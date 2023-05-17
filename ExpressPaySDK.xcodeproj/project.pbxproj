@@ -1,0 +1,1630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3044D8A529827AFB00F81550 /* ExpressPaySDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8A429827AFB00F81550 /* ExpressPaySDK.docc */; };
+		3044D8AB29827AFB00F81550 /* ExpressPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3044D8A029827AFB00F81550 /* ExpressPaySDK.framework */; };
+		3044D8B029827AFB00F81550 /* ExpressPaySDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8AF29827AFB00F81550 /* ExpressPaySDKTests.swift */; };
+		3044D8B129827AFB00F81550 /* ExpressPaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 3044D8A329827AFB00F81550 /* ExpressPaySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3044D91F29827B2A00F81550 /* ExpressPaySaleRedirectBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BD29827B2900F81550 /* ExpressPaySaleRedirectBody.swift */; };
+		3044D92029827B2A00F81550 /* ExpressPaySaleRedirectBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BD29827B2900F81550 /* ExpressPaySaleRedirectBody.swift */; };
+		3044D92129827B2A00F81550 /* ExpressPaySaleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BE29827B2900F81550 /* ExpressPaySaleResult.swift */; };
+		3044D92229827B2A00F81550 /* ExpressPaySaleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BE29827B2900F81550 /* ExpressPaySaleResult.swift */; };
+		3044D92329827B2A00F81550 /* ExpressPaySaleRedirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BF29827B2900F81550 /* ExpressPaySaleRedirect.swift */; };
+		3044D92429827B2A00F81550 /* ExpressPaySaleRedirect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BF29827B2900F81550 /* ExpressPaySaleRedirect.swift */; };
+		3044D92529827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C029827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift */; };
+		3044D92629827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C029827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift */; };
+		3044D92729827B2A00F81550 /* ExpressPaySaleSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C129827B2A00F81550 /* ExpressPaySaleSuccess.swift */; };
+		3044D92829827B2A00F81550 /* ExpressPaySaleSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C129827B2A00F81550 /* ExpressPaySaleSuccess.swift */; };
+		3044D92929827B2A00F81550 /* ExpressPaySale3ds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C229827B2A00F81550 /* ExpressPaySale3ds.swift */; };
+		3044D92A29827B2A00F81550 /* ExpressPaySale3ds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C229827B2A00F81550 /* ExpressPaySale3ds.swift */; };
+		3044D92B29827B2A00F81550 /* ExpressPaySaleDecline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C329827B2A00F81550 /* ExpressPaySaleDecline.swift */; };
+		3044D92C29827B2A00F81550 /* ExpressPaySaleDecline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C329827B2A00F81550 /* ExpressPaySaleDecline.swift */; };
+		3044D92D29827B2A00F81550 /* ExpressPaySaleRedirectParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C429827B2A00F81550 /* ExpressPaySaleRedirectParams.swift */; };
+		3044D92E29827B2A00F81550 /* ExpressPaySaleRedirectParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C429827B2A00F81550 /* ExpressPaySaleRedirectParams.swift */; };
+		3044D92F29827B2A00F81550 /* ExpressPaySaleRecurring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C529827B2A00F81550 /* ExpressPaySaleRecurring.swift */; };
+		3044D93029827B2A00F81550 /* ExpressPaySaleRecurring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C529827B2A00F81550 /* ExpressPaySaleRecurring.swift */; };
+		3044D93129827B2A00F81550 /* ExpressPayCaptureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C729827B2A00F81550 /* ExpressPayCaptureResult.swift */; };
+		3044D93229827B2A00F81550 /* ExpressPayCaptureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C729827B2A00F81550 /* ExpressPayCaptureResult.swift */; };
+		3044D93329827B2A00F81550 /* ExpressPayCaptureSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C829827B2A00F81550 /* ExpressPayCaptureSuccess.swift */; };
+		3044D93429827B2A00F81550 /* ExpressPayCaptureSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8C829827B2A00F81550 /* ExpressPayCaptureSuccess.swift */; };
+		3044D93529827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CA29827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift */; };
+		3044D93629827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CA29827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift */; };
+		3044D93729827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CB29827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift */; };
+		3044D93829827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CB29827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift */; };
+		3044D93929827B2A00F81550 /* ExpressPayTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CC29827B2A00F81550 /* ExpressPayTransaction.swift */; };
+		3044D93A29827B2A00F81550 /* ExpressPayTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CC29827B2A00F81550 /* ExpressPayTransaction.swift */; };
+		3044D93B29827B2A00F81550 /* ExpressPayCreditvoidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CE29827B2A00F81550 /* ExpressPayCreditvoidResult.swift */; };
+		3044D93C29827B2A00F81550 /* ExpressPayCreditvoidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CE29827B2A00F81550 /* ExpressPayCreditvoidResult.swift */; };
+		3044D93D29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CF29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift */; };
+		3044D93E29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8CF29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift */; };
+		3044D93F29827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D129827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift */; };
+		3044D94029827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D129827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift */; };
+		3044D94129827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D229827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift */; };
+		3044D94229827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D229827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift */; };
+		3044D94329827B2A00F81550 /* ExpressPayResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D529827B2A00F81550 /* ExpressPayResultProtocol.swift */; };
+		3044D94429827B2A00F81550 /* ExpressPayResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D529827B2A00F81550 /* ExpressPayResultProtocol.swift */; };
+		3044D94529827B2A00F81550 /* OrderExpressPayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D629827B2A00F81550 /* OrderExpressPayResult.swift */; };
+		3044D94629827B2A00F81550 /* OrderExpressPayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D629827B2A00F81550 /* OrderExpressPayResult.swift */; };
+		3044D94729827B2A00F81550 /* DetailsExpressPayResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D729827B2A00F81550 /* DetailsExpressPayResultProtocol.swift */; };
+		3044D94829827B2A00F81550 /* DetailsExpressPayResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D729827B2A00F81550 /* DetailsExpressPayResultProtocol.swift */; };
+		3044D94929827B2A00F81550 /* ExpressPayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D929827B2A00F81550 /* ExpressPayError.swift */; };
+		3044D94A29827B2A00F81550 /* ExpressPayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8D929827B2A00F81550 /* ExpressPayError.swift */; };
+		3044D94B29827B2A00F81550 /* ExpressPayExactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DA29827B2A00F81550 /* ExpressPayExactError.swift */; };
+		3044D94C29827B2A00F81550 /* ExpressPayExactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DA29827B2A00F81550 /* ExpressPayExactError.swift */; };
+		3044D94D29827B2A00F81550 /* TestSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DB29827B2A00F81550 /* TestSDK.swift */; };
+		3044D94E29827B2A00F81550 /* TestSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DB29827B2A00F81550 /* TestSDK.swift */; };
+		3044D94F29827B2A00F81550 /* ExpressPayTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DD29827B2A00F81550 /* ExpressPayTransactionType.swift */; };
+		3044D95029827B2A00F81550 /* ExpressPayTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DD29827B2A00F81550 /* ExpressPayTransactionType.swift */; };
+		3044D95129827B2A00F81550 /* ExpressPayStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DE29827B2A00F81550 /* ExpressPayStatus.swift */; };
+		3044D95229827B2A00F81550 /* ExpressPayStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DE29827B2A00F81550 /* ExpressPayStatus.swift */; };
+		3044D95329827B2A00F81550 /* ExpressPayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DF29827B2A00F81550 /* ExpressPayAction.swift */; };
+		3044D95429827B2A00F81550 /* ExpressPayAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8DF29827B2A00F81550 /* ExpressPayAction.swift */; };
+		3044D95529827B2A00F81550 /* ExpressPayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E029827B2A00F81550 /* ExpressPayResult.swift */; };
+		3044D95629827B2A00F81550 /* ExpressPayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E029827B2A00F81550 /* ExpressPayResult.swift */; };
+		3044D95729827B2A00F81550 /* ExpressPayRedirectMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E129827B2A00F81550 /* ExpressPayRedirectMethod.swift */; };
+		3044D95829827B2A00F81550 /* ExpressPayRedirectMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E129827B2A00F81550 /* ExpressPayRedirectMethod.swift */; };
+		3044D95929827B2A00F81550 /* ExpressPayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E229827B2A00F81550 /* ExpressPayOption.swift */; };
+		3044D95A29827B2A00F81550 /* ExpressPayOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E229827B2A00F81550 /* ExpressPayOption.swift */; };
+		3044D95B29827B2A00F81550 /* ExpressPayTransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E329827B2A00F81550 /* ExpressPayTransactionStatus.swift */; };
+		3044D95C29827B2A00F81550 /* ExpressPayTransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E329827B2A00F81550 /* ExpressPayTransactionStatus.swift */; };
+		3044D95D29827B2A00F81550 /* ExpressPayOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E629827B2A00F81550 /* ExpressPayOrder.swift */; };
+		3044D95E29827B2A00F81550 /* ExpressPayOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E629827B2A00F81550 /* ExpressPayOrder.swift */; };
+		3044D95F29827B2A00F81550 /* ExpressPaySaleOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E729827B2A00F81550 /* ExpressPaySaleOrder.swift */; };
+		3044D96029827B2A00F81550 /* ExpressPaySaleOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E729827B2A00F81550 /* ExpressPaySaleOrder.swift */; };
+		3044D96129827B2A00F81550 /* ExpressPayOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E829827B2A00F81550 /* ExpressPayOrderProtocol.swift */; };
+		3044D96229827B2A00F81550 /* ExpressPayOrderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8E829827B2A00F81550 /* ExpressPayOrderProtocol.swift */; };
+		3044D96329827B2A00F81550 /* ExpressPayRecurringOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EA29827B2A00F81550 /* ExpressPayRecurringOptions.swift */; };
+		3044D96429827B2A00F81550 /* ExpressPayRecurringOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EA29827B2A00F81550 /* ExpressPayRecurringOptions.swift */; };
+		3044D96529827B2A00F81550 /* ExpressPaySaleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EB29827B2A00F81550 /* ExpressPaySaleOptions.swift */; };
+		3044D96629827B2A00F81550 /* ExpressPaySaleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EB29827B2A00F81550 /* ExpressPaySaleOptions.swift */; };
+		3044D96729827B2A00F81550 /* ExpressPayCardFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8ED29827B2A00F81550 /* ExpressPayCardFormatter.swift */; };
+		3044D96829827B2A00F81550 /* ExpressPayCardFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8ED29827B2A00F81550 /* ExpressPayCardFormatter.swift */; };
+		3044D96929827B2A00F81550 /* ExpressPayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EE29827B2A00F81550 /* ExpressPayCard.swift */; };
+		3044D96A29827B2A00F81550 /* ExpressPayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EE29827B2A00F81550 /* ExpressPayCard.swift */; };
+		3044D96B29827B2A00F81550 /* ExpressPayTestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EF29827B2A00F81550 /* ExpressPayTestCard.swift */; };
+		3044D96C29827B2A00F81550 /* ExpressPayTestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8EF29827B2A00F81550 /* ExpressPayTestCard.swift */; };
+		3044D96D29827B2A00F81550 /* ExpressPayPayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F129827B2A00F81550 /* ExpressPayPayer.swift */; };
+		3044D96E29827B2A00F81550 /* ExpressPayPayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F129827B2A00F81550 /* ExpressPayPayer.swift */; };
+		3044D96F29827B2A00F81550 /* ExpressPayPayerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F229827B2A00F81550 /* ExpressPayPayerOptions.swift */; };
+		3044D97029827B2A00F81550 /* ExpressPayPayerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F229827B2A00F81550 /* ExpressPayPayerOptions.swift */; };
+		3044D97129827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F329827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift */; };
+		3044D97229827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F329827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift */; };
+		3044D97329827B2A00F81550 /* DeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F529827B2A00F81550 /* DeviceDetail.swift */; };
+		3044D97429827B2A00F81550 /* DeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F529827B2A00F81550 /* DeviceDetail.swift */; };
+		3044D97529827B2A00F81550 /* VirtualPurchaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F629827B2A00F81550 /* VirtualPurchaseSession.swift */; };
+		3044D97629827B2A00F81550 /* VirtualPurchaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F629827B2A00F81550 /* VirtualPurchaseSession.swift */; };
+		3044D97729827B2A00F81550 /* ApplePayVirtualPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F729827B2A00F81550 /* ApplePayVirtualPurchase.swift */; };
+		3044D97829827B2A00F81550 /* ApplePayVirtualPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F729827B2A00F81550 /* ApplePayVirtualPurchase.swift */; };
+		3044D97929827B2A00F81550 /* ExpressPayAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F929827B2A00F81550 /* ExpressPayAdapterFactory.swift */; };
+		3044D97A29827B2A00F81550 /* ExpressPayAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8F929827B2A00F81550 /* ExpressPayAdapterFactory.swift */; };
+		3044D97B29827B2A00F81550 /* ExpressPayCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FA29827B2A00F81550 /* ExpressPayCredential.swift */; };
+		3044D97C29827B2A00F81550 /* ExpressPayCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FA29827B2A00F81550 /* ExpressPayCredential.swift */; };
+		3044D97D29827B2A00F81550 /* ExpressPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FB29827B2A00F81550 /* ExpressPaySDK.swift */; };
+		3044D97E29827B2A00F81550 /* ExpressPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FB29827B2A00F81550 /* ExpressPaySDK.swift */; };
+		3044D97F29827B2A00F81550 /* ExpressPayCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FE29827B2A00F81550 /* ExpressPayCallback.swift */; };
+		3044D98029827B2A00F81550 /* ExpressPayCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FE29827B2A00F81550 /* ExpressPayCallback.swift */; };
+		3044D98129827B2A00F81550 /* ExpressPayBaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FF29827B2A00F81550 /* ExpressPayBaseAdapter.swift */; };
+		3044D98229827B2A00F81550 /* ExpressPayBaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8FF29827B2A00F81550 /* ExpressPayBaseAdapter.swift */; };
+		3044D98329827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90029827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift */; };
+		3044D98429827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90029827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift */; };
+		3044D98529827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90129827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift */; };
+		3044D98629827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90129827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift */; };
+		3044D98729827B2A00F81550 /* ExpressPayCaptureAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90229827B2A00F81550 /* ExpressPayCaptureAdapter.swift */; };
+		3044D98829827B2A00F81550 /* ExpressPayCaptureAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90229827B2A00F81550 /* ExpressPayCaptureAdapter.swift */; };
+		3044D98929827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90329827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift */; };
+		3044D98A29827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90329827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift */; };
+		3044D98B29827B2A00F81550 /* ExpressPaySaleAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90429827B2A00F81550 /* ExpressPaySaleAdapter.swift */; };
+		3044D98C29827B2A00F81550 /* ExpressPaySaleAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90429827B2A00F81550 /* ExpressPaySaleAdapter.swift */; };
+		3044D98D29827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90529827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift */; };
+		3044D98E29827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90529827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift */; };
+		3044D98F29827B2A00F81550 /* ExpressPaySaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90729827B2A00F81550 /* ExpressPaySaleService.swift */; };
+		3044D99029827B2A00F81550 /* ExpressPaySaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90729827B2A00F81550 /* ExpressPaySaleService.swift */; };
+		3044D99129827B2A00F81550 /* ExpressPayCreditvoidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90829827B2A00F81550 /* ExpressPayCreditvoidService.swift */; };
+		3044D99229827B2A00F81550 /* ExpressPayCreditvoidService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90829827B2A00F81550 /* ExpressPayCreditvoidService.swift */; };
+		3044D99329827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90929827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift */; };
+		3044D99429827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90929827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift */; };
+		3044D99529827B2A00F81550 /* ExpressPayCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90A29827B2A00F81550 /* ExpressPayCaptureService.swift */; };
+		3044D99629827B2A00F81550 /* ExpressPayCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90A29827B2A00F81550 /* ExpressPayCaptureService.swift */; };
+		3044D99729827B2A00F81550 /* ExpressPayRecurringSaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90B29827B2A00F81550 /* ExpressPayRecurringSaleService.swift */; };
+		3044D99829827B2A00F81550 /* ExpressPayRecurringSaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90B29827B2A00F81550 /* ExpressPayRecurringSaleService.swift */; };
+		3044D99929827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90C29827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift */; };
+		3044D99A29827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90C29827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift */; };
+		3044D99B29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90E29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift */; };
+		3044D99C29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90E29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift */; };
+		3044D99D29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90F29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift */; };
+		3044D99E29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D90F29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift */; };
+		3044D99F29827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91029827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift */; };
+		3044D9A029827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91029827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift */; };
+		3044D9A129827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91129827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift */; };
+		3044D9A229827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91129827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift */; };
+		3044D9A329827B2A00F81550 /* ExpressPaySaleDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91229827B2A00F81550 /* ExpressPaySaleDeserializer.swift */; };
+		3044D9A429827B2A00F81550 /* ExpressPaySaleDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91229827B2A00F81550 /* ExpressPaySaleDeserializer.swift */; };
+		3044D9A529827B2A00F81550 /* ExpressApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91429827B2A00F81550 /* ExpressApplePay.swift */; };
+		3044D9A629827B2A00F81550 /* ExpressApplePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91429827B2A00F81550 /* ExpressApplePay.swift */; };
+		3044D9A729827B2A00F81550 /* SaleRedirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91529827B2A00F81550 /* SaleRedirectionView.swift */; };
+		3044D9A829827B2A00F81550 /* SaleRedirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91529827B2A00F81550 /* SaleRedirectionView.swift */; };
+		3044D9A929827B2A00F81550 /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91629827B2A00F81550 /* UserAgent.swift */; };
+		3044D9AA29827B2A00F81550 /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91629827B2A00F81550 /* UserAgent.swift */; };
+		3044D9AB29827B2A00F81550 /* ExpressPayDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91829827B2A00F81550 /* ExpressPayDateFormatter.swift */; };
+		3044D9AC29827B2A00F81550 /* ExpressPayDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91829827B2A00F81550 /* ExpressPayDateFormatter.swift */; };
+		3044D9AD29827B2A00F81550 /* XWWWFormUrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91A29827B2A00F81550 /* XWWWFormUrlEncodable.swift */; };
+		3044D9AE29827B2A00F81550 /* XWWWFormUrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91A29827B2A00F81550 /* XWWWFormUrlEncodable.swift */; };
+		3044D9AF29827B2A00F81550 /* ExpressPayRestApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91B29827B2A00F81550 /* ExpressPayRestApiClient.swift */; };
+		3044D9B029827B2A00F81550 /* ExpressPayRestApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91B29827B2A00F81550 /* ExpressPayRestApiClient.swift */; };
+		3044D9B129827B2A00F81550 /* ExpressPayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91C29827B2A00F81550 /* ExpressPayExtensions.swift */; };
+		3044D9B229827B2A00F81550 /* ExpressPayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91C29827B2A00F81550 /* ExpressPayExtensions.swift */; };
+		3044D9B329827B2A00F81550 /* ExpressPayAmountFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91D29827B2A00F81550 /* ExpressPayAmountFormatter.swift */; };
+		3044D9B429827B2A00F81550 /* ExpressPayAmountFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91D29827B2A00F81550 /* ExpressPayAmountFormatter.swift */; };
+		3044D9B529827B2A00F81550 /* ExpressPayHashUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91E29827B2A00F81550 /* ExpressPayHashUtil.swift */; };
+		3044D9B629827B2A00F81550 /* ExpressPayHashUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D91E29827B2A00F81550 /* ExpressPayHashUtil.swift */; };
+		30783A2E2990F0130089D34E /* PublicIPAPIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30783A2B2990F0130089D34E /* PublicIPAPIURLs.swift */; };
+		30783A2F2990F0130089D34E /* PublicIPAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30783A2C2990F0130089D34E /* PublicIPAPI.swift */; };
+		30783A302990F0130089D34E /* SwiftPublicIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30783A2D2990F0130089D34E /* SwiftPublicIP.swift */; };
+		30787E332989E5C10008631C /* TextViewInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E0C2989E5C00008631C /* TextViewInputController.swift */; };
+		30787E342989E5C10008631C /* TextViewInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E0C2989E5C00008631C /* TextViewInputController.swift */; };
+		30787E352989E5C10008631C /* TextViewStartInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E0D2989E5C00008631C /* TextViewStartInputController.swift */; };
+		30787E362989E5C10008631C /* TextViewStartInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E0D2989E5C00008631C /* TextViewStartInputController.swift */; };
+		30787E372989E5C10008631C /* TextFieldStartInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E0F2989E5C00008631C /* TextFieldStartInputController.swift */; };
+		30787E382989E5C10008631C /* TextFieldStartInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E0F2989E5C00008631C /* TextFieldStartInputController.swift */; };
+		30787E392989E5C10008631C /* TextFieldInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E102989E5C00008631C /* TextFieldInputController.swift */; };
+		30787E3A2989E5C10008631C /* TextFieldInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E102989E5C00008631C /* TextFieldInputController.swift */; };
+		30787E3B2989E5C10008631C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E122989E5C00008631C /* String+Extension.swift */; };
+		30787E3C2989E5C10008631C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E122989E5C00008631C /* String+Extension.swift */; };
+		30787E3D2989E5C10008631C /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E132989E5C00008631C /* UITextView+Extension.swift */; };
+		30787E3E2989E5C10008631C /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E132989E5C00008631C /* UITextView+Extension.swift */; };
+		30787E3F2989E5C10008631C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E142989E5C00008631C /* UITextField+Extension.swift */; };
+		30787E402989E5C10008631C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E142989E5C00008631C /* UITextField+Extension.swift */; };
+		30787E412989E5C10008631C /* DefaultTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E182989E5C00008631C /* DefaultTextInputFormatter.swift */; };
+		30787E422989E5C10008631C /* DefaultTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E182989E5C00008631C /* DefaultTextInputFormatter.swift */; };
+		30787E432989E5C10008631C /* DefaultTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E192989E5C00008631C /* DefaultTextFormatter.swift */; };
+		30787E442989E5C10008631C /* DefaultTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E192989E5C00008631C /* DefaultTextFormatter.swift */; };
+		30787E452989E5C10008631C /* DefaultCaretPositionCorrector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E1B2989E5C00008631C /* DefaultCaretPositionCorrector.swift */; };
+		30787E462989E5C10008631C /* DefaultCaretPositionCorrector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E1B2989E5C00008631C /* DefaultCaretPositionCorrector.swift */; };
+		30787E472989E5C10008631C /* DefaultRangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E1C2989E5C00008631C /* DefaultRangeCalculator.swift */; };
+		30787E482989E5C10008631C /* DefaultRangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E1C2989E5C00008631C /* DefaultRangeCalculator.swift */; };
+		30787E492989E5C10008631C /* SumTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E1F2989E5C00008631C /* SumTextInputFormatter.swift */; };
+		30787E4A2989E5C10008631C /* SumTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E1F2989E5C00008631C /* SumTextInputFormatter.swift */; };
+		30787E4B2989E5C10008631C /* SumTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E202989E5C00008631C /* SumTextFormatter.swift */; };
+		30787E4C2989E5C10008631C /* SumTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E202989E5C00008631C /* SumTextFormatter.swift */; };
+		30787E4D2989E5C10008631C /* SumTextInputFormatterCaretPositionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E222989E5C00008631C /* SumTextInputFormatterCaretPositionCalculator.swift */; };
+		30787E4E2989E5C10008631C /* SumTextInputFormatterCaretPositionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E222989E5C00008631C /* SumTextInputFormatterCaretPositionCalculator.swift */; };
+		30787E4F2989E5C10008631C /* SumFormatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E232989E5C00008631C /* SumFormatParser.swift */; };
+		30787E502989E5C10008631C /* SumFormatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E232989E5C00008631C /* SumFormatParser.swift */; };
+		30787E512989E5C10008631C /* PlaceholderTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E262989E5C00008631C /* PlaceholderTextFormatter.swift */; };
+		30787E522989E5C10008631C /* PlaceholderTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E262989E5C00008631C /* PlaceholderTextFormatter.swift */; };
+		30787E532989E5C10008631C /* PlaceholderTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E272989E5C00008631C /* PlaceholderTextInputFormatter.swift */; };
+		30787E542989E5C10008631C /* PlaceholderTextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E272989E5C00008631C /* PlaceholderTextInputFormatter.swift */; };
+		30787E552989E5C10008631C /* PlaceholderRangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E292989E5C00008631C /* PlaceholderRangeCalculator.swift */; };
+		30787E562989E5C10008631C /* PlaceholderRangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E292989E5C00008631C /* PlaceholderRangeCalculator.swift */; };
+		30787E572989E5C10008631C /* PlaceholderCaretPositionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2A2989E5C00008631C /* PlaceholderCaretPositionCalculator.swift */; };
+		30787E582989E5C10008631C /* PlaceholderCaretPositionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2A2989E5C00008631C /* PlaceholderCaretPositionCalculator.swift */; };
+		30787E592989E5C10008631C /* TextNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2C2989E5C00008631C /* TextNumberFormatter.swift */; };
+		30787E5A2989E5C10008631C /* TextNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2C2989E5C00008631C /* TextNumberFormatter.swift */; };
+		30787E5B2989E5C10008631C /* FormattedTextValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2D2989E5C00008631C /* FormattedTextValue.swift */; };
+		30787E5C2989E5C10008631C /* FormattedTextValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2D2989E5C00008631C /* FormattedTextValue.swift */; };
+		30787E5D2989E5C10008631C /* TextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2E2989E5C00008631C /* TextInputFormatter.swift */; };
+		30787E5E2989E5C10008631C /* TextInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2E2989E5C00008631C /* TextInputFormatter.swift */; };
+		30787E5F2989E5C10008631C /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2F2989E5C00008631C /* TextFormatter.swift */; };
+		30787E602989E5C10008631C /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E2F2989E5C00008631C /* TextFormatter.swift */; };
+		30787E612989E5C10008631C /* CaretPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E302989E5C00008631C /* CaretPositioner.swift */; };
+		30787E622989E5C10008631C /* CaretPositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E302989E5C00008631C /* CaretPositioner.swift */; };
+		30787E632989E5C10008631C /* TextNumberUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E312989E5C00008631C /* TextNumberUnformatter.swift */; };
+		30787E642989E5C10008631C /* TextNumberUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E312989E5C00008631C /* TextNumberUnformatter.swift */; };
+		30787E652989E5C10008631C /* TextUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E322989E5C00008631C /* TextUnformatter.swift */; };
+		30787E662989E5C10008631C /* TextUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E322989E5C00008631C /* TextUnformatter.swift */; };
+		30787E68298A466A0008631C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30787E67298A466A0008631C /* Images.xcassets */; };
+		30787E69298A466A0008631C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30787E67298A466A0008631C /* Images.xcassets */; };
+		30787EC7298BB96A0008631C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787EC6298BB96A0008631C /* Extensions.swift */; };
+		3085D5032989B52B00AEFE32 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */; };
+		3085D5042989B52B00AEFE32 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */; };
+		3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3085D5022989B52B00AEFE32 /* CardDetailViewController.xib */; };
+		3085D5062989B52B00AEFE32 /* CardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3085D5022989B52B00AEFE32 /* CardDetailViewController.xib */; };
+		3085D5142989B55F00AEFE32 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5092989B55F00AEFE32 /* Utilities.swift */; };
+		3085D5152989B55F00AEFE32 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5092989B55F00AEFE32 /* Utilities.swift */; };
+		3085D5162989B55F00AEFE32 /* AKMaskFieldEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50A2989B55F00AEFE32 /* AKMaskFieldEvent.swift */; };
+		3085D5172989B55F00AEFE32 /* AKMaskFieldEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50A2989B55F00AEFE32 /* AKMaskFieldEvent.swift */; };
+		3085D5182989B55F00AEFE32 /* CreditCardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50B2989B55F00AEFE32 /* CreditCardFormView.swift */; };
+		3085D5192989B55F00AEFE32 /* CreditCardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50B2989B55F00AEFE32 /* CreditCardFormView.swift */; };
+		3085D51A2989B55F00AEFE32 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50C2989B55F00AEFE32 /* CreditCardValidator.swift */; };
+		3085D51B2989B55F00AEFE32 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50C2989B55F00AEFE32 /* CreditCardValidator.swift */; };
+		3085D51C2989B55F00AEFE32 /* AKMaskFieldBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50D2989B55F00AEFE32 /* AKMaskFieldBlock.swift */; };
+		3085D51D2989B55F00AEFE32 /* AKMaskFieldBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50D2989B55F00AEFE32 /* AKMaskFieldBlock.swift */; };
+		3085D51E2989B55F00AEFE32 /* AKMaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50E2989B55F00AEFE32 /* AKMaskField.swift */; };
+		3085D51F2989B55F00AEFE32 /* AKMaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50E2989B55F00AEFE32 /* AKMaskField.swift */; };
+		3085D5202989B55F00AEFE32 /* AKMaskFieldUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50F2989B55F00AEFE32 /* AKMaskFieldUtility.swift */; };
+		3085D5212989B55F00AEFE32 /* AKMaskFieldUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D50F2989B55F00AEFE32 /* AKMaskFieldUtility.swift */; };
+		3085D5222989B55F00AEFE32 /* CreditCardValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5102989B55F00AEFE32 /* CreditCardValidationType.swift */; };
+		3085D5232989B55F00AEFE32 /* CreditCardValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5102989B55F00AEFE32 /* CreditCardValidationType.swift */; };
+		3085D5242989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5112989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift */; };
+		3085D5252989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5112989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift */; };
+		3085D5262989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */; };
+		3085D5272989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */; };
+		3085D5282989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
+		3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
+		308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */ = {isa = PBXBuildFile; fileRef = 308B683029FEB078000EF281 /* PrepareForDevice.sh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3044D8AC29827AFB00F81550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3044D89729827AFB00F81550 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3044D89F29827AFB00F81550;
+			remoteInfo = ExpressPaySDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3085D53C2989CF6E00AEFE32 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = .;
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3044D8A029827AFB00F81550 /* ExpressPaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExpressPaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3044D8A329827AFB00F81550 /* ExpressPaySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressPaySDK.h; sourceTree = "<group>"; };
+		3044D8A429827AFB00F81550 /* ExpressPaySDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ExpressPaySDK.docc; sourceTree = "<group>"; };
+		3044D8AA29827AFB00F81550 /* ExpressPaySDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpressPaySDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3044D8AF29827AFB00F81550 /* ExpressPaySDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressPaySDKTests.swift; sourceTree = "<group>"; };
+		3044D8BD29827B2900F81550 /* ExpressPaySaleRedirectBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleRedirectBody.swift; sourceTree = "<group>"; };
+		3044D8BE29827B2900F81550 /* ExpressPaySaleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleResult.swift; sourceTree = "<group>"; };
+		3044D8BF29827B2900F81550 /* ExpressPaySaleRedirect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleRedirect.swift; sourceTree = "<group>"; };
+		3044D8C029827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleRedirectionBody.swift; sourceTree = "<group>"; };
+		3044D8C129827B2A00F81550 /* ExpressPaySaleSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleSuccess.swift; sourceTree = "<group>"; };
+		3044D8C229827B2A00F81550 /* ExpressPaySale3ds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySale3ds.swift; sourceTree = "<group>"; };
+		3044D8C329827B2A00F81550 /* ExpressPaySaleDecline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleDecline.swift; sourceTree = "<group>"; };
+		3044D8C429827B2A00F81550 /* ExpressPaySaleRedirectParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleRedirectParams.swift; sourceTree = "<group>"; };
+		3044D8C529827B2A00F81550 /* ExpressPaySaleRecurring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleRecurring.swift; sourceTree = "<group>"; };
+		3044D8C729827B2A00F81550 /* ExpressPayCaptureResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCaptureResult.swift; sourceTree = "<group>"; };
+		3044D8C829827B2A00F81550 /* ExpressPayCaptureSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCaptureSuccess.swift; sourceTree = "<group>"; };
+		3044D8CA29827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionDetailsSuccess.swift; sourceTree = "<group>"; };
+		3044D8CB29827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionDetailsResult.swift; sourceTree = "<group>"; };
+		3044D8CC29827B2A00F81550 /* ExpressPayTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayTransaction.swift; sourceTree = "<group>"; };
+		3044D8CE29827B2A00F81550 /* ExpressPayCreditvoidResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCreditvoidResult.swift; sourceTree = "<group>"; };
+		3044D8CF29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCreditvoidSuccess.swift; sourceTree = "<group>"; };
+		3044D8D129827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionStatusResult.swift; sourceTree = "<group>"; };
+		3044D8D229827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionStatusSuccess.swift; sourceTree = "<group>"; };
+		3044D8D529827B2A00F81550 /* ExpressPayResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayResultProtocol.swift; sourceTree = "<group>"; };
+		3044D8D629827B2A00F81550 /* OrderExpressPayResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderExpressPayResult.swift; sourceTree = "<group>"; };
+		3044D8D729827B2A00F81550 /* DetailsExpressPayResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsExpressPayResultProtocol.swift; sourceTree = "<group>"; };
+		3044D8D929827B2A00F81550 /* ExpressPayError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayError.swift; sourceTree = "<group>"; };
+		3044D8DA29827B2A00F81550 /* ExpressPayExactError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayExactError.swift; sourceTree = "<group>"; };
+		3044D8DB29827B2A00F81550 /* TestSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSDK.swift; sourceTree = "<group>"; };
+		3044D8DD29827B2A00F81550 /* ExpressPayTransactionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayTransactionType.swift; sourceTree = "<group>"; };
+		3044D8DE29827B2A00F81550 /* ExpressPayStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayStatus.swift; sourceTree = "<group>"; };
+		3044D8DF29827B2A00F81550 /* ExpressPayAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayAction.swift; sourceTree = "<group>"; };
+		3044D8E029827B2A00F81550 /* ExpressPayResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayResult.swift; sourceTree = "<group>"; };
+		3044D8E129827B2A00F81550 /* ExpressPayRedirectMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayRedirectMethod.swift; sourceTree = "<group>"; };
+		3044D8E229827B2A00F81550 /* ExpressPayOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayOption.swift; sourceTree = "<group>"; };
+		3044D8E329827B2A00F81550 /* ExpressPayTransactionStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayTransactionStatus.swift; sourceTree = "<group>"; };
+		3044D8E629827B2A00F81550 /* ExpressPayOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayOrder.swift; sourceTree = "<group>"; };
+		3044D8E729827B2A00F81550 /* ExpressPaySaleOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleOrder.swift; sourceTree = "<group>"; };
+		3044D8E829827B2A00F81550 /* ExpressPayOrderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayOrderProtocol.swift; sourceTree = "<group>"; };
+		3044D8EA29827B2A00F81550 /* ExpressPayRecurringOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayRecurringOptions.swift; sourceTree = "<group>"; };
+		3044D8EB29827B2A00F81550 /* ExpressPaySaleOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleOptions.swift; sourceTree = "<group>"; };
+		3044D8ED29827B2A00F81550 /* ExpressPayCardFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCardFormatter.swift; sourceTree = "<group>"; };
+		3044D8EE29827B2A00F81550 /* ExpressPayCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCard.swift; sourceTree = "<group>"; };
+		3044D8EF29827B2A00F81550 /* ExpressPayTestCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayTestCard.swift; sourceTree = "<group>"; };
+		3044D8F129827B2A00F81550 /* ExpressPayPayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayPayer.swift; sourceTree = "<group>"; };
+		3044D8F229827B2A00F81550 /* ExpressPayPayerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayPayerOptions.swift; sourceTree = "<group>"; };
+		3044D8F329827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayPayerOptionsFormatter.swift; sourceTree = "<group>"; };
+		3044D8F529827B2A00F81550 /* DeviceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetail.swift; sourceTree = "<group>"; };
+		3044D8F629827B2A00F81550 /* VirtualPurchaseSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualPurchaseSession.swift; sourceTree = "<group>"; };
+		3044D8F729827B2A00F81550 /* ApplePayVirtualPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayVirtualPurchase.swift; sourceTree = "<group>"; };
+		3044D8F929827B2A00F81550 /* ExpressPayAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayAdapterFactory.swift; sourceTree = "<group>"; };
+		3044D8FA29827B2A00F81550 /* ExpressPayCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCredential.swift; sourceTree = "<group>"; };
+		3044D8FB29827B2A00F81550 /* ExpressPaySDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySDK.swift; sourceTree = "<group>"; };
+		3044D8FE29827B2A00F81550 /* ExpressPayCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCallback.swift; sourceTree = "<group>"; };
+		3044D8FF29827B2A00F81550 /* ExpressPayBaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayBaseAdapter.swift; sourceTree = "<group>"; };
+		3044D90029827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionStatusAdapter.swift; sourceTree = "<group>"; };
+		3044D90129827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayRecurringSaleAdapter.swift; sourceTree = "<group>"; };
+		3044D90229827B2A00F81550 /* ExpressPayCaptureAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCaptureAdapter.swift; sourceTree = "<group>"; };
+		3044D90329827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionDetailsAdapter.swift; sourceTree = "<group>"; };
+		3044D90429827B2A00F81550 /* ExpressPaySaleAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleAdapter.swift; sourceTree = "<group>"; };
+		3044D90529827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCreditvoidAdapter.swift; sourceTree = "<group>"; };
+		3044D90729827B2A00F81550 /* ExpressPaySaleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleService.swift; sourceTree = "<group>"; };
+		3044D90829827B2A00F81550 /* ExpressPayCreditvoidService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCreditvoidService.swift; sourceTree = "<group>"; };
+		3044D90929827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionDetailsService.swift; sourceTree = "<group>"; };
+		3044D90A29827B2A00F81550 /* ExpressPayCaptureService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCaptureService.swift; sourceTree = "<group>"; };
+		3044D90B29827B2A00F81550 /* ExpressPayRecurringSaleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayRecurringSaleService.swift; sourceTree = "<group>"; };
+		3044D90C29827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionStatusService.swift; sourceTree = "<group>"; };
+		3044D90E29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionStatusDeserializer.swift; sourceTree = "<group>"; };
+		3044D90F29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCaptureDeserializer.swift; sourceTree = "<group>"; };
+		3044D91029827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayGetTransactionDetailsDeserializer.swift; sourceTree = "<group>"; };
+		3044D91129827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayCreditvoidDeserializer.swift; sourceTree = "<group>"; };
+		3044D91229827B2A00F81550 /* ExpressPaySaleDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPaySaleDeserializer.swift; sourceTree = "<group>"; };
+		3044D91429827B2A00F81550 /* ExpressApplePay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressApplePay.swift; sourceTree = "<group>"; };
+		3044D91529827B2A00F81550 /* SaleRedirectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleRedirectionView.swift; sourceTree = "<group>"; };
+		3044D91629827B2A00F81550 /* UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
+		3044D91829827B2A00F81550 /* ExpressPayDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayDateFormatter.swift; sourceTree = "<group>"; };
+		3044D91A29827B2A00F81550 /* XWWWFormUrlEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWWWFormUrlEncodable.swift; sourceTree = "<group>"; };
+		3044D91B29827B2A00F81550 /* ExpressPayRestApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayRestApiClient.swift; sourceTree = "<group>"; };
+		3044D91C29827B2A00F81550 /* ExpressPayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayExtensions.swift; sourceTree = "<group>"; };
+		3044D91D29827B2A00F81550 /* ExpressPayAmountFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayAmountFormatter.swift; sourceTree = "<group>"; };
+		3044D91E29827B2A00F81550 /* ExpressPayHashUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPayHashUtil.swift; sourceTree = "<group>"; };
+		30783A2B2990F0130089D34E /* PublicIPAPIURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicIPAPIURLs.swift; sourceTree = "<group>"; };
+		30783A2C2990F0130089D34E /* PublicIPAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicIPAPI.swift; sourceTree = "<group>"; };
+		30783A2D2990F0130089D34E /* SwiftPublicIP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPublicIP.swift; sourceTree = "<group>"; };
+		30787E0C2989E5C00008631C /* TextViewInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewInputController.swift; sourceTree = "<group>"; };
+		30787E0D2989E5C00008631C /* TextViewStartInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewStartInputController.swift; sourceTree = "<group>"; };
+		30787E0F2989E5C00008631C /* TextFieldStartInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStartInputController.swift; sourceTree = "<group>"; };
+		30787E102989E5C00008631C /* TextFieldInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldInputController.swift; sourceTree = "<group>"; };
+		30787E122989E5C00008631C /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		30787E132989E5C00008631C /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		30787E142989E5C00008631C /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		30787E182989E5C00008631C /* DefaultTextInputFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTextInputFormatter.swift; sourceTree = "<group>"; };
+		30787E192989E5C00008631C /* DefaultTextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTextFormatter.swift; sourceTree = "<group>"; };
+		30787E1B2989E5C00008631C /* DefaultCaretPositionCorrector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCaretPositionCorrector.swift; sourceTree = "<group>"; };
+		30787E1C2989E5C00008631C /* DefaultRangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRangeCalculator.swift; sourceTree = "<group>"; };
+		30787E1F2989E5C00008631C /* SumTextInputFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumTextInputFormatter.swift; sourceTree = "<group>"; };
+		30787E202989E5C00008631C /* SumTextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumTextFormatter.swift; sourceTree = "<group>"; };
+		30787E222989E5C00008631C /* SumTextInputFormatterCaretPositionCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumTextInputFormatterCaretPositionCalculator.swift; sourceTree = "<group>"; };
+		30787E232989E5C00008631C /* SumFormatParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumFormatParser.swift; sourceTree = "<group>"; };
+		30787E262989E5C00008631C /* PlaceholderTextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextFormatter.swift; sourceTree = "<group>"; };
+		30787E272989E5C00008631C /* PlaceholderTextInputFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextInputFormatter.swift; sourceTree = "<group>"; };
+		30787E292989E5C00008631C /* PlaceholderRangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderRangeCalculator.swift; sourceTree = "<group>"; };
+		30787E2A2989E5C00008631C /* PlaceholderCaretPositionCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderCaretPositionCalculator.swift; sourceTree = "<group>"; };
+		30787E2C2989E5C00008631C /* TextNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextNumberFormatter.swift; sourceTree = "<group>"; };
+		30787E2D2989E5C00008631C /* FormattedTextValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattedTextValue.swift; sourceTree = "<group>"; };
+		30787E2E2989E5C00008631C /* TextInputFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputFormatter.swift; sourceTree = "<group>"; };
+		30787E2F2989E5C00008631C /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		30787E302989E5C00008631C /* CaretPositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretPositioner.swift; sourceTree = "<group>"; };
+		30787E312989E5C00008631C /* TextNumberUnformatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextNumberUnformatter.swift; sourceTree = "<group>"; };
+		30787E322989E5C00008631C /* TextUnformatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextUnformatter.swift; sourceTree = "<group>"; };
+		30787E67298A466A0008631C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		30787EC6298BB96A0008631C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		3085D5022989B52B00AEFE32 /* CardDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardDetailViewController.xib; sourceTree = "<group>"; };
+		3085D5092989B55F00AEFE32 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3085D50A2989B55F00AEFE32 /* AKMaskFieldEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldEvent.swift; sourceTree = "<group>"; };
+		3085D50B2989B55F00AEFE32 /* CreditCardFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardFormView.swift; sourceTree = "<group>"; };
+		3085D50C2989B55F00AEFE32 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
+		3085D50D2989B55F00AEFE32 /* AKMaskFieldBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldBlock.swift; sourceTree = "<group>"; };
+		3085D50E2989B55F00AEFE32 /* AKMaskField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskField.swift; sourceTree = "<group>"; };
+		3085D50F2989B55F00AEFE32 /* AKMaskFieldUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldUtility.swift; sourceTree = "<group>"; };
+		3085D5102989B55F00AEFE32 /* CreditCardValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidationType.swift; sourceTree = "<group>"; };
+		3085D5112989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldBlockCharacter.swift; sourceTree = "<group>"; };
+		3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldPatternCharacter.swift; sourceTree = "<group>"; };
+		3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldStatus.swift; sourceTree = "<group>"; };
+		308B683029FEB078000EF281 /* PrepareForDevice.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PrepareForDevice.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3044D89D29827AFB00F81550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3044D8A729827AFB00F81550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3044D8AB29827AFB00F81550 /* ExpressPaySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3044D89629827AFB00F81550 = {
+			isa = PBXGroup;
+			children = (
+				308B683029FEB078000EF281 /* PrepareForDevice.sh */,
+				3044D8A229827AFB00F81550 /* ExpressPaySDK */,
+				3044D8AE29827AFB00F81550 /* ExpressPaySDKTests */,
+				3044D8A129827AFB00F81550 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3044D8A129827AFB00F81550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8A029827AFB00F81550 /* ExpressPaySDK.framework */,
+				3044D8AA29827AFB00F81550 /* ExpressPaySDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3044D8A229827AFB00F81550 /* ExpressPaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				30787EC9298BBF520008631C /* frameworks */,
+				30787E67298A466A0008631C /* Images.xcassets */,
+				3044D8F829827B2A00F81550 /* Core */,
+				3044D8FC29827B2A00F81550 /* Feature */,
+				3044D8BA29827B2900F81550 /* Model */,
+				3044D91729827B2A00F81550 /* Toolbox */,
+				3044D8A329827AFB00F81550 /* ExpressPaySDK.h */,
+				3044D8A429827AFB00F81550 /* ExpressPaySDK.docc */,
+			);
+			path = ExpressPaySDK;
+			sourceTree = "<group>";
+		};
+		3044D8AE29827AFB00F81550 /* ExpressPaySDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8AF29827AFB00F81550 /* ExpressPaySDKTests.swift */,
+			);
+			path = ExpressPaySDKTests;
+			sourceTree = "<group>";
+		};
+		3044D8BA29827B2900F81550 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8BB29827B2900F81550 /* Response */,
+				3044D8DB29827B2A00F81550 /* TestSDK.swift */,
+				3044D8DC29827B2A00F81550 /* API */,
+				3044D8E429827B2A00F81550 /* Request */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3044D8BB29827B2900F81550 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8BC29827B2900F81550 /* Sale */,
+				3044D8C629827B2A00F81550 /* Capture */,
+				3044D8C929827B2A00F81550 /* GetTransactionDetails */,
+				3044D8CD29827B2A00F81550 /* Creditvoid */,
+				3044D8D029827B2A00F81550 /* GetTransactionStatus */,
+				3044D8D329827B2A00F81550 /* Base */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		3044D8BC29827B2900F81550 /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8BD29827B2900F81550 /* ExpressPaySaleRedirectBody.swift */,
+				3044D8BE29827B2900F81550 /* ExpressPaySaleResult.swift */,
+				3044D8BF29827B2900F81550 /* ExpressPaySaleRedirect.swift */,
+				3044D8C029827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift */,
+				3044D8C129827B2A00F81550 /* ExpressPaySaleSuccess.swift */,
+				3044D8C229827B2A00F81550 /* ExpressPaySale3ds.swift */,
+				3044D8C329827B2A00F81550 /* ExpressPaySaleDecline.swift */,
+				3044D8C429827B2A00F81550 /* ExpressPaySaleRedirectParams.swift */,
+				3044D8C529827B2A00F81550 /* ExpressPaySaleRecurring.swift */,
+			);
+			path = Sale;
+			sourceTree = "<group>";
+		};
+		3044D8C629827B2A00F81550 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8C729827B2A00F81550 /* ExpressPayCaptureResult.swift */,
+				3044D8C829827B2A00F81550 /* ExpressPayCaptureSuccess.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		3044D8C929827B2A00F81550 /* GetTransactionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8CA29827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift */,
+				3044D8CB29827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift */,
+				3044D8CC29827B2A00F81550 /* ExpressPayTransaction.swift */,
+			);
+			path = GetTransactionDetails;
+			sourceTree = "<group>";
+		};
+		3044D8CD29827B2A00F81550 /* Creditvoid */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8CE29827B2A00F81550 /* ExpressPayCreditvoidResult.swift */,
+				3044D8CF29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift */,
+			);
+			path = Creditvoid;
+			sourceTree = "<group>";
+		};
+		3044D8D029827B2A00F81550 /* GetTransactionStatus */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8D129827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift */,
+				3044D8D229827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift */,
+			);
+			path = GetTransactionStatus;
+			sourceTree = "<group>";
+		};
+		3044D8D329827B2A00F81550 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8D429827B2A00F81550 /* Result */,
+				3044D8D829827B2A00F81550 /* Error */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3044D8D429827B2A00F81550 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8D529827B2A00F81550 /* ExpressPayResultProtocol.swift */,
+				3044D8D629827B2A00F81550 /* OrderExpressPayResult.swift */,
+				3044D8D729827B2A00F81550 /* DetailsExpressPayResultProtocol.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		3044D8D829827B2A00F81550 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8D929827B2A00F81550 /* ExpressPayError.swift */,
+				3044D8DA29827B2A00F81550 /* ExpressPayExactError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		3044D8DC29827B2A00F81550 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8DD29827B2A00F81550 /* ExpressPayTransactionType.swift */,
+				3044D8DE29827B2A00F81550 /* ExpressPayStatus.swift */,
+				3044D8DF29827B2A00F81550 /* ExpressPayAction.swift */,
+				3044D8E029827B2A00F81550 /* ExpressPayResult.swift */,
+				3044D8E129827B2A00F81550 /* ExpressPayRedirectMethod.swift */,
+				3044D8E229827B2A00F81550 /* ExpressPayOption.swift */,
+				3044D8E329827B2A00F81550 /* ExpressPayTransactionStatus.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3044D8E429827B2A00F81550 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8E529827B2A00F81550 /* Order */,
+				3044D8E929827B2A00F81550 /* Options */,
+				3044D8EC29827B2A00F81550 /* Card */,
+				3044D8F029827B2A00F81550 /* Payer */,
+				3044D8F429827B2A00F81550 /* VirtualPurchase */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		3044D8E529827B2A00F81550 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8E629827B2A00F81550 /* ExpressPayOrder.swift */,
+				3044D8E729827B2A00F81550 /* ExpressPaySaleOrder.swift */,
+				3044D8E829827B2A00F81550 /* ExpressPayOrderProtocol.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		3044D8E929827B2A00F81550 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8EA29827B2A00F81550 /* ExpressPayRecurringOptions.swift */,
+				3044D8EB29827B2A00F81550 /* ExpressPaySaleOptions.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		3044D8EC29827B2A00F81550 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8ED29827B2A00F81550 /* ExpressPayCardFormatter.swift */,
+				3044D8EE29827B2A00F81550 /* ExpressPayCard.swift */,
+				3044D8EF29827B2A00F81550 /* ExpressPayTestCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		3044D8F029827B2A00F81550 /* Payer */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8F129827B2A00F81550 /* ExpressPayPayer.swift */,
+				3044D8F229827B2A00F81550 /* ExpressPayPayerOptions.swift */,
+				3044D8F329827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift */,
+			);
+			path = Payer;
+			sourceTree = "<group>";
+		};
+		3044D8F429827B2A00F81550 /* VirtualPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8F529827B2A00F81550 /* DeviceDetail.swift */,
+				3044D8F629827B2A00F81550 /* VirtualPurchaseSession.swift */,
+				3044D8F729827B2A00F81550 /* ApplePayVirtualPurchase.swift */,
+			);
+			path = VirtualPurchase;
+			sourceTree = "<group>";
+		};
+		3044D8F829827B2A00F81550 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8F929827B2A00F81550 /* ExpressPayAdapterFactory.swift */,
+				3044D8FA29827B2A00F81550 /* ExpressPayCredential.swift */,
+				3044D8FB29827B2A00F81550 /* ExpressPaySDK.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3044D8FC29827B2A00F81550 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				30783A2A2990F0130089D34E /* PublicIP */,
+				3085D4E32989B36500AEFE32 /* Views */,
+				3044D8FD29827B2A00F81550 /* Adapter */,
+				3044D90629827B2A00F81550 /* Service */,
+				3044D90D29827B2A00F81550 /* Deserealizer */,
+				3044D91329827B2A00F81550 /* Helpers */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		3044D8FD29827B2A00F81550 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				3044D8FE29827B2A00F81550 /* ExpressPayCallback.swift */,
+				3044D8FF29827B2A00F81550 /* ExpressPayBaseAdapter.swift */,
+				3044D90029827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift */,
+				3044D90129827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift */,
+				3044D90229827B2A00F81550 /* ExpressPayCaptureAdapter.swift */,
+				3044D90329827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift */,
+				3044D90429827B2A00F81550 /* ExpressPaySaleAdapter.swift */,
+				3044D90529827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		3044D90629827B2A00F81550 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3044D90729827B2A00F81550 /* ExpressPaySaleService.swift */,
+				3044D90829827B2A00F81550 /* ExpressPayCreditvoidService.swift */,
+				3044D90929827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift */,
+				3044D90A29827B2A00F81550 /* ExpressPayCaptureService.swift */,
+				3044D90B29827B2A00F81550 /* ExpressPayRecurringSaleService.swift */,
+				3044D90C29827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3044D90D29827B2A00F81550 /* Deserealizer */ = {
+			isa = PBXGroup;
+			children = (
+				3044D90E29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift */,
+				3044D90F29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift */,
+				3044D91029827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift */,
+				3044D91129827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift */,
+				3044D91229827B2A00F81550 /* ExpressPaySaleDeserializer.swift */,
+			);
+			path = Deserealizer;
+			sourceTree = "<group>";
+		};
+		3044D91329827B2A00F81550 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3044D91429827B2A00F81550 /* ExpressApplePay.swift */,
+				30787EC6298BB96A0008631C /* Extensions.swift */,
+				3044D91529827B2A00F81550 /* SaleRedirectionView.swift */,
+				3044D91629827B2A00F81550 /* UserAgent.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3044D91729827B2A00F81550 /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				3044D91829827B2A00F81550 /* ExpressPayDateFormatter.swift */,
+				3044D91929827B2A00F81550 /* ApiClient */,
+				3044D91C29827B2A00F81550 /* ExpressPayExtensions.swift */,
+				3044D91D29827B2A00F81550 /* ExpressPayAmountFormatter.swift */,
+				3044D91E29827B2A00F81550 /* ExpressPayHashUtil.swift */,
+			);
+			path = Toolbox;
+			sourceTree = "<group>";
+		};
+		3044D91929827B2A00F81550 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				3044D91A29827B2A00F81550 /* XWWWFormUrlEncodable.swift */,
+				3044D91B29827B2A00F81550 /* ExpressPayRestApiClient.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		30783A2A2990F0130089D34E /* PublicIP */ = {
+			isa = PBXGroup;
+			children = (
+				30783A2B2990F0130089D34E /* PublicIPAPIURLs.swift */,
+				30783A2C2990F0130089D34E /* PublicIPAPI.swift */,
+				30783A2D2990F0130089D34E /* SwiftPublicIP.swift */,
+			);
+			path = PublicIP;
+			sourceTree = "<group>";
+		};
+		30787DF42989E4BA0008631C /* TextFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				30787E0A2989E5C00008631C /* Controllers */,
+				30787E112989E5C00008631C /* Extensions */,
+				30787E152989E5C00008631C /* TextFormatter */,
+			);
+			path = TextFormatter;
+			sourceTree = "<group>";
+		};
+		30787E0A2989E5C00008631C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30787E0B2989E5C00008631C /* TextViewControllers */,
+				30787E0E2989E5C00008631C /* TextFieldControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		30787E0B2989E5C00008631C /* TextViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30787E0C2989E5C00008631C /* TextViewInputController.swift */,
+				30787E0D2989E5C00008631C /* TextViewStartInputController.swift */,
+			);
+			path = TextViewControllers;
+			sourceTree = "<group>";
+		};
+		30787E0E2989E5C00008631C /* TextFieldControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30787E0F2989E5C00008631C /* TextFieldStartInputController.swift */,
+				30787E102989E5C00008631C /* TextFieldInputController.swift */,
+			);
+			path = TextFieldControllers;
+			sourceTree = "<group>";
+		};
+		30787E112989E5C00008631C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30787E122989E5C00008631C /* String+Extension.swift */,
+				30787E132989E5C00008631C /* UITextView+Extension.swift */,
+				30787E142989E5C00008631C /* UITextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30787E152989E5C00008631C /* TextFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				30787E162989E5C00008631C /* DefaultFormatters */,
+				30787E1D2989E5C00008631C /* SumFormatters */,
+				30787E242989E5C00008631C /* PlaceholderFormatters */,
+				30787E2B2989E5C00008631C /* TextFormatter */,
+			);
+			path = TextFormatter;
+			sourceTree = "<group>";
+		};
+		30787E162989E5C00008631C /* DefaultFormatters */ = {
+			isa = PBXGroup;
+			children = (
+				30787E172989E5C00008631C /* Formatters */,
+				30787E1A2989E5C00008631C /* Helpers */,
+			);
+			path = DefaultFormatters;
+			sourceTree = "<group>";
+		};
+		30787E172989E5C00008631C /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				30787E182989E5C00008631C /* DefaultTextInputFormatter.swift */,
+				30787E192989E5C00008631C /* DefaultTextFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		30787E1A2989E5C00008631C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30787E1B2989E5C00008631C /* DefaultCaretPositionCorrector.swift */,
+				30787E1C2989E5C00008631C /* DefaultRangeCalculator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30787E1D2989E5C00008631C /* SumFormatters */ = {
+			isa = PBXGroup;
+			children = (
+				30787E1E2989E5C00008631C /* Formatters */,
+				30787E212989E5C00008631C /* Helpers */,
+			);
+			path = SumFormatters;
+			sourceTree = "<group>";
+		};
+		30787E1E2989E5C00008631C /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				30787E1F2989E5C00008631C /* SumTextInputFormatter.swift */,
+				30787E202989E5C00008631C /* SumTextFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		30787E212989E5C00008631C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30787E222989E5C00008631C /* SumTextInputFormatterCaretPositionCalculator.swift */,
+				30787E232989E5C00008631C /* SumFormatParser.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30787E242989E5C00008631C /* PlaceholderFormatters */ = {
+			isa = PBXGroup;
+			children = (
+				30787E252989E5C00008631C /* Formatters */,
+				30787E282989E5C00008631C /* Helpers */,
+			);
+			path = PlaceholderFormatters;
+			sourceTree = "<group>";
+		};
+		30787E252989E5C00008631C /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				30787E262989E5C00008631C /* PlaceholderTextFormatter.swift */,
+				30787E272989E5C00008631C /* PlaceholderTextInputFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		30787E282989E5C00008631C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30787E292989E5C00008631C /* PlaceholderRangeCalculator.swift */,
+				30787E2A2989E5C00008631C /* PlaceholderCaretPositionCalculator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30787E2B2989E5C00008631C /* TextFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				30787E2C2989E5C00008631C /* TextNumberFormatter.swift */,
+				30787E2D2989E5C00008631C /* FormattedTextValue.swift */,
+				30787E2E2989E5C00008631C /* TextInputFormatter.swift */,
+				30787E2F2989E5C00008631C /* TextFormatter.swift */,
+				30787E302989E5C00008631C /* CaretPositioner.swift */,
+				30787E312989E5C00008631C /* TextNumberUnformatter.swift */,
+				30787E322989E5C00008631C /* TextUnformatter.swift */,
+			);
+			path = TextFormatter;
+			sourceTree = "<group>";
+		};
+		30787EC9298BBF520008631C /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		3085D4E32989B36500AEFE32 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3085D4E42989B36500AEFE32 /* CardDetailView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3085D4E42989B36500AEFE32 /* CardDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				3085D5072989B55F00AEFE32 /* CreditCardForm */,
+				3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */,
+				3085D5022989B52B00AEFE32 /* CardDetailViewController.xib */,
+			);
+			path = CardDetailView;
+			sourceTree = "<group>";
+		};
+		3085D5072989B55F00AEFE32 /* CreditCardForm */ = {
+			isa = PBXGroup;
+			children = (
+				30787DF42989E4BA0008631C /* TextFormatter */,
+				3085D5082989B55F00AEFE32 /* Classes */,
+			);
+			path = CreditCardForm;
+			sourceTree = "<group>";
+		};
+		3085D5082989B55F00AEFE32 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3085D5092989B55F00AEFE32 /* Utilities.swift */,
+				3085D50A2989B55F00AEFE32 /* AKMaskFieldEvent.swift */,
+				3085D50B2989B55F00AEFE32 /* CreditCardFormView.swift */,
+				3085D50C2989B55F00AEFE32 /* CreditCardValidator.swift */,
+				3085D50D2989B55F00AEFE32 /* AKMaskFieldBlock.swift */,
+				3085D50E2989B55F00AEFE32 /* AKMaskField.swift */,
+				3085D50F2989B55F00AEFE32 /* AKMaskFieldUtility.swift */,
+				3085D5102989B55F00AEFE32 /* CreditCardValidationType.swift */,
+				3085D5112989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift */,
+				3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */,
+				3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3044D89B29827AFB00F81550 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3044D8B129827AFB00F81550 /* ExpressPaySDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3044D89F29827AFB00F81550 /* ExpressPaySDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3044D8B429827AFB00F81550 /* Build configuration list for PBXNativeTarget "ExpressPaySDK" */;
+			buildPhases = (
+				3044D89B29827AFB00F81550 /* Headers */,
+				3044D89C29827AFB00F81550 /* Sources */,
+				3044D89D29827AFB00F81550 /* Frameworks */,
+				3044D89E29827AFB00F81550 /* Resources */,
+				3085D53C2989CF6E00AEFE32 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpressPaySDK;
+			productName = ExpressPaySDK;
+			productReference = 3044D8A029827AFB00F81550 /* ExpressPaySDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3044D8A929827AFB00F81550 /* ExpressPaySDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3044D8B729827AFB00F81550 /* Build configuration list for PBXNativeTarget "ExpressPaySDKTests" */;
+			buildPhases = (
+				3044D8A629827AFB00F81550 /* Sources */,
+				3044D8A729827AFB00F81550 /* Frameworks */,
+				3044D8A829827AFB00F81550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3044D8AD29827AFB00F81550 /* PBXTargetDependency */,
+			);
+			name = ExpressPaySDKTests;
+			productName = ExpressPaySDKTests;
+			productReference = 3044D8AA29827AFB00F81550 /* ExpressPaySDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3044D89729827AFB00F81550 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					3044D89F29827AFB00F81550 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+					3044D8A929827AFB00F81550 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+				};
+			};
+			buildConfigurationList = 3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "ExpressPaySDK" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3044D89629827AFB00F81550;
+			productRefGroup = 3044D8A129827AFB00F81550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3044D89F29827AFB00F81550 /* ExpressPaySDK */,
+				3044D8A929827AFB00F81550 /* ExpressPaySDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3044D89E29827AFB00F81550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
+				308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */,
+				30787E68298A466A0008631C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3044D8A829827AFB00F81550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3085D5062989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
+				30787E69298A466A0008631C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3044D89C29827AFB00F81550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3044D94B29827B2A00F81550 /* ExpressPayExactError.swift in Sources */,
+				3044D98329827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift in Sources */,
+				3044D92729827B2A00F81550 /* ExpressPaySaleSuccess.swift in Sources */,
+				3044D95129827B2A00F81550 /* ExpressPayStatus.swift in Sources */,
+				30787E372989E5C10008631C /* TextFieldStartInputController.swift in Sources */,
+				3044D94529827B2A00F81550 /* OrderExpressPayResult.swift in Sources */,
+				30787E652989E5C10008631C /* TextUnformatter.swift in Sources */,
+				30787EC7298BB96A0008631C /* Extensions.swift in Sources */,
+				3044D97B29827B2A00F81550 /* ExpressPayCredential.swift in Sources */,
+				30787E3B2989E5C10008631C /* String+Extension.swift in Sources */,
+				3044D97329827B2A00F81550 /* DeviceDetail.swift in Sources */,
+				30787E5F2989E5C10008631C /* TextFormatter.swift in Sources */,
+				3085D5202989B55F00AEFE32 /* AKMaskFieldUtility.swift in Sources */,
+				3044D92129827B2A00F81550 /* ExpressPaySaleResult.swift in Sources */,
+				3085D5262989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift in Sources */,
+				3044D99729827B2A00F81550 /* ExpressPayRecurringSaleService.swift in Sources */,
+				3085D5142989B55F00AEFE32 /* Utilities.swift in Sources */,
+				3044D9AF29827B2A00F81550 /* ExpressPayRestApiClient.swift in Sources */,
+				3044D9AD29827B2A00F81550 /* XWWWFormUrlEncodable.swift in Sources */,
+				3044D93F29827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift in Sources */,
+				3044D96529827B2A00F81550 /* ExpressPaySaleOptions.swift in Sources */,
+				3085D5032989B52B00AEFE32 /* CardDetailViewController.swift in Sources */,
+				3085D5162989B55F00AEFE32 /* AKMaskFieldEvent.swift in Sources */,
+				30783A302990F0130089D34E /* SwiftPublicIP.swift in Sources */,
+				3044D98929827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift in Sources */,
+				3044D91F29827B2A00F81550 /* ExpressPaySaleRedirectBody.swift in Sources */,
+				3044D96729827B2A00F81550 /* ExpressPayCardFormatter.swift in Sources */,
+				3044D93929827B2A00F81550 /* ExpressPayTransaction.swift in Sources */,
+				3044D92B29827B2A00F81550 /* ExpressPaySaleDecline.swift in Sources */,
+				30783A2F2990F0130089D34E /* PublicIPAPI.swift in Sources */,
+				3044D92D29827B2A00F81550 /* ExpressPaySaleRedirectParams.swift in Sources */,
+				30787E5D2989E5C10008631C /* TextInputFormatter.swift in Sources */,
+				3044D97529827B2A00F81550 /* VirtualPurchaseSession.swift in Sources */,
+				3044D93B29827B2A00F81550 /* ExpressPayCreditvoidResult.swift in Sources */,
+				30787E3D2989E5C10008631C /* UITextView+Extension.swift in Sources */,
+				30787E3F2989E5C10008631C /* UITextField+Extension.swift in Sources */,
+				30787E352989E5C10008631C /* TextViewStartInputController.swift in Sources */,
+				30787E472989E5C10008631C /* DefaultRangeCalculator.swift in Sources */,
+				3044D92529827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift in Sources */,
+				3044D95929827B2A00F81550 /* ExpressPayOption.swift in Sources */,
+				3044D93329827B2A00F81550 /* ExpressPayCaptureSuccess.swift in Sources */,
+				3044D9A329827B2A00F81550 /* ExpressPaySaleDeserializer.swift in Sources */,
+				3044D95B29827B2A00F81550 /* ExpressPayTransactionStatus.swift in Sources */,
+				30787E392989E5C10008631C /* TextFieldInputController.swift in Sources */,
+				3044D97D29827B2A00F81550 /* ExpressPaySDK.swift in Sources */,
+				3044D9B529827B2A00F81550 /* ExpressPayHashUtil.swift in Sources */,
+				3085D5282989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */,
+				3085D51A2989B55F00AEFE32 /* CreditCardValidator.swift in Sources */,
+				3085D51E2989B55F00AEFE32 /* AKMaskField.swift in Sources */,
+				30787E4F2989E5C10008631C /* SumFormatParser.swift in Sources */,
+				3044D99929827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift in Sources */,
+				3085D5242989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift in Sources */,
+				3044D96B29827B2A00F81550 /* ExpressPayTestCard.swift in Sources */,
+				3044D98B29827B2A00F81550 /* ExpressPaySaleAdapter.swift in Sources */,
+				3044D94F29827B2A00F81550 /* ExpressPayTransactionType.swift in Sources */,
+				30787E432989E5C10008631C /* DefaultTextFormatter.swift in Sources */,
+				3044D94929827B2A00F81550 /* ExpressPayError.swift in Sources */,
+				30787E512989E5C10008631C /* PlaceholderTextFormatter.swift in Sources */,
+				3044D9AB29827B2A00F81550 /* ExpressPayDateFormatter.swift in Sources */,
+				3044D97729827B2A00F81550 /* ApplePayVirtualPurchase.swift in Sources */,
+				3044D95D29827B2A00F81550 /* ExpressPayOrder.swift in Sources */,
+				30787E572989E5C10008631C /* PlaceholderCaretPositionCalculator.swift in Sources */,
+				30787E592989E5C10008631C /* TextNumberFormatter.swift in Sources */,
+				30787E5B2989E5C10008631C /* FormattedTextValue.swift in Sources */,
+				3085D5182989B55F00AEFE32 /* CreditCardFormView.swift in Sources */,
+				3044D99F29827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift in Sources */,
+				3044D95329827B2A00F81550 /* ExpressPayAction.swift in Sources */,
+				3044D97929827B2A00F81550 /* ExpressPayAdapterFactory.swift in Sources */,
+				30787E4B2989E5C10008631C /* SumTextFormatter.swift in Sources */,
+				30783A2E2990F0130089D34E /* PublicIPAPIURLs.swift in Sources */,
+				3044D9B329827B2A00F81550 /* ExpressPayAmountFormatter.swift in Sources */,
+				30787E412989E5C10008631C /* DefaultTextInputFormatter.swift in Sources */,
+				3044D94729827B2A00F81550 /* DetailsExpressPayResultProtocol.swift in Sources */,
+				3044D98729827B2A00F81550 /* ExpressPayCaptureAdapter.swift in Sources */,
+				3044D93D29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift in Sources */,
+				3044D93729827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift in Sources */,
+				3044D9A929827B2A00F81550 /* UserAgent.swift in Sources */,
+				3044D92F29827B2A00F81550 /* ExpressPaySaleRecurring.swift in Sources */,
+				30787E532989E5C10008631C /* PlaceholderTextInputFormatter.swift in Sources */,
+				3044D98D29827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift in Sources */,
+				3044D94129827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift in Sources */,
+				30787E492989E5C10008631C /* SumTextInputFormatter.swift in Sources */,
+				3044D94329827B2A00F81550 /* ExpressPayResultProtocol.swift in Sources */,
+				3044D98529827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift in Sources */,
+				3044D92929827B2A00F81550 /* ExpressPaySale3ds.swift in Sources */,
+				3044D97129827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift in Sources */,
+				3044D99D29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift in Sources */,
+				3044D99B29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift in Sources */,
+				3085D5222989B55F00AEFE32 /* CreditCardValidationType.swift in Sources */,
+				3044D92329827B2A00F81550 /* ExpressPaySaleRedirect.swift in Sources */,
+				30787E632989E5C10008631C /* TextNumberUnformatter.swift in Sources */,
+				3085D51C2989B55F00AEFE32 /* AKMaskFieldBlock.swift in Sources */,
+				3044D96F29827B2A00F81550 /* ExpressPayPayerOptions.swift in Sources */,
+				3044D99129827B2A00F81550 /* ExpressPayCreditvoidService.swift in Sources */,
+				3044D94D29827B2A00F81550 /* TestSDK.swift in Sources */,
+				30787E332989E5C10008631C /* TextViewInputController.swift in Sources */,
+				3044D96329827B2A00F81550 /* ExpressPayRecurringOptions.swift in Sources */,
+				30787E612989E5C10008631C /* CaretPositioner.swift in Sources */,
+				30787E4D2989E5C10008631C /* SumTextInputFormatterCaretPositionCalculator.swift in Sources */,
+				3044D93129827B2A00F81550 /* ExpressPayCaptureResult.swift in Sources */,
+				3044D95729827B2A00F81550 /* ExpressPayRedirectMethod.swift in Sources */,
+				30787E552989E5C10008631C /* PlaceholderRangeCalculator.swift in Sources */,
+				3044D8A529827AFB00F81550 /* ExpressPaySDK.docc in Sources */,
+				3044D96129827B2A00F81550 /* ExpressPayOrderProtocol.swift in Sources */,
+				3044D9B129827B2A00F81550 /* ExpressPayExtensions.swift in Sources */,
+				30787E452989E5C10008631C /* DefaultCaretPositionCorrector.swift in Sources */,
+				3044D95529827B2A00F81550 /* ExpressPayResult.swift in Sources */,
+				3044D9A729827B2A00F81550 /* SaleRedirectionView.swift in Sources */,
+				3044D99529827B2A00F81550 /* ExpressPayCaptureService.swift in Sources */,
+				3044D93529827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift in Sources */,
+				3044D98F29827B2A00F81550 /* ExpressPaySaleService.swift in Sources */,
+				3044D97F29827B2A00F81550 /* ExpressPayCallback.swift in Sources */,
+				3044D98129827B2A00F81550 /* ExpressPayBaseAdapter.swift in Sources */,
+				3044D99329827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift in Sources */,
+				3044D9A129827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift in Sources */,
+				3044D9A529827B2A00F81550 /* ExpressApplePay.swift in Sources */,
+				3044D95F29827B2A00F81550 /* ExpressPaySaleOrder.swift in Sources */,
+				3044D96D29827B2A00F81550 /* ExpressPayPayer.swift in Sources */,
+				3044D96929827B2A00F81550 /* ExpressPayCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3044D8A629827AFB00F81550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3044D94C29827B2A00F81550 /* ExpressPayExactError.swift in Sources */,
+				3044D98429827B2A00F81550 /* ExpressPayGetTransactionStatusAdapter.swift in Sources */,
+				3044D92829827B2A00F81550 /* ExpressPaySaleSuccess.swift in Sources */,
+				3044D95229827B2A00F81550 /* ExpressPayStatus.swift in Sources */,
+				30787E382989E5C10008631C /* TextFieldStartInputController.swift in Sources */,
+				3044D94629827B2A00F81550 /* OrderExpressPayResult.swift in Sources */,
+				30787E662989E5C10008631C /* TextUnformatter.swift in Sources */,
+				3044D97C29827B2A00F81550 /* ExpressPayCredential.swift in Sources */,
+				30787E3C2989E5C10008631C /* String+Extension.swift in Sources */,
+				3044D97429827B2A00F81550 /* DeviceDetail.swift in Sources */,
+				30787E602989E5C10008631C /* TextFormatter.swift in Sources */,
+				3085D5212989B55F00AEFE32 /* AKMaskFieldUtility.swift in Sources */,
+				3044D92229827B2A00F81550 /* ExpressPaySaleResult.swift in Sources */,
+				3085D5272989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift in Sources */,
+				3044D99829827B2A00F81550 /* ExpressPayRecurringSaleService.swift in Sources */,
+				3085D5152989B55F00AEFE32 /* Utilities.swift in Sources */,
+				3044D9B029827B2A00F81550 /* ExpressPayRestApiClient.swift in Sources */,
+				3044D9AE29827B2A00F81550 /* XWWWFormUrlEncodable.swift in Sources */,
+				3044D94029827B2A00F81550 /* ExpressPayGetTransactionStatusResult.swift in Sources */,
+				3044D96629827B2A00F81550 /* ExpressPaySaleOptions.swift in Sources */,
+				3085D5042989B52B00AEFE32 /* CardDetailViewController.swift in Sources */,
+				3085D5172989B55F00AEFE32 /* AKMaskFieldEvent.swift in Sources */,
+				3044D98A29827B2A00F81550 /* ExpressPayGetTransactionDetailsAdapter.swift in Sources */,
+				3044D92029827B2A00F81550 /* ExpressPaySaleRedirectBody.swift in Sources */,
+				3044D96829827B2A00F81550 /* ExpressPayCardFormatter.swift in Sources */,
+				3044D93A29827B2A00F81550 /* ExpressPayTransaction.swift in Sources */,
+				3044D92C29827B2A00F81550 /* ExpressPaySaleDecline.swift in Sources */,
+				3044D92E29827B2A00F81550 /* ExpressPaySaleRedirectParams.swift in Sources */,
+				30787E5E2989E5C10008631C /* TextInputFormatter.swift in Sources */,
+				3044D97629827B2A00F81550 /* VirtualPurchaseSession.swift in Sources */,
+				3044D93C29827B2A00F81550 /* ExpressPayCreditvoidResult.swift in Sources */,
+				30787E3E2989E5C10008631C /* UITextView+Extension.swift in Sources */,
+				30787E402989E5C10008631C /* UITextField+Extension.swift in Sources */,
+				30787E362989E5C10008631C /* TextViewStartInputController.swift in Sources */,
+				30787E482989E5C10008631C /* DefaultRangeCalculator.swift in Sources */,
+				3044D92629827B2A00F81550 /* ExpressPaySaleRedirectionBody.swift in Sources */,
+				3044D95A29827B2A00F81550 /* ExpressPayOption.swift in Sources */,
+				3044D93429827B2A00F81550 /* ExpressPayCaptureSuccess.swift in Sources */,
+				3044D9A429827B2A00F81550 /* ExpressPaySaleDeserializer.swift in Sources */,
+				3044D95C29827B2A00F81550 /* ExpressPayTransactionStatus.swift in Sources */,
+				30787E3A2989E5C10008631C /* TextFieldInputController.swift in Sources */,
+				3044D97E29827B2A00F81550 /* ExpressPaySDK.swift in Sources */,
+				3044D9B629827B2A00F81550 /* ExpressPayHashUtil.swift in Sources */,
+				3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */,
+				3085D51B2989B55F00AEFE32 /* CreditCardValidator.swift in Sources */,
+				3085D51F2989B55F00AEFE32 /* AKMaskField.swift in Sources */,
+				30787E502989E5C10008631C /* SumFormatParser.swift in Sources */,
+				3044D99A29827B2A00F81550 /* ExpressPayGetTransactionStatusService.swift in Sources */,
+				3085D5252989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift in Sources */,
+				3044D96C29827B2A00F81550 /* ExpressPayTestCard.swift in Sources */,
+				3044D98C29827B2A00F81550 /* ExpressPaySaleAdapter.swift in Sources */,
+				3044D95029827B2A00F81550 /* ExpressPayTransactionType.swift in Sources */,
+				30787E442989E5C10008631C /* DefaultTextFormatter.swift in Sources */,
+				3044D94A29827B2A00F81550 /* ExpressPayError.swift in Sources */,
+				30787E522989E5C10008631C /* PlaceholderTextFormatter.swift in Sources */,
+				3044D9AC29827B2A00F81550 /* ExpressPayDateFormatter.swift in Sources */,
+				3044D97829827B2A00F81550 /* ApplePayVirtualPurchase.swift in Sources */,
+				3044D95E29827B2A00F81550 /* ExpressPayOrder.swift in Sources */,
+				30787E582989E5C10008631C /* PlaceholderCaretPositionCalculator.swift in Sources */,
+				30787E5A2989E5C10008631C /* TextNumberFormatter.swift in Sources */,
+				30787E5C2989E5C10008631C /* FormattedTextValue.swift in Sources */,
+				3085D5192989B55F00AEFE32 /* CreditCardFormView.swift in Sources */,
+				3044D9A029827B2A00F81550 /* ExpressPayGetTransactionDetailsDeserializer.swift in Sources */,
+				3044D95429827B2A00F81550 /* ExpressPayAction.swift in Sources */,
+				3044D97A29827B2A00F81550 /* ExpressPayAdapterFactory.swift in Sources */,
+				30787E4C2989E5C10008631C /* SumTextFormatter.swift in Sources */,
+				3044D9B429827B2A00F81550 /* ExpressPayAmountFormatter.swift in Sources */,
+				30787E422989E5C10008631C /* DefaultTextInputFormatter.swift in Sources */,
+				3044D94829827B2A00F81550 /* DetailsExpressPayResultProtocol.swift in Sources */,
+				3044D98829827B2A00F81550 /* ExpressPayCaptureAdapter.swift in Sources */,
+				3044D93E29827B2A00F81550 /* ExpressPayCreditvoidSuccess.swift in Sources */,
+				3044D93829827B2A00F81550 /* ExpressPayGetTransactionDetailsResult.swift in Sources */,
+				3044D9AA29827B2A00F81550 /* UserAgent.swift in Sources */,
+				3044D93029827B2A00F81550 /* ExpressPaySaleRecurring.swift in Sources */,
+				30787E542989E5C10008631C /* PlaceholderTextInputFormatter.swift in Sources */,
+				3044D98E29827B2A00F81550 /* ExpressPayCreditvoidAdapter.swift in Sources */,
+				3044D94229827B2A00F81550 /* ExpressPayGetTransactionStatusSuccess.swift in Sources */,
+				30787E4A2989E5C10008631C /* SumTextInputFormatter.swift in Sources */,
+				3044D94429827B2A00F81550 /* ExpressPayResultProtocol.swift in Sources */,
+				3044D98629827B2A00F81550 /* ExpressPayRecurringSaleAdapter.swift in Sources */,
+				3044D92A29827B2A00F81550 /* ExpressPaySale3ds.swift in Sources */,
+				3044D97229827B2A00F81550 /* ExpressPayPayerOptionsFormatter.swift in Sources */,
+				3044D99E29827B2A00F81550 /* ExpressPayCaptureDeserializer.swift in Sources */,
+				3044D99C29827B2A00F81550 /* ExpressPayGetTransactionStatusDeserializer.swift in Sources */,
+				3085D5232989B55F00AEFE32 /* CreditCardValidationType.swift in Sources */,
+				3044D92429827B2A00F81550 /* ExpressPaySaleRedirect.swift in Sources */,
+				30787E642989E5C10008631C /* TextNumberUnformatter.swift in Sources */,
+				3085D51D2989B55F00AEFE32 /* AKMaskFieldBlock.swift in Sources */,
+				3044D97029827B2A00F81550 /* ExpressPayPayerOptions.swift in Sources */,
+				3044D99229827B2A00F81550 /* ExpressPayCreditvoidService.swift in Sources */,
+				3044D94E29827B2A00F81550 /* TestSDK.swift in Sources */,
+				30787E342989E5C10008631C /* TextViewInputController.swift in Sources */,
+				3044D96429827B2A00F81550 /* ExpressPayRecurringOptions.swift in Sources */,
+				30787E622989E5C10008631C /* CaretPositioner.swift in Sources */,
+				30787E4E2989E5C10008631C /* SumTextInputFormatterCaretPositionCalculator.swift in Sources */,
+				3044D93229827B2A00F81550 /* ExpressPayCaptureResult.swift in Sources */,
+				3044D95829827B2A00F81550 /* ExpressPayRedirectMethod.swift in Sources */,
+				30787E562989E5C10008631C /* PlaceholderRangeCalculator.swift in Sources */,
+				3044D8B029827AFB00F81550 /* ExpressPaySDKTests.swift in Sources */,
+				3044D96229827B2A00F81550 /* ExpressPayOrderProtocol.swift in Sources */,
+				3044D9B229827B2A00F81550 /* ExpressPayExtensions.swift in Sources */,
+				30787E462989E5C10008631C /* DefaultCaretPositionCorrector.swift in Sources */,
+				3044D95629827B2A00F81550 /* ExpressPayResult.swift in Sources */,
+				3044D9A829827B2A00F81550 /* SaleRedirectionView.swift in Sources */,
+				3044D99629827B2A00F81550 /* ExpressPayCaptureService.swift in Sources */,
+				3044D93629827B2A00F81550 /* ExpressPayGetTransactionDetailsSuccess.swift in Sources */,
+				3044D99029827B2A00F81550 /* ExpressPaySaleService.swift in Sources */,
+				3044D98029827B2A00F81550 /* ExpressPayCallback.swift in Sources */,
+				3044D98229827B2A00F81550 /* ExpressPayBaseAdapter.swift in Sources */,
+				3044D99429827B2A00F81550 /* ExpressPayGetTransactionDetailsService.swift in Sources */,
+				3044D9A229827B2A00F81550 /* ExpressPayCreditvoidDeserializer.swift in Sources */,
+				3044D9A629827B2A00F81550 /* ExpressApplePay.swift in Sources */,
+				3044D96029827B2A00F81550 /* ExpressPaySaleOrder.swift in Sources */,
+				3044D96E29827B2A00F81550 /* ExpressPayPayer.swift in Sources */,
+				3044D96A29827B2A00F81550 /* ExpressPayCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3044D8AD29827AFB00F81550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3044D89F29827AFB00F81550 /* ExpressPaySDK */;
+			targetProxy = 3044D8AC29827AFB00F81550 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3044D8B229827AFB00F81550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.0.5;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 0.0.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3044D8B329827AFB00F81550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.0.5;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 0.0.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3044D8B529827AFB00F81550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.5;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2H7JEC8468;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExpressPaySDK",
+					"$(PROJECT_DIR)/ExpressPaySDK/frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.5;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.expresspay.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3044D8B629827AFB00F81550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.0.5;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2H7JEC8468;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExpressPaySDK",
+					"$(PROJECT_DIR)/ExpressPaySDK/frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.expresspay.sdk;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3044D8B829827AFB00F81550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H7JEC8468;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExpressPaySDK",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.expresspay.sdk.ExpressPaySDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpressPaySDK/Feature/Views/CardDetailView/CreditCardForm/STPPaymentCardTextField/ExpressPaySDKTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3044D8B929827AFB00F81550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2H7JEC8468;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExpressPaySDK",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.expresspay.sdk.ExpressPaySDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpressPaySDK/Feature/Views/CardDetailView/CreditCardForm/STPPaymentCardTextField/ExpressPaySDKTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "ExpressPaySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3044D8B229827AFB00F81550 /* Debug */,
+				3044D8B329827AFB00F81550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3044D8B429827AFB00F81550 /* Build configuration list for PBXNativeTarget "ExpressPaySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3044D8B529827AFB00F81550 /* Debug */,
+				3044D8B629827AFB00F81550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3044D8B729827AFB00F81550 /* Build configuration list for PBXNativeTarget "ExpressPaySDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3044D8B829827AFB00F81550 /* Debug */,
+				3044D8B929827AFB00F81550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3044D89729827AFB00F81550 /* Project object */;
+}
