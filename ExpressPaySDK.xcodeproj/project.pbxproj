@@ -218,8 +218,6 @@
 		30787E642989E5C10008631C /* TextNumberUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E312989E5C00008631C /* TextNumberUnformatter.swift */; };
 		30787E652989E5C10008631C /* TextUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E322989E5C00008631C /* TextUnformatter.swift */; };
 		30787E662989E5C10008631C /* TextUnformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787E322989E5C00008631C /* TextUnformatter.swift */; };
-		30787E68298A466A0008631C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30787E67298A466A0008631C /* Images.xcassets */; };
-		30787E69298A466A0008631C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30787E67298A466A0008631C /* Images.xcassets */; };
 		30787EC7298BB96A0008631C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30787EC6298BB96A0008631C /* Extensions.swift */; };
 		3085D5032989B52B00AEFE32 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */; };
 		3085D5042989B52B00AEFE32 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */; };
@@ -248,6 +246,7 @@
 		3085D5282989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */ = {isa = PBXBuildFile; fileRef = 308B683029FEB078000EF281 /* PrepareForDevice.sh */; };
+		308B68BA2A1522F4000EF281 /* ExpressPaySDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,7 +383,6 @@
 		30787E302989E5C00008631C /* CaretPositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaretPositioner.swift; sourceTree = "<group>"; };
 		30787E312989E5C00008631C /* TextNumberUnformatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextNumberUnformatter.swift; sourceTree = "<group>"; };
 		30787E322989E5C00008631C /* TextUnformatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextUnformatter.swift; sourceTree = "<group>"; };
-		30787E67298A466A0008631C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		30787EC6298BB96A0008631C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3085D5012989B52A00AEFE32 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		3085D5022989B52B00AEFE32 /* CardDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardDetailViewController.xib; sourceTree = "<group>"; };
@@ -400,6 +398,8 @@
 		3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldPatternCharacter.swift; sourceTree = "<group>"; };
 		3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldStatus.swift; sourceTree = "<group>"; };
 		308B683029FEB078000EF281 /* PrepareForDevice.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PrepareForDevice.sh; sourceTree = "<group>"; };
+		308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExpressPaySDK.podspec; sourceTree = "<group>"; };
+		308B68BB2A1527AE000EF281 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				308B683029FEB078000EF281 /* PrepareForDevice.sh */,
+				308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */,
 				3044D8A229827AFB00F81550 /* ExpressPaySDK */,
 				3044D8AE29827AFB00F81550 /* ExpressPaySDKTests */,
 				3044D8A129827AFB00F81550 /* Products */,
@@ -443,8 +444,8 @@
 		3044D8A229827AFB00F81550 /* ExpressPaySDK */ = {
 			isa = PBXGroup;
 			children = (
+				308B68BB2A1527AE000EF281 /* Images.xcassets */,
 				30787EC9298BBF520008631C /* frameworks */,
-				30787E67298A466A0008631C /* Images.xcassets */,
 				3044D8F829827B2A00F81550 /* Core */,
 				3044D8FC29827B2A00F81550 /* Feature */,
 				3044D8BA29827B2900F81550 /* Model */,
@@ -1050,7 +1051,7 @@
 			files = (
 				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
 				308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */,
-				30787E68298A466A0008631C /* Images.xcassets in Resources */,
+				308B68BA2A1522F4000EF281 /* ExpressPaySDK.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,7 +1060,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3085D5062989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
-				30787E69298A466A0008631C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

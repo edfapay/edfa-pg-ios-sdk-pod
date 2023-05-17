@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   #
   
   spec.name         = "ExpressPaySDK"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.8"
   spec.summary      = "ExpressPaySDK is an payment SDK library written in Swift."
   
   # This description is used to generate tags and improve search results.
@@ -72,7 +72,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ExpresspaySa/expresspay-ios-sdk-source.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ExpresspaySa/expresspay-ios-sdk-pod.git", :tag => "#{spec.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -81,15 +81,14 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
   spec.source_files  = "#{spec.name}/**/*.{swift,xib,framework,xcassets}"
   
-#  spec.resource_bundles = {
-#    "ExpressPaySDK" => [
-#      "ExpressPaySDK/**/*.{imageset,xcassets}",
-#    ]
-#  }
-  
+  spec.resource_bundles = {
+    "ExpressPaySDK" => [
+      "**/*.{xcassets}",
+    ]
+  }
+
   spec.exclude_files = "Classes/Exclude"
 
 end
