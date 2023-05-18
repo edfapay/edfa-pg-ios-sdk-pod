@@ -89,6 +89,7 @@ Pod::Spec.new do |spec|
     ]
   }
   
+  spec.resources = "ExpressPaySDK/Assets/*.xcassets"
   spec.exclude_files = "Classes/Exclude"
 
 end
