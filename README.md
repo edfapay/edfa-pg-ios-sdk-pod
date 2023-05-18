@@ -28,7 +28,7 @@ Add to the `Podfile`:
 pod 'ExpressPaySDK'
 ```
 
-Always download latest version by run pod update | pod install --repo-update 
+Always download latest version by run `pod update` or `pod install --repo-update`
 
 [Follow further at wiki](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/wiki/Setup) | [Report new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new)
 
