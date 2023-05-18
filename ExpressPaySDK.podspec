@@ -88,8 +88,9 @@ Pod::Spec.new do |spec|
         "**/*.{xcassets}/*",
         "**/*.{xcassets}",
         "**/*.{json}",
-        "ExpressPaySDK/Assets/*"
-        "Resources/**/*.{png}"
+        "ExpressPaySDK/Assets/*",
+        "Resources/**/*.{png}",
+        "Resources/**/*.{json}"
     ]
   }
   
