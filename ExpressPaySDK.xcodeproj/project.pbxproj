@@ -248,7 +248,6 @@
 		308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */ = {isa = PBXBuildFile; fileRef = 308B683029FEB078000EF281 /* PrepareForDevice.sh */; };
 		308B68BA2A1522F4000EF281 /* ExpressPaySDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */; };
 		308B68D72A1632E7000EF281 /* Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308B68D32A1632DF000EF281 /* Bundle.bundle */; };
-		308B68D82A1632EC000EF281 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B68BB2A1527AE000EF281 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1100,7 +1099,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308B68D82A1632EC000EF281 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
