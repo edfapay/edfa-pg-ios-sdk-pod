@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   #
   
   spec.name         = "ExpressPaySDK"
-  spec.version      = "0.0.8"
+  spec.version      = "1.0.1"
   spec.summary      = "ExpressPaySDK is an payment SDK library written in Swift."
   
   # This description is used to generate tags and improve search results.
@@ -85,7 +85,8 @@ Pod::Spec.new do |spec|
   
   spec.resource_bundles = {
     "ExpressPaySDK" => [
-      "**/*.{xcassets}",
+        "**/*.{xcassets}/*",
+        "ExpressPaySDK/Assets/*"
     ]
   }
 
