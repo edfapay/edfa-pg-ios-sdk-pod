@@ -82,6 +82,15 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
   spec.source_files  = "#{spec.name}/**/*.{swift,xib,framework}"
+  
+  spec.resource_bundles = {
+    "ExpressPaySDK" => [
+        "**/*.{xcassets}/*",
+        "**/*.{xcassets}",
+        "ExpressPaySDK/Assets/*"
+    ]
+  }
+  
   spec.resources = "ExpressPaySDK/Assets/*.xcassets"
   spec.exclude_files = "Classes/Exclude"
 
