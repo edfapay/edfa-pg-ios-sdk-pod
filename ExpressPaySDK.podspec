@@ -85,16 +85,10 @@ Pod::Spec.new do |spec|
   
   spec.resource_bundles = {
     "ExpressPaySDK" => [
-        "**/*.{xcassets}/*",
-        "**/*.{xcassets}",
-        "**/*.{json}",
-        "ExpressPaySDK/Assets/*",
-        "Resources/**/*.{png}",
-        "Resources/**/*.{json}"
+        "**/*.{xcassets}/*"
     ]
   }
   
-  spec.resources = "ExpressPaySDK/Assets/*.xcassets"
   spec.exclude_files = "Classes/Exclude"
 
 end
