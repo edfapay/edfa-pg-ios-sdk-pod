@@ -247,10 +247,18 @@
 		3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */ = {isa = PBXBuildFile; fileRef = 308B683029FEB078000EF281 /* PrepareForDevice.sh */; };
 		308B68BA2A1522F4000EF281 /* ExpressPaySDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */; };
-		308B68D72A1632E7000EF281 /* Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308B68D32A1632DF000EF281 /* Bundle.bundle */; };
-		308B68DA2A1640BA000EF281 /* Amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68D92A1640BA000EF281 /* Amex.png */; };
-		308B68DC2A16413E000EF281 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B68BB2A1527AE000EF281 /* Images.xcassets */; };
-		308B68DE2A16422E000EF281 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B68BB2A1527AE000EF281 /* Images.xcassets */; };
+		308B68F02A164D5C000EF281 /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E42A164D5B000EF281 /* Mastercard.png */; };
+		308B68F12A164D5C000EF281 /* pci-dss-compliant.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E52A164D5B000EF281 /* pci-dss-compliant.png */; };
+		308B68F32A164D5C000EF281 /* UnionPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E72A164D5B000EF281 /* UnionPay.png */; };
+		308B68F42A164D5C000EF281 /* amexCvc.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E82A164D5B000EF281 /* amexCvc.png */; };
+		308B68F52A164D5C000EF281 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E92A164D5B000EF281 /* Visa.png */; };
+		308B68F62A164D5C000EF281 /* Group-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EA2A164D5B000EF281 /* Group-1.png */; };
+		308B68F72A164D5C000EF281 /* Discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EB2A164D5C000EF281 /* Discover.png */; };
+		308B68F82A164D5C000EF281 /* Amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EC2A164D5C000EF281 /* Amex.png */; };
+		308B68F92A164D5C000EF281 /* mada.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68ED2A164D5C000EF281 /* mada.png */; };
+		308B68FA2A164D5C000EF281 /* JCB.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EE2A164D5C000EF281 /* JCB.png */; };
+		308B68FB2A164D5C000EF281 /* chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EF2A164D5C000EF281 /* chip.png */; };
+		308B68FD2A164DE4000EF281 /* paweredby-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FC2A164DE4000EF281 /* paweredby-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -403,9 +411,18 @@
 		3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldStatus.swift; sourceTree = "<group>"; };
 		308B683029FEB078000EF281 /* PrepareForDevice.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PrepareForDevice.sh; sourceTree = "<group>"; };
 		308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExpressPaySDK.podspec; sourceTree = "<group>"; };
-		308B68BB2A1527AE000EF281 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		308B68D32A1632DF000EF281 /* Bundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		308B68D92A1640BA000EF281 /* Amex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amex.png; sourceTree = "<group>"; };
+		308B68E42A164D5B000EF281 /* Mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mastercard.png; sourceTree = "<group>"; };
+		308B68E52A164D5B000EF281 /* pci-dss-compliant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pci-dss-compliant.png"; sourceTree = "<group>"; };
+		308B68E72A164D5B000EF281 /* UnionPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnionPay.png; sourceTree = "<group>"; };
+		308B68E82A164D5B000EF281 /* amexCvc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amexCvc.png; sourceTree = "<group>"; };
+		308B68E92A164D5B000EF281 /* Visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Visa.png; sourceTree = "<group>"; };
+		308B68EA2A164D5B000EF281 /* Group-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group-1.png"; sourceTree = "<group>"; };
+		308B68EB2A164D5C000EF281 /* Discover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Discover.png; sourceTree = "<group>"; };
+		308B68EC2A164D5C000EF281 /* Amex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amex.png; sourceTree = "<group>"; };
+		308B68ED2A164D5C000EF281 /* mada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mada.png; sourceTree = "<group>"; };
+		308B68EE2A164D5C000EF281 /* JCB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JCB.png; sourceTree = "<group>"; };
+		308B68EF2A164D5C000EF281 /* chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chip.png; sourceTree = "<group>"; };
+		308B68FC2A164DE4000EF281 /* paweredby-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paweredby-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,13 +438,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3044D8AB29827AFB00F81550 /* ExpressPaySDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		308B68D02A1632DF000EF281 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +460,6 @@
 			children = (
 				3044D8A029827AFB00F81550 /* ExpressPaySDK.framework */,
 				3044D8AA29827AFB00F81550 /* ExpressPaySDKTests.xctest */,
-				308B68D32A1632DF000EF281 /* Bundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -458,9 +467,7 @@
 		3044D8A229827AFB00F81550 /* ExpressPaySDK */ = {
 			isa = PBXGroup;
 			children = (
-				308B68D92A1640BA000EF281 /* Amex.png */,
-				308B68BB2A1527AE000EF281 /* Images.xcassets */,
-				30787EC9298BBF520008631C /* frameworks */,
+				308B68DF2A164312000EF281 /* Assets */,
 				3044D8F829827B2A00F81550 /* Core */,
 				3044D8FC29827B2A00F81550 /* Feature */,
 				3044D8BA29827B2900F81550 /* Model */,
@@ -917,13 +924,6 @@
 			path = TextFormatter;
 			sourceTree = "<group>";
 		};
-		30787EC9298BBF520008631C /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
 		3085D4E32989B36500AEFE32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -967,6 +967,25 @@
 				3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		308B68DF2A164312000EF281 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				308B68EC2A164D5C000EF281 /* Amex.png */,
+				308B68EF2A164D5C000EF281 /* chip.png */,
+				308B68E82A164D5B000EF281 /* amexCvc.png */,
+				308B68EB2A164D5C000EF281 /* Discover.png */,
+				308B68EA2A164D5B000EF281 /* Group-1.png */,
+				308B68EE2A164D5C000EF281 /* JCB.png */,
+				308B68ED2A164D5C000EF281 /* mada.png */,
+				308B68E42A164D5B000EF281 /* Mastercard.png */,
+				308B68FC2A164DE4000EF281 /* paweredby-logo.png */,
+				308B68E52A164D5B000EF281 /* pci-dss-compliant.png */,
+				308B68E72A164D5B000EF281 /* UnionPay.png */,
+				308B68E92A164D5B000EF281 /* Visa.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1020,23 +1039,6 @@
 			productReference = 3044D8AA29827AFB00F81550 /* ExpressPaySDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		308B68D22A1632DF000EF281 /* Bundle */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 308B68D42A1632DF000EF281 /* Build configuration list for PBXNativeTarget "Bundle" */;
-			buildPhases = (
-				308B68CF2A1632DF000EF281 /* Sources */,
-				308B68D02A1632DF000EF281 /* Frameworks */,
-				308B68D12A1632DF000EF281 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Bundle;
-			productName = Bundle;
-			productReference = 308B68D32A1632DF000EF281 /* Bundle.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1055,9 +1057,6 @@
 						CreatedOnToolsVersion = 14.1;
 						LastSwiftMigration = 1410;
 					};
-					308B68D22A1632DF000EF281 = {
-						CreatedOnToolsVersion = 14.3;
-					};
 				};
 			};
 			buildConfigurationList = 3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "ExpressPaySDK" */;
@@ -1075,7 +1074,6 @@
 			targets = (
 				3044D89F29827AFB00F81550 /* ExpressPaySDK */,
 				3044D8A929827AFB00F81550 /* ExpressPaySDKTests */,
-				308B68D22A1632DF000EF281 /* Bundle */,
 			);
 		};
 /* End PBXProject section */
@@ -1085,11 +1083,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308B68DC2A16413E000EF281 /* Images.xcassets in Resources */,
-				308B68D72A1632E7000EF281 /* Bundle.bundle in Resources */,
+				308B68F32A164D5C000EF281 /* UnionPay.png in Resources */,
+				308B68F82A164D5C000EF281 /* Amex.png in Resources */,
+				308B68F52A164D5C000EF281 /* Visa.png in Resources */,
+				308B68FD2A164DE4000EF281 /* paweredby-logo.png in Resources */,
+				308B68F02A164D5C000EF281 /* Mastercard.png in Resources */,
+				308B68F72A164D5C000EF281 /* Discover.png in Resources */,
+				308B68F42A164D5C000EF281 /* amexCvc.png in Resources */,
+				308B68FA2A164D5C000EF281 /* JCB.png in Resources */,
 				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
-				308B68DA2A1640BA000EF281 /* Amex.png in Resources */,
+				308B68FB2A164D5C000EF281 /* chip.png in Resources */,
 				308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */,
+				308B68F92A164D5C000EF281 /* mada.png in Resources */,
+				308B68F62A164D5C000EF281 /* Group-1.png in Resources */,
+				308B68F12A164D5C000EF281 /* pci-dss-compliant.png in Resources */,
 				308B68BA2A1522F4000EF281 /* ExpressPaySDK.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1099,14 +1106,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3085D5062989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		308B68D12A1632DF000EF281 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				308B68DE2A16422E000EF281 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1358,13 +1357,6 @@
 				3044D96029827B2A00F81550 /* ExpressPaySaleOrder.swift in Sources */,
 				3044D96E29827B2A00F81550 /* ExpressPayPayer.swift in Sources */,
 				3044D96A29827B2A00F81550 /* ExpressPayCard.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		308B68CF2A1632DF000EF281 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,50 +1640,6 @@
 			};
 			name = Release;
 		};
-		308B68D52A1632DF000EF281 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2H7JEC8468;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.expresspay.sdk.Bundle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		308B68D62A1632DF000EF281 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2H7JEC8468;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSPrincipalClass = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.expresspay.sdk.Bundle;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1718,15 +1666,6 @@
 			buildConfigurations = (
 				3044D8B829827AFB00F81550 /* Debug */,
 				3044D8B929827AFB00F81550 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		308B68D42A1632DF000EF281 /* Build configuration list for PBXNativeTarget "Bundle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				308B68D52A1632DF000EF281 /* Debug */,
-				308B68D62A1632DF000EF281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
