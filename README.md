@@ -18,19 +18,17 @@ The main aspects of the ExpressPay iOS SDK:
 - Minimum iOS 11
 - Sample Application
 
-To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expressPay-ios-sdk-pod/tree/main/Sample).
+To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expresspay-ios-sdk-sample).
 
 ## Setup
 
 Add to the `Podfile`:
 
 ```
-pod 'ExpressPaySDK' #Note: Currently adding ExpressPaySDK as pod dependency is not available)
+pod 'ExpressPaySDK'
 ```
 
-Latest version is: ![](https://cocoapod-badges.herokuapp.com/v/ExpressPaySDK/badge.png) 
-
-Also, it is possible to download the latest artifact from the [releases page](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/releases).
+Always download latest version by run pod update | pod install --repo-update 
 
 ## Sample
 

@@ -245,7 +245,6 @@
 		3085D5272989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */; };
 		3085D5282989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
-		308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */ = {isa = PBXBuildFile; fileRef = 308B683029FEB078000EF281 /* PrepareForDevice.sh */; };
 		308B68BA2A1522F4000EF281 /* ExpressPaySDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */; };
 		308B68F02A164D5C000EF281 /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E42A164D5B000EF281 /* Mastercard.png */; };
 		308B68F12A164D5C000EF281 /* pci-dss-compliant.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E52A164D5B000EF281 /* pci-dss-compliant.png */; };
@@ -410,7 +409,6 @@
 		3085D5112989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldBlockCharacter.swift; sourceTree = "<group>"; };
 		3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldPatternCharacter.swift; sourceTree = "<group>"; };
 		3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldStatus.swift; sourceTree = "<group>"; };
-		308B683029FEB078000EF281 /* PrepareForDevice.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PrepareForDevice.sh; sourceTree = "<group>"; };
 		308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExpressPaySDK.podspec; sourceTree = "<group>"; };
 		308B68E42A164D5B000EF281 /* Mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mastercard.png; sourceTree = "<group>"; };
 		308B68E52A164D5B000EF281 /* pci-dss-compliant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pci-dss-compliant.png"; sourceTree = "<group>"; };
@@ -449,7 +447,6 @@
 		3044D89629827AFB00F81550 = {
 			isa = PBXGroup;
 			children = (
-				308B683029FEB078000EF281 /* PrepareForDevice.sh */,
 				308B68B92A1522F4000EF281 /* ExpressPaySDK.podspec */,
 				3044D8A229827AFB00F81550 /* ExpressPaySDK */,
 				3044D8AE29827AFB00F81550 /* ExpressPaySDKTests */,
@@ -1097,7 +1094,6 @@
 				308B68FA2A164D5C000EF281 /* JCB.png in Resources */,
 				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
 				308B68FB2A164D5C000EF281 /* chip.png in Resources */,
-				308B683129FEB078000EF281 /* PrepareForDevice.sh in Resources */,
 				308B68F92A164D5C000EF281 /* mada.png in Resources */,
 				308B68F62A164D5C000EF281 /* Group-1.png in Resources */,
 				308B68F12A164D5C000EF281 /* pci-dss-compliant.png in Resources */,
