@@ -1,4 +1,4 @@
-[View SDK Wiki](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/wiki) | [Report new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/issues/new)
+[View SDK Wiki](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/wiki) | [Report new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new)
 
 # ExpressPay iOS SDK
 
@@ -18,7 +18,7 @@ The main aspects of the ExpressPay iOS SDK:
 - Minimum iOS 11
 - Sample Application
 
-To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expressPay-ios-sdk/tree/main/Sample).
+To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expressPay-ios-sdk-pod/tree/main/Sample).
 
 ## Setup
 
@@ -30,7 +30,7 @@ pod 'ExpressPaySDK' #Note: Currently adding ExpressPaySDK as pod dependency is n
 
 Latest version is: ![](https://cocoapod-badges.herokuapp.com/v/ExpressPaySDK/badge.png) 
 
-Also, it is possible to download the latest artifact from the [releases page](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/releases).
+Also, it is possible to download the latest artifact from the [releases page](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/releases).
 
 ## Sample
 
@@ -44,13 +44,13 @@ Also, it is possible to download the latest artifact from the [releases page](ht
 
 ## Getting help
 
-To report a specific issue or feature request, open a [new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/issues/new).
+To report a specific issue or feature request, open a [new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new).
 
 Or write a direct letter to the [itsupport@expresspay.sa](mailto:admin@expresspay.sa).
 
 ## License
 
-MIT License. See the [LICENSE](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/blob/main/LICENSE) file for more details.
+MIT License. See the [LICENSE](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/blob/main/LICENSE) file for more details.
 
 ## Contacts
 

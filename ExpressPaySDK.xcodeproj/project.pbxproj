@@ -259,6 +259,7 @@
 		308B68FA2A164D5C000EF281 /* JCB.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EE2A164D5C000EF281 /* JCB.png */; };
 		308B68FB2A164D5C000EF281 /* chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EF2A164D5C000EF281 /* chip.png */; };
 		308B68FD2A164DE4000EF281 /* paweredby-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FC2A164DE4000EF281 /* paweredby-logo.png */; };
+		308B68FF2A166E5B000EF281 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FE2A166E5B000EF281 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,6 +424,7 @@
 		308B68EE2A164D5C000EF281 /* JCB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JCB.png; sourceTree = "<group>"; };
 		308B68EF2A164D5C000EF281 /* chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chip.png; sourceTree = "<group>"; };
 		308B68FC2A164DE4000EF281 /* paweredby-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paweredby-logo.png"; sourceTree = "<group>"; };
+		308B68FE2A166E5B000EF281 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +469,7 @@
 		3044D8A229827AFB00F81550 /* ExpressPaySDK */ = {
 			isa = PBXGroup;
 			children = (
+				308B68FE2A166E5B000EF281 /* README.md */,
 				308B68DF2A164312000EF281 /* Assets */,
 				3044D8F829827B2A00F81550 /* Core */,
 				3044D8FC29827B2A00F81550 /* Feature */,
@@ -1089,6 +1092,7 @@
 				308B68FD2A164DE4000EF281 /* paweredby-logo.png in Resources */,
 				308B68F02A164D5C000EF281 /* Mastercard.png in Resources */,
 				308B68F72A164D5C000EF281 /* Discover.png in Resources */,
+				308B68FF2A166E5B000EF281 /* README.md in Resources */,
 				308B68F42A164D5C000EF281 /* amexCvc.png in Resources */,
 				308B68FA2A164D5C000EF281 /* JCB.png in Resources */,
 				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
