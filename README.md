@@ -18,7 +18,7 @@ The main aspects of the ExpressPay iOS SDK:
 - Minimum iOS 11
 - Sample Application
 
-To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expressPay-ios-sdk-pod/tree/main/Sample).
+To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expresspay-ios-sdk-sample).
 
 ## Setup
 
