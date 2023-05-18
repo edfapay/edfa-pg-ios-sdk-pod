@@ -86,7 +86,8 @@ Pod::Spec.new do |spec|
   spec.resource_bundles = {
     "ExpressPaySDK" => [
         "**/*.{xcassets}/*",
-        "**/*.{xcassets}/**/*.{json}",
+        "**/*.{xcassets}",
+        "**/*.{json}",
         "ExpressPaySDK/Assets/*"
     ]
   }
