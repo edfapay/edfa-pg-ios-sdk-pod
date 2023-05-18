@@ -250,6 +250,7 @@
 		308B68D72A1632E7000EF281 /* Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308B68D32A1632DF000EF281 /* Bundle.bundle */; };
 		308B68DA2A1640BA000EF281 /* Amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68D92A1640BA000EF281 /* Amex.png */; };
 		308B68DC2A16413E000EF281 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B68BB2A1527AE000EF281 /* Images.xcassets */; };
+		308B68DD2A16417B000EF281 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 308B68BB2A1527AE000EF281 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1105,6 +1106,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308B68DD2A16417B000EF281 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

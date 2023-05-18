@@ -83,10 +83,6 @@ Pod::Spec.new do |spec|
   #
   spec.source_files  = "#{spec.name}/**/*.{swift,xib,framework}"
   
-  spec.resources = [
-    "ExpressPaySDK/*.xcassets",
-    "ExpressPaySDK/*.png",
-  ]
   
   spec.exclude_files = "Classes/Exclude"
 
