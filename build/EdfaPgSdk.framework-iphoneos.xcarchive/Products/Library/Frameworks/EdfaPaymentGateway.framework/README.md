@@ -1,11 +1,11 @@
-[View SDK Wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod/wiki) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new)
+[View SDK Wiki](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/wiki) | [Report new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new)
 
 # EdfaPg iOS SDK
 
 EdfaPg is a payment gateway. Thanks to our 15+ years of experience in the payment industry, we’ve developed a state-of-the-art white-label payment system that ensures smooth and uninterrupted payment flow for merchants across industries.
 
 <p align="center">
-  <a href="https://edfapay.com">
+  <a href="https://expresspay.sa">
       <img src="/media/header.png" alt="EdfaPg" width="400px"/>
   </a>
 </p>
@@ -18,7 +18,7 @@ The main aspects of the EdfaPg iOS SDK:
 - Minimum iOS 11
 - Sample Application
 
-To get used to the SDK, download a [sample app](https://github.com/edfapay/edfa-pg-ios-sdk-sample).
+To get used to the SDK, download a [sample app](https://github.com/ExpresspaySa/expresspay-ios-sdk-sample).
 
 ## Setup
 
@@ -30,7 +30,7 @@ pod 'EdfaPgSdk'
 
 Always download latest version by run `pod update` or `pod install --repo-update`
 
-[Follow further at wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod/wiki/Setup) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new)
+[Follow further at wiki](https://github.com/ExpresspaySa/expresspay-ios-sdk-framework/wiki/Setup) | [Report new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new)
 
 ## Sample
 
@@ -44,19 +44,19 @@ Always download latest version by run `pod update` or `pod install --repo-update
 
 ## Getting help
 
-To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new).
+To report a specific issue or feature request, open a [new issue](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/issues/new).
 
-Or write a direct letter to the [itsupport@edfapay.com](mailto:itsupport@edfapay.com).
+Or write a direct letter to the [itsupport@expresspay.sa](mailto:admin@expresspay.sa).
 
 ## License
 
-MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/LICENSE) file for more details.
+MIT License. See the [LICENSE](https://github.com/ExpresspaySa/expresspay-ios-sdk-pod/blob/main/LICENSE) file for more details.
 
 ## Contacts
 
-Website: https://edfapay.com  
+Website: https://expresspay.sa  
 Phone: [+966920033633](tel:+966920033633)  
-Email: [itsupport@edfapay.com](mailto:itsupport@edfapay.com)  
+Email: [itsupport@expresspay.sa](mailto:itsupport@expresspay.sa)  
 Address: EdfaPg, Olaya Street, Riyadh, Saudi Arabia
 
 © 2023 - 2024 EdfaPg. All rights reserved.

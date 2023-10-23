@@ -1,0 +1,4 @@
+framework module EdfaPaymentGateway {
+  header "EdfaPaymentGateway-Swift.h"
+  requires objc
+}
