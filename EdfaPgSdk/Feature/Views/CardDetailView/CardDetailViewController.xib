@@ -2,12 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardDetailViewController" customModule="EdfaPaymentGateway" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardDetailViewController" customModule="EdfaPgSdk" customModuleProvider="target">
             <connections>
                 <outlet property="btnSubmit" destination="6jc-d3-rVL" id="bKz-rq-Gvp"/>
                 <outlet property="cardView" destination="kqV-Ba-Un8" id="Ihi-0v-Dt6"/>
@@ -25,7 +27,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqV-Ba-Un8" customClass="CreditCardFormView" customModule="EdfaPaymentGateway" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqV-Ba-Un8" customClass="CreditCardFormView" customModule="EdfaPgSdk" customModuleProvider="target">
                     <rect key="frame" x="68.666666666666671" y="79.000000000000014" width="255.66666666666663" height="170.33333333333337"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -216,15 +218,14 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fYs-D9-VVm">
                     <rect key="frame" x="20" y="698" width="353" height="120"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jc-d3-rVL">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jc-d3-rVL" customClass="EdfaPayButton" customModule="Sample">
                             <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="5Bb-OY-RSv"/>
                             </constraints>
-                            <color key="tintColor" red="0.41176474089999998" green="0.88627451660000001" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" systemColor="tintColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Pay"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Pay"/>
                             <connections>
                                 <action selector="btnSubmit:" destination="-1" eventType="touchUpInside" id="zpT-8S-Myb"/>
                             </connections>
@@ -285,5 +286,8 @@
         <image name="mada.png" width="349" height="280"/>
         <image name="paweredby-logo.png" width="496.55999755859375" height="110.87999725341797"/>
         <image name="pci-dss-compliant.png" width="1000" height="384"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

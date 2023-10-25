@@ -1,5 +1,5 @@
 //
-//  ExpressApplePay.swift
+//  EdfaApplePay.swift
 //  Sample
 //
 //  Created by Zohaib Kambrani on 23/01/2023.
@@ -31,7 +31,7 @@ fileprivate var _onError:(([String]) -> Void)!
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
 fileprivate var enableLogs:Bool = false
-public class ExpressApplePay{
+public class EdfaApplePay{
     public init() {
         
     }
@@ -56,7 +56,7 @@ public class ExpressApplePay{
                 let request = preparePayment(request:PKPaymentRequest())
                 
                 if let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request){
-                    applePayController.delegate = prepareDelegate(target: target, expressApplePay: self)
+                    applePayController.delegate = prepareDelegate(target: target, edfaApplePay: self)
                     target.present(applePayController, animated: true, completion: onPresent)
                 }else{
                     _onError?(["Error initializing 'PKPaymentAuthorizationViewController(paymentRequest:)'"])
@@ -113,8 +113,8 @@ public class ExpressApplePay{
         return request
     }
     
-    private func prepareDelegate(target:UIViewController, expressApplePay:ExpressApplePay) -> ExpressApplePayDelegate{
-        let delegate = ExpressApplePayDelegate()
+    private func prepareDelegate(target:UIViewController, edfaApplePay:EdfaApplePay) -> EdfaApplePayDelegate{
+        let delegate = EdfaApplePayDelegate()
         // Required to PKPaymentAuthorizationViewControllerDelegate to work (should be implemented by UIViewController)
         // * done due to provide the very coding efforts to customer to start applepay in thier application *
         delegate.view.isHidden = true
@@ -126,63 +126,63 @@ public class ExpressApplePay{
 
 
 // Payment Properties Setters
-extension ExpressApplePay{
+extension EdfaApplePay{
     
     public func initialize(target:UIViewController, onError:@escaping ((Any) -> Void), onPresent:(() ->Void)?){
         start(target: target, onError: onError, onPresent: onPresent)
     }
     
-    public func on(authentication:@escaping ((PKPayment) -> Void)) -> ExpressApplePay{
+    public func on(authentication:@escaping ((PKPayment) -> Void)) -> EdfaApplePay{
         _onAuthentication = authentication
         return self
     }
     
-    public func on(transactionSuccess:@escaping (([String:Any]?) -> Void)) -> ExpressApplePay{
+    public func on(transactionSuccess:@escaping (([String:Any]?) -> Void)) -> EdfaApplePay{
         _onTransactionSuccess = transactionSuccess
         return self
     }
     
-    public func on(transactionFailure:@escaping (([String:Any]) -> Void)) -> ExpressApplePay{
+    public func on(transactionFailure:@escaping (([String:Any]) -> Void)) -> EdfaApplePay{
         _onTransactionFailure = transactionFailure
         return self
     }
     
-    public func set(applePayMerchantID:String) -> ExpressApplePay{
+    public func set(applePayMerchantID:String) -> EdfaApplePay{
         self.applePayMerchantID = applePayMerchantID
         return self
     }
     
-    public func set(payer:EdfaPgPayer) -> ExpressApplePay{
+    public func set(payer:EdfaPgPayer) -> EdfaApplePay{
         _payer = payer
         return self
     }
     
-    public func set(order:EdfaPgSaleOrder) -> ExpressApplePay{
+    public func set(order:EdfaPgSaleOrder) -> EdfaApplePay{
         _order = order
         return self
     }
     
-    public func set(shippingAddress:EdfaPgShippingAddress) -> ExpressApplePay{
+    public func set(shippingAddress:EdfaPgShippingAddress) -> EdfaApplePay{
         self.shippingAddress = shippingAddress
         return self
     }
     
-    public func set(merchantCapability:PKMerchantCapability) -> ExpressApplePay{
+    public func set(merchantCapability:PKMerchantCapability) -> EdfaApplePay{
         self.merchantCapability = merchantCapability
         return self
     }
     
-    public func addSupported(paymentNetworks:[PKPaymentNetwork]) -> ExpressApplePay{
+    public func addSupported(paymentNetworks:[PKPaymentNetwork]) -> EdfaApplePay{
         self.supportedPaymentNetworks = paymentNetworks
         return self
     }
     
-    public func addPurchaseItem(label:String, amount:Double, type:PKPaymentSummaryItemType) -> ExpressApplePay{
+    public func addPurchaseItem(label:String, amount:Double, type:PKPaymentSummaryItemType) -> EdfaApplePay{
         purchaseItems.append(PKPaymentSummaryItem(label: label, amount: NSDecimalNumber(value: amount), type: type))
         return self
     }
     
-    public func enable(logs:Bool) -> ExpressApplePay{
+    public func enable(logs:Bool) -> EdfaApplePay{
         enableLogs = logs
         return self
     }
@@ -190,7 +190,7 @@ extension ExpressApplePay{
 
 
 // Payment Properties Validator
-private extension ExpressApplePay{
+private extension EdfaApplePay{
     func validate() -> (valid:Bool, validationErrors:[String] ){
         var errors:[String] = []
         var valid = true
@@ -198,14 +198,14 @@ private extension ExpressApplePay{
         
         if _onTransactionSuccess == nil{
             valid = valid && false
-            errors.append("onTransactionFailure not set, try to call function 'ExpressApplePay.on(transactionSuccess:)'")
-            log(label: "Error", object:"onTransactionFailure not set, try to call function 'ExpressApplePay.on(transactionSuccess:)'")
+            errors.append("onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionSuccess:)'")
+            log(label: "Error", object:"onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionSuccess:)'")
         }
         
         if _onTransactionFailure == nil{
             valid = valid && false
-            errors.append("onTransactionFailure not set, try to call function 'ExpressApplePay.on(transactionFailure:)'")
-            log(label: "Error", object:"onTransactionFailure not set, try to call function 'ExpressApplePay.on(transactionFailure:)'")
+            errors.append("onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionFailure:)'")
+            log(label: "Error", object:"onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionFailure:)'")
         }
         
         if applePayMerchantID == nil || applePayMerchantID!.isEmpty{
@@ -237,7 +237,7 @@ private extension ExpressApplePay{
 }
 
 
-fileprivate class ExpressApplePayDelegate : UIViewController, PKPaymentAuthorizationViewControllerDelegate{
+fileprivate class EdfaApplePayDelegate : UIViewController, PKPaymentAuthorizationViewControllerDelegate{
     
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         _onAuthentication?(payment)

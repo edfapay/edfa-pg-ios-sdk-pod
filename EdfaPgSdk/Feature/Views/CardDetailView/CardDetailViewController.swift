@@ -400,7 +400,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
 }
 
 
-public class ExpressCardPay{
+public class EdfaCardPay{
     
     public init() {}
     
@@ -437,7 +437,7 @@ public class ExpressCardPay{
 
 
 // Payment Properties Setters
-extension ExpressCardPay{
+extension EdfaCardPay{
     
     public func initialize(target:UIViewController, onError:@escaping ErrorCallback, onPresent:(() ->Void)?) -> UIViewController{
         _target = target
@@ -446,22 +446,22 @@ extension ExpressCardPay{
         return start()
     }
     
-    public func on(transactionSuccess:@escaping TransactionCallback) -> ExpressCardPay{
+    public func on(transactionSuccess:@escaping TransactionCallback) -> EdfaCardPay{
         _onTransactionSuccess = transactionSuccess
         return self
     }
     
-    public func on(transactionFailure:@escaping TransactionCallback) -> ExpressCardPay{
+    public func on(transactionFailure:@escaping TransactionCallback) -> EdfaCardPay{
         _onTransactionFailure = transactionFailure
         return self
     }
     
-    public func set(payer:EdfaPgPayer) -> ExpressCardPay{
+    public func set(payer:EdfaPgPayer) -> EdfaCardPay{
         _payer = payer
         return self
     }
     
-    public func set(order:EdfaPgSaleOrder) -> ExpressCardPay{
+    public func set(order:EdfaPgSaleOrder) -> EdfaCardPay{
         _order = order
         return self
     }
@@ -469,7 +469,7 @@ extension ExpressCardPay{
 
 
 // Payment Properties Validator
-private extension ExpressCardPay{
+private extension EdfaCardPay{
     func validate() -> (valid:Bool, validationErrors:[String] ){
         var errors:[String] = []
         var valid = true
@@ -477,12 +477,12 @@ private extension ExpressCardPay{
         
         if _onTransactionSuccess == nil{
             valid = valid && false
-            errors.append("onTransactionFailure not set, try to call function 'ExpressApplePay.on(transactionSuccess:)'")
+            errors.append("onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionSuccess:)'")
         }
         
         if _onTransactionFailure == nil{
             valid = valid && false
-            errors.append("onTransactionFailure not set, try to call function 'ExpressApplePay.on(transactionFailure:)'")
+            errors.append("onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionFailure:)'")
         }
         
         if !(_order.amount >= 1){
