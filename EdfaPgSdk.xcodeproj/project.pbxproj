@@ -259,6 +259,7 @@
 		30B013BC2AE98BE300460806 /* pci-dss-compliant.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E52A164D5B000EF281 /* pci-dss-compliant.png */; };
 		30B013BD2AE98BE300460806 /* UnionPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E72A164D5B000EF281 /* UnionPay.png */; };
 		30B013BE2AE98BE300460806 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E92A164D5B000EF281 /* Visa.png */; };
+		30B013C02AE98E3200460806 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 30B013BF2AE98E3200460806 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,6 +424,7 @@
 		308B68EF2A164D5C000EF281 /* chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chip.png; sourceTree = "<group>"; };
 		308B68FC2A164DE4000EF281 /* paweredby-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paweredby-logo.png"; sourceTree = "<group>"; };
 		308B68FE2A166E5B000EF281 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		30B013BF2AE98E3200460806 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +449,7 @@
 		3044D89629827AFB00F81550 = {
 			isa = PBXGroup;
 			children = (
+				30B013BF2AE98E3200460806 /* LICENSE */,
 				308B68B92A1522F4000EF281 /* EdfaPgSdk.podspec */,
 				3044D8A229827AFB00F81550 /* EdfaPgSdk */,
 				3044D8AE29827AFB00F81550 /* EdfaPgSdkTests */,
@@ -1093,6 +1096,7 @@
 				30B013BA2AE98BE300460806 /* Mastercard.png in Resources */,
 				30B013BB2AE98BE300460806 /* paweredby-logo.png in Resources */,
 				30B013BC2AE98BE300460806 /* pci-dss-compliant.png in Resources */,
+				30B013C02AE98E3200460806 /* LICENSE in Resources */,
 				30B013BD2AE98BE300460806 /* UnionPay.png in Resources */,
 				30B013BE2AE98BE300460806 /* Visa.png in Resources */,
 				308B68FF2A166E5B000EF281 /* README.md in Resources */,
