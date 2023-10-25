@@ -5,6 +5,16 @@
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
+#
+#  ―――――――――――――――――――――――――――――――――――――――――――――――――――――
+#  Create/Delete Pod on Cocoapod - Terminal Commands
+#  ―――――――――――――――――――――――――――――――――――――――――――――――――――――
+#  (Register) > pod trunk register <email> <user_name>
+#  (Validate) > pod lib lint
+#  (Create)   > pod trunk push <*.podspec>
+#  (Delete)   > pod trunk delete <pod_name> <pod_version>
+#
+
 
 Pod::Spec.new do |spec|
 
