@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3044D89F29827AFB00F81550"
-               BuildableName = "EdfaPaymentGateway.framework"
-               BlueprintName = "EdfaPaymentGateway"
-               ReferencedContainer = "container:EdfaPaymentGateway.xcodeproj">
+               BuildableName = "EdfaPgSdk.framework"
+               BlueprintName = "EdfaPgSdk"
+               ReferencedContainer = "container:EdfaPgSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3044D8A929827AFB00F81550"
-               BuildableName = "EdfaPaymentGatewayTests.xctest"
-               BlueprintName = "EdfaPaymentGatewayTests"
-               ReferencedContainer = "container:EdfaPaymentGateway.xcodeproj">
+               BuildableName = "EdfaPgSdkTests.xctest"
+               BlueprintName = "EdfaPgSdkTests"
+               ReferencedContainer = "container:EdfaPgSdk.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3044D89F29827AFB00F81550"
-            BuildableName = "EdfaPaymentGateway.framework"
-            BlueprintName = "EdfaPaymentGateway"
-            ReferencedContainer = "container:EdfaPaymentGateway.xcodeproj">
+            BuildableName = "EdfaPgSdk.framework"
+            BlueprintName = "EdfaPgSdk"
+            ReferencedContainer = "container:EdfaPgSdk.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

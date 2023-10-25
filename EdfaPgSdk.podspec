@@ -83,7 +83,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  spec.source_files  = "#{spec.name}/**/*.{swift,xib,framework}"
+  spec.source_files  = "#{spec.name}/**/*.{swift,xib}"
 
   spec.resources = '**/*{png}'
 

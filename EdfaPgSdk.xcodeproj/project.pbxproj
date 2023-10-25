@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3044D8A529827AFB00F81550 /* EdfaPgSdk.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8A429827AFB00F81550 /* EdfaPgSdk.docc */; };
-		3044D8AB29827AFB00F81550 /* EdfaPaymentGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3044D8A029827AFB00F81550 /* EdfaPaymentGateway.framework */; };
+		3044D8AB29827AFB00F81550 /* EdfaPgSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3044D8A029827AFB00F81550 /* EdfaPgSdk.framework */; };
 		3044D8B029827AFB00F81550 /* EdfaPgSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8AF29827AFB00F81550 /* EdfaPgSDKTests.swift */; };
 		3044D8B129827AFB00F81550 /* EdfaPgSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 3044D8A329827AFB00F81550 /* EdfaPgSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3044D91F29827B2A00F81550 /* EdfaPgSaleRedirectBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8BD29827B2900F81550 /* EdfaPgSaleRedirectBody.swift */; };
@@ -247,6 +247,18 @@
 		3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		308B68BA2A1522F4000EF281 /* EdfaPgSdk.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 308B68B92A1522F4000EF281 /* EdfaPgSdk.podspec */; };
 		308B68FF2A166E5B000EF281 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FE2A166E5B000EF281 /* README.md */; };
+		30B013B32AE98BE300460806 /* Amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EC2A164D5C000EF281 /* Amex.png */; };
+		30B013B42AE98BE300460806 /* chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EF2A164D5C000EF281 /* chip.png */; };
+		30B013B52AE98BE300460806 /* amexCvc.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E82A164D5B000EF281 /* amexCvc.png */; };
+		30B013B62AE98BE300460806 /* Discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EB2A164D5C000EF281 /* Discover.png */; };
+		30B013B72AE98BE300460806 /* Group-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EA2A164D5B000EF281 /* Group-1.png */; };
+		30B013B82AE98BE300460806 /* JCB.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EE2A164D5C000EF281 /* JCB.png */; };
+		30B013B92AE98BE300460806 /* mada.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68ED2A164D5C000EF281 /* mada.png */; };
+		30B013BA2AE98BE300460806 /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E42A164D5B000EF281 /* Mastercard.png */; };
+		30B013BB2AE98BE300460806 /* paweredby-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FC2A164DE4000EF281 /* paweredby-logo.png */; };
+		30B013BC2AE98BE300460806 /* pci-dss-compliant.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E52A164D5B000EF281 /* pci-dss-compliant.png */; };
+		30B013BD2AE98BE300460806 /* UnionPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E72A164D5B000EF281 /* UnionPay.png */; };
+		30B013BE2AE98BE300460806 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E92A164D5B000EF281 /* Visa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,10 +285,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3044D8A029827AFB00F81550 /* EdfaPaymentGateway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EdfaPaymentGateway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3044D8A029827AFB00F81550 /* EdfaPgSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EdfaPgSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3044D8A329827AFB00F81550 /* EdfaPgSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EdfaPgSdk.h; sourceTree = "<group>"; };
 		3044D8A429827AFB00F81550 /* EdfaPgSdk.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EdfaPgSdk.docc; sourceTree = "<group>"; };
-		3044D8AA29827AFB00F81550 /* EdfaPaymentGatewayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdfaPaymentGatewayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3044D8AA29827AFB00F81550 /* EdfaPgSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdfaPgSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3044D8AF29827AFB00F81550 /* EdfaPgSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdfaPgSDKTests.swift; sourceTree = "<group>"; };
 		3044D8BD29827B2900F81550 /* EdfaPgSaleRedirectBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdfaPgSaleRedirectBody.swift; sourceTree = "<group>"; };
 		3044D8BE29827B2900F81550 /* EdfaPgSaleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdfaPgSaleResult.swift; sourceTree = "<group>"; };
@@ -425,7 +437,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3044D8AB29827AFB00F81550 /* EdfaPaymentGateway.framework in Frameworks */,
+				3044D8AB29827AFB00F81550 /* EdfaPgSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,8 +457,8 @@
 		3044D8A129827AFB00F81550 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3044D8A029827AFB00F81550 /* EdfaPaymentGateway.framework */,
-				3044D8AA29827AFB00F81550 /* EdfaPaymentGatewayTests.xctest */,
+				3044D8A029827AFB00F81550 /* EdfaPgSdk.framework */,
+				3044D8AA29827AFB00F81550 /* EdfaPgSdkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -990,9 +1002,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3044D89F29827AFB00F81550 /* EdfaPaymentGateway */ = {
+		3044D89F29827AFB00F81550 /* EdfaPgSdk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3044D8B429827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPaymentGateway" */;
+			buildConfigurationList = 3044D8B429827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPgSdk" */;
 			buildPhases = (
 				3044D89B29827AFB00F81550 /* Headers */,
 				3044D89C29827AFB00F81550 /* Sources */,
@@ -1004,14 +1016,14 @@
 			);
 			dependencies = (
 			);
-			name = EdfaPaymentGateway;
+			name = EdfaPgSdk;
 			productName = ExpressPaySDK;
-			productReference = 3044D8A029827AFB00F81550 /* EdfaPaymentGateway.framework */;
+			productReference = 3044D8A029827AFB00F81550 /* EdfaPgSdk.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3044D8A929827AFB00F81550 /* EdfaPaymentGatewayTests */ = {
+		3044D8A929827AFB00F81550 /* EdfaPgSdkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3044D8B729827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPaymentGatewayTests" */;
+			buildConfigurationList = 3044D8B729827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPgSdkTests" */;
 			buildPhases = (
 				3044D8A629827AFB00F81550 /* Sources */,
 				3044D8A729827AFB00F81550 /* Frameworks */,
@@ -1022,9 +1034,9 @@
 			dependencies = (
 				3044D8AD29827AFB00F81550 /* PBXTargetDependency */,
 			);
-			name = EdfaPaymentGatewayTests;
+			name = EdfaPgSdkTests;
 			productName = ExpressPaySDKTests;
-			productReference = 3044D8AA29827AFB00F81550 /* EdfaPaymentGatewayTests.xctest */;
+			productReference = 3044D8AA29827AFB00F81550 /* EdfaPgSdkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1047,7 +1059,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "EdfaPaymentGateway" */;
+			buildConfigurationList = 3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "EdfaPgSdk" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1060,8 +1072,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3044D89F29827AFB00F81550 /* EdfaPaymentGateway */,
-				3044D8A929827AFB00F81550 /* EdfaPaymentGatewayTests */,
+				3044D89F29827AFB00F81550 /* EdfaPgSdk */,
+				3044D8A929827AFB00F81550 /* EdfaPgSdkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1071,6 +1083,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B013B32AE98BE300460806 /* Amex.png in Resources */,
+				30B013B42AE98BE300460806 /* chip.png in Resources */,
+				30B013B52AE98BE300460806 /* amexCvc.png in Resources */,
+				30B013B62AE98BE300460806 /* Discover.png in Resources */,
+				30B013B72AE98BE300460806 /* Group-1.png in Resources */,
+				30B013B82AE98BE300460806 /* JCB.png in Resources */,
+				30B013B92AE98BE300460806 /* mada.png in Resources */,
+				30B013BA2AE98BE300460806 /* Mastercard.png in Resources */,
+				30B013BB2AE98BE300460806 /* paweredby-logo.png in Resources */,
+				30B013BC2AE98BE300460806 /* pci-dss-compliant.png in Resources */,
+				30B013BD2AE98BE300460806 /* UnionPay.png in Resources */,
+				30B013BE2AE98BE300460806 /* Visa.png in Resources */,
 				308B68FF2A166E5B000EF281 /* README.md in Resources */,
 				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
 				308B68BA2A1522F4000EF281 /* EdfaPgSdk.podspec in Resources */,
@@ -1341,7 +1365,7 @@
 /* Begin PBXTargetDependency section */
 		3044D8AD29827AFB00F81550 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3044D89F29827AFB00F81550 /* EdfaPaymentGateway */;
+			target = 3044D89F29827AFB00F81550 /* EdfaPgSdk */;
 			targetProxy = 3044D8AC29827AFB00F81550 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1617,7 +1641,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "EdfaPaymentGateway" */ = {
+		3044D89A29827AFB00F81550 /* Build configuration list for PBXProject "EdfaPgSdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3044D8B229827AFB00F81550 /* Debug */,
@@ -1626,7 +1650,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3044D8B429827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPaymentGateway" */ = {
+		3044D8B429827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPgSdk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3044D8B529827AFB00F81550 /* Debug */,
@@ -1635,7 +1659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3044D8B729827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPaymentGatewayTests" */ = {
+		3044D8B729827AFB00F81550 /* Build configuration list for PBXNativeTarget "EdfaPgSdkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3044D8B829827AFB00F81550 /* Debug */,
