@@ -16,9 +16,11 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
   
-  spec.name         = "Edfa Payment Gateway SDK (EdfaPgSdk)"
+  spec.name         = "EdfaPgSdk"
   spec.version      = "0.0.1"
-  spec.summary      = "EdfaPgSdk is an payment SDK library written in Swift."
+  spec.summary      = "(EdfaPgSdk) Edfa Payment Gateway SDK is an payment library written in Swift.
+
+"
   
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,8 +28,8 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  EdfaPgSdk iOS SDK was developed and designed with one purpose: to help the iOS developers easily integrate the Edfa Payment Gateway Platform for a specific merchant.
-                   DESC
+  EdfaPgSdk iOS SDK was developed and designed with to help the developers to easily integrate the Edfa Payment Gateway Platform for a specific merchant.
+  DESC
 
   spec.homepage     = "https://edfapay.com"
   spec.screenshots  = "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/sale.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/recurring-sale.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/capture.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/creditvoid.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/get-trans-status.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/get-trans-details.png?raw=true"
