@@ -246,18 +246,6 @@
 		3085D5282989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		3085D5292989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */; };
 		308B68BA2A1522F4000EF281 /* EdfaPgSdk.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 308B68B92A1522F4000EF281 /* EdfaPgSdk.podspec */; };
-		308B68F02A164D5C000EF281 /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E42A164D5B000EF281 /* Mastercard.png */; };
-		308B68F12A164D5C000EF281 /* pci-dss-compliant.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E52A164D5B000EF281 /* pci-dss-compliant.png */; };
-		308B68F32A164D5C000EF281 /* UnionPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E72A164D5B000EF281 /* UnionPay.png */; };
-		308B68F42A164D5C000EF281 /* amexCvc.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E82A164D5B000EF281 /* amexCvc.png */; };
-		308B68F52A164D5C000EF281 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E92A164D5B000EF281 /* Visa.png */; };
-		308B68F62A164D5C000EF281 /* Group-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EA2A164D5B000EF281 /* Group-1.png */; };
-		308B68F72A164D5C000EF281 /* Discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EB2A164D5C000EF281 /* Discover.png */; };
-		308B68F82A164D5C000EF281 /* Amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EC2A164D5C000EF281 /* Amex.png */; };
-		308B68F92A164D5C000EF281 /* mada.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68ED2A164D5C000EF281 /* mada.png */; };
-		308B68FA2A164D5C000EF281 /* JCB.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EE2A164D5C000EF281 /* JCB.png */; };
-		308B68FB2A164D5C000EF281 /* chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68EF2A164D5C000EF281 /* chip.png */; };
-		308B68FD2A164DE4000EF281 /* paweredby-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FC2A164DE4000EF281 /* paweredby-logo.png */; };
 		308B68FF2A166E5B000EF281 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 308B68FE2A166E5B000EF281 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -1083,20 +1071,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308B68F32A164D5C000EF281 /* UnionPay.png in Resources */,
-				308B68F82A164D5C000EF281 /* Amex.png in Resources */,
-				308B68F52A164D5C000EF281 /* Visa.png in Resources */,
-				308B68FD2A164DE4000EF281 /* paweredby-logo.png in Resources */,
-				308B68F02A164D5C000EF281 /* Mastercard.png in Resources */,
-				308B68F72A164D5C000EF281 /* Discover.png in Resources */,
 				308B68FF2A166E5B000EF281 /* README.md in Resources */,
-				308B68F42A164D5C000EF281 /* amexCvc.png in Resources */,
-				308B68FA2A164D5C000EF281 /* JCB.png in Resources */,
 				3085D5052989B52B00AEFE32 /* CardDetailViewController.xib in Resources */,
-				308B68FB2A164D5C000EF281 /* chip.png in Resources */,
-				308B68F92A164D5C000EF281 /* mada.png in Resources */,
-				308B68F62A164D5C000EF281 /* Group-1.png in Resources */,
-				308B68F12A164D5C000EF281 /* pci-dss-compliant.png in Resources */,
 				308B68BA2A1522F4000EF281 /* EdfaPgSdk.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
