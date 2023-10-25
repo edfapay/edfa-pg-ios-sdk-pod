@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   #
   
   spec.name         = "Edfa Payment Gateway SDK (EdfaPgSdk)"
-  spec.version      = "1.1.1"
+  spec.version      = "0.0.1"
   spec.summary      = "EdfaPgSdk is an payment SDK library written in Swift."
   
   # This description is used to generate tags and improve search results.
