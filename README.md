@@ -1,4 +1,4 @@
-[View SDK Wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod /wiki) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new)
+[View SDK Wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod/wiki) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new)
 
 # EdfaPg iOS SDK
 
