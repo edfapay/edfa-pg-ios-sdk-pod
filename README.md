@@ -1,4 +1,4 @@
-[View SDK Wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod/wiki) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new)
+[View SDK Wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod /wiki) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new)
 
 # EdfaPg iOS SDK
 
@@ -18,7 +18,7 @@ The main aspects of the EdfaPg iOS SDK:
 - Minimum iOS 11
 - Sample Application
 
-To get used to the SDK, download a [sample app](https://github.com/edfapay/edfa-pg-ios-sdk-sample).
+To get used to the SDK, download a [sample app](https://github.com/edfapay/edfa-pg-ios-sdk-sample ).
 
 ## Setup
 
@@ -30,27 +30,25 @@ pod 'EdfaPgSdk'
 
 Always download latest version by run `pod update` or `pod install --repo-update`
 
-[Follow further at wiki](https://github.com/edfapay/edfa-pg-ios-sdk-pod/wiki/Setup) | [Report new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new)
-
 ## Sample
 
-| Sale | Recurring Sale | Capture |
-|-|-|-|
-| ![](/media/sale.png) | ![](/media/recurring-sale.png) | ![](/media/capture.png) |
+| Txn Types | Card Pay | Sale | Recurring Sale |
+|-|-|-|-|
+| ![](/media/main_page.png) | ![](/media/pay_card.png) | ![](/media/sale.png) | ![](/media/recurring-sale.png) |
 
-| Creditvoid | Get Trans Status | Get Trans Details |
-|-|-|-|
-| ![](/media/creditvoid.png) | ![](/media/get-trans-status.png) | ![](/media/get-trans-details.png) |
+| Capture | Creditvoid | Get Trans Status | Get Trans Details |
+|-|-|-|-|
+| ![](/media/capture.png) | ![](/media/creditvoid.png) | ![](/media/get-trans-status.png) | ![](/media/get-trans-details.png) |
 
 ## Getting help
 
-To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new).
+To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new).
 
-Or write a direct letter to the [itsupport@edfapay.com](mailto:itsupport@edfapay.com).
+Or write a direct letter to the [itsupport@edfapay.com](mailto:admin@edfapay.com).
 
 ## License
 
-MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/LICENSE) file for more details.
+MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod /blob/main/LICENSE) file for more details.
 
 ## Contacts
 
