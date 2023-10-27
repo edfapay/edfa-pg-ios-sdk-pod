@@ -42,7 +42,7 @@ Always download latest version by run `pod update` or `pod install --repo-update
 
 ## Getting help
 
-To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new).
+To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new).
 
 Or write a direct letter to the [support@edfapay.com](mailto:support@edfapay.com).
 
