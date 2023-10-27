@@ -48,7 +48,7 @@ Or write a direct letter to the [support@edfapay.com](mailto:support@edfapay.com
 
 ## License
 
-MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod /blob/main/LICENSE) file for more details.
+MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/LICENSE) file for more details.
 
 ## Contacts
 
