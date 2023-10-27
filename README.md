@@ -44,7 +44,7 @@ Always download latest version by run `pod update` or `pod install --repo-update
 
 To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod /issues/new).
 
-Or write a direct letter to the [itsupport@edfapay.com](mailto:admin@edfapay.com).
+Or write a direct letter to the [support@edfapay.com](mailto:support@edfapay.com).
 
 ## License
 
@@ -54,7 +54,7 @@ MIT License. See the [LICENSE](https://github.com/edfapay/edfa-pg-ios-sdk-pod /b
 
 Website: https://edfapay.com  
 Phone: [+966920033633](tel:+966920033633)  
-Email: [itsupport@edfapay.com](mailto:itsupport@edfapay.com)  
+Email: [support@edfapay.com](mailto:support@edfapay.com)  
 Address: EdfaPg, Olaya Street, Riyadh, Saudi Arabia
 
 © 2023 - 2024 EdfaPg. All rights reserved.
