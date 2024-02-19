@@ -43,7 +43,7 @@ class CardDetailViewController : UIViewController {
     
     let cardNumberFormatter = DefaultTextInputFormatter(textPattern: "#### #### #### ####")
     let cardExpirationFormatter = DefaultTextInputFormatter(textPattern: "## / ##")
-    let cardCVVFormatter = DefaultTextInputFormatter(textPattern: "###")
+    let cardCVVFormatter = DefaultTextInputFormatter(textPattern: "####")
     
     @IBOutlet weak var lblAmount: UILabel!
     @IBOutlet weak var lblCurrency: UILabel!
@@ -119,7 +119,7 @@ class CardDetailViewController : UIViewController {
         onChange()
         sender.textColor = UIColor.black
         let number = cardNumberFormatter.unformat(sender.text)
-        if number?.count == 16{
+        if (number?.count == 16){
             if isValidCardNumber(number: number){
                 txtCardExpiry.becomeFirstResponder()
             }else{
@@ -154,7 +154,7 @@ class CardDetailViewController : UIViewController {
     @IBAction func cvvTextChanged(_ sender: UITextField) {
         onChange()
         sender.textColor = UIColor.black
-        if cardCVVFormatter.unformat(sender.text)?.count == 3{
+        if (cardCVVFormatter.unformat(sender.text)?.count == 4){
             sender.resignFirstResponder()
             if isValidCVC(){
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -207,7 +207,7 @@ class CardDetailViewController : UIViewController {
     }
     
     func isValidCardNumber(number:String?) -> Bool{
-        return (number ?? "").count == 16 || cardView.cardBrand != .NONE
+        return ((number ?? "").count == 15 || (number ?? "").count == 16) || cardView.cardBrand != .NONE
     }
     
     func isValidExpiry() -> Bool{
@@ -231,7 +231,7 @@ class CardDetailViewController : UIViewController {
     }
     
     func isValidCVC() -> Bool{
-        return txtCardCVV.text?.count == 3
+        return (txtCardCVV.text?.count == 3 || txtCardCVV.text?.count == 4 )
     }
     
 }
