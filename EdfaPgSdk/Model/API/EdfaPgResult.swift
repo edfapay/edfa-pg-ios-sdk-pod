@@ -19,7 +19,7 @@ public enum EdfaPgResult: String, Codable {
     case declined = "DECLINED"
     
     /// Additional action required from requester (Redirect to 3ds).
-    case rejected = "REDIRECT"
+    case redirect = "REDIRECT"
     
     /// Action was accepted by Payment Platform, but will be completed later.
     case accepted = "ACCEPTED"

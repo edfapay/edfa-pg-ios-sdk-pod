@@ -131,9 +131,11 @@ extension SaleRedirectionView : WKNavigationDelegate{
         if url.lowercased().starts(with: EdfaPgProcessCompleteCallbackUrl){
             operationCompleted(
                 result: response3ds ?? EdfaPg3dsResponse(
-                    orderId: response.orderId, transactionId: response.transactionId,
+                    orderId: response.orderId,
+                    transactionId: response.transactionId,
                     ciphertext: nil, nonce: nil, tag: nil,
-                    result: .failure, gatewayRecommendation: .dontProceed
+                    result: .success,
+                    gatewayRecommendation: .checkStatus
                 )
             )
             decisionHandler(.cancel)
@@ -202,6 +204,8 @@ extension SaleRedirectionView{
             return
         }
         
+        
+        let uri = request.url
         let url = request.url?.description ?? ""
         let body = String(data: request.httpBody ?? Data(), encoding: .utf8)  ?? "None"
         

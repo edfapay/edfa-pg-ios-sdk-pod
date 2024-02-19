@@ -67,6 +67,7 @@ public enum Result: String, Codable {
 public enum GatewayRecommendation: String, Codable {
     case proceed = "PROCEED"
     case dontProceed = "DO_NOT_PROCEED"
+    case checkStatus = "CHECK_TXN_STATUS"
 }
 
 
