@@ -128,13 +128,20 @@ public final class EdfaPgDataRequest {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue.capitalized
         
-        request.httpBody = (body as? XWWWFormUrlEncodable)?.formUrlEncodableData
-        
         request.allHTTPHeaderFields = [
             "X-User-Agent": "ios",
             "Accept": "application/json",
-            "Content-Type": "application/x-www-form-urlencoded"
         ]
+        
+        if body is XWWWFormUrlEncodable{
+            request.httpBody = (body as? XWWWFormUrlEncodable)?.encodableData
+            request.allHTTPHeaderFields?["Content-Type"] = "application/x-www-form-urlencoded"
+        }
+        
+        if body is MultiPartTextFormDataUrlEncodable{
+            request.httpBody = (body as? MultiPartTextFormDataUrlEncodable)?.encodableData
+            request.allHTTPHeaderFields?["Content-Type"] = "multipart/form-data; boundary=boundary-edfapay-pg-formdata"
+        }
         
         self.request = request
     }

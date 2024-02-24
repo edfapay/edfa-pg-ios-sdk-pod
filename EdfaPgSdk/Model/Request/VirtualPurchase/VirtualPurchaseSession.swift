@@ -77,6 +77,7 @@ public final class VirtualPurchaseSession {
     }
     
     func data() -> Data?{
+        let j = json()
         return try? JSONSerialization.data(withJSONObject: json())
     }
 }

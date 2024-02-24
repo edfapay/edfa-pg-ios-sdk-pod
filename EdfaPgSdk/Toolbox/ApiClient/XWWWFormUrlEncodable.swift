@@ -8,11 +8,11 @@
 import Foundation
 
 protocol XWWWFormUrlEncodable: Encodable {
-    var formUrlEncodableData: Data? { get }
+    var encodableData: Data? { get }
 }
 
 extension XWWWFormUrlEncodable {
-    var formUrlEncodableData: Data? {
+    var encodableData: Data? {
         guard let data = try? JSONEncoder().encode(self),
               let dict = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [String: Any]
         else { return nil }

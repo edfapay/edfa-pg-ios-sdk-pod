@@ -63,6 +63,29 @@ final class EdfaPgHashUtil {
         return nil
     }
     
+
+    
+    
+    ////Example: Must be of MD5 encoded string (uppercased): reverseStr(applepay_identifier + order_number + order_amount + order_currency  + password)
+    /// The returned has must be encoded string calculated by rules:
+    ///
+    /// md5(strtoupper(reverseStr(applepay_identifier.order_number.order_amount.order_currency.merchant_password)))
+    /// - Parameters:
+    ///   - identifier: The transaction identiflier from appley pay
+    ///   - number: The order unique number/id.
+    ///   - amount: The order amount.
+    ///   - currency: The order currency
+    /// - Returns: The *md5* hash String.
+    static func hashApplePayVirtual(identifier:String, number:String, amount:String, currency:String) -> String? {
+        let clientPass = EdfaPgSdk.shared.credentials.clientPass
+        
+        let reversed = "\(identifier)\(number)\(amount)\(currency)\(clientPass)".reversed()
+        if let md5 = md5(from: String(reversed).uppercased()){
+            return md5
+        }
+        return nil
+    }
+    
     private static func md5(from string: String) -> String? {
         let data = Data(string.utf8)
         

@@ -31,9 +31,13 @@ fileprivate var _onError:(([String]) -> Void)!
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
 fileprivate var enableLogs:Bool = false
-public class EdfaApplePay{
+
+fileprivate let virtualSaleAdapter = EdfaPgVirtualSaleAdapter()
+public class EdfaApplePay : EdfaPgAdapterDelegate{
+    
+    
     public init() {
-        
+        virtualSaleAdapter.delegate = self
     }
     
     private let request = PKPaymentRequest()
@@ -241,7 +245,7 @@ fileprivate class EdfaApplePayDelegate : UIViewController, PKPaymentAuthorizatio
     
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         _onAuthentication?(payment)
-        startPurchase(payment: payment) { (success, response) in
+        startPurchaseApm(payment: payment) { (success, response) in
             let result = PKPaymentAuthorizationResult(
                 status: success ? .success : .failure,
                 errors: nil
@@ -270,7 +274,56 @@ fileprivate class EdfaApplePayDelegate : UIViewController, PKPaymentAuthorizatio
 
 
 
+
+
 // Initiate Purchase
+fileprivate func startPurchaseApm(payment:PKPayment, completion:@escaping ((Bool,[String:Any])->Void)){
+    let token = payment.token
+    let method = payment.token.paymentMethod
+    
+    if let paymentDataJSON = try? JSONSerialization.jsonObject(with: token.paymentData) as? [String:Any]{
+        let paymentJSON:[String : Any] = [
+            "paymentData" : paymentDataJSON,
+            "paymentMethod" : [
+                "displayName" : method.displayName ?? "",
+                "network" : method.network?.rawValue  ?? "",
+                "type" : method.type.name(),
+            ],
+            "transactionIdentifier" : token.transactionIdentifier
+        ]
+        if let paymentToken = try? JSONSerialization.data(withJSONObject: paymentJSON), let paymentTokenString = String(data: paymentToken, encoding: .utf8){
+            
+            virtualSaleAdapter.execute(
+                brand: "applepay",
+                identifier: payment.token.transactionIdentifier,
+                returnUrl: EdfaPgProcessCompleteCallbackUrl,
+                paymentToken: paymentTokenString,
+                order: _order,
+                payer: _payer
+            ) { response in
+                switch response{
+                    
+                case .result(let resp):
+                    switch resp{
+                    case .success(let result):
+                        if(result.status == .settled){
+                            completion(true, result.json())
+                        }else{
+                            completion(false, result.json())
+                        }
+                    }
+                    
+                case .error(let error):
+                    completion(false, error.json())
+                    
+                case .failure(let error):
+                    completion(false, ["error" : error.localizedDescription ?? "Error while performing sale"])
+                }
+            }
+        }
+    }
+}
+
 fileprivate func startPurchase(payment:PKPayment, completion:@escaping ((Bool,[String:Any])->Void)){
     
     let requestHash = EdfaPgHashUtil.hashVirtualPurchaseOrder(
@@ -280,7 +333,7 @@ fileprivate func startPurchase(payment:PKPayment, completion:@escaping ((Bool,[S
         description: _order.description
     )
     
-    if let _requestHash = requestHash, let applePayVirtualPurchaseData = ApplePayVirtualPurchase(payment: payment, payer: _payer).getData(){
+    if let _requestHash = requestHash, let applePayVirtualPurchaseData = ApplePayPaymentData(payment: payment, payer: _payer).getData(){
         
         
         let merchant_key = EdfaPgSdk.shared.credentials.clientKey
@@ -501,5 +554,17 @@ fileprivate func printHttp(response: URLResponse?, request: URLRequest?, data: D
         
         print(printString)
 
+    }
+}
+
+
+extension EdfaApplePay{
+    
+    public func willSendRequest(_ request: EdfaPgDataRequest) {
+        
+    }
+    
+    public func didReceiveResponse(_ reponse: EdfaPgDataResponse?) {
+        
     }
 }

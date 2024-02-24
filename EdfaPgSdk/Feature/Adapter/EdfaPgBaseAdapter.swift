@@ -66,3 +66,53 @@ public class EdfaPgBaseAdapter<Serivce: Encodable> {
         delegate?.didReceiveResponse(response)
     }
 }
+
+
+
+/// The base EdfaPg API Adapter.
+public class EdfaPgVirtualBaseAdapter<Serivce: Encodable> {
+    
+    private let apiClient = EdfaPgRestApiClient()
+    
+    /// The delegate to observe requests and responses
+    public weak var delegate: EdfaPgAdapterDelegate?
+    
+    @discardableResult
+    func procesedRequest<T: Decodable>(action: EdfaPgAction,
+                                       params: Serivce,
+                                       callback: @escaping EdfaPgCallback<T>) -> URLSessionDataTask {
+        let url = URL(string: "\(EdfaPgSdk.shared.credentials.paymentUrl)-va")!
+        
+        let request = EdfaPgDataRequest(url: url,
+                                           httpMethod: .post,
+                                           body: params)
+        
+        delegate?.willSendRequest(request)
+        
+        return apiClient.send(request) { [weak self] in
+            self?.parseResponse($0, callback: callback)
+        }
+    }
+    
+    private func parseResponse<T: Decodable>(_ response: EdfaPgDataResponse, callback: @escaping EdfaPgCallback<T>) {
+        if let data = response.data {
+            do {
+                callback(.error(try JSONDecoder().decode(EdfaPgError.self, from: data)))
+           
+            } catch {
+                do {
+                    let a: T = try JSONDecoder().decode(T.self, from: data)
+                    callback(.result(a))
+                    
+                } catch {
+                    callback(.failure(error))
+                }
+            }
+            
+        } else {
+            callback(.failure(response.error ?? NSError(domain: "Server error", code: 0, userInfo: nil)))
+        }
+        
+        delegate?.didReceiveResponse(response)
+    }
+}
