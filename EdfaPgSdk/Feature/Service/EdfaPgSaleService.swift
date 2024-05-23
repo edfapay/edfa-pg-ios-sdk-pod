@@ -51,6 +51,7 @@ public struct EdfaPgSaleService: XWWWFormUrlEncodable {
     let recurringInit: EdfaPgOption?
     let auth: EdfaPgOption?
     let hash: String
+    let reqToken: String = "N"
 }
 
 extension EdfaPgSaleService: Encodable {
@@ -81,5 +82,6 @@ extension EdfaPgSaleService: Encodable {
         case payerIp = "payer_ip"
         case termUrl3ds = "term_url_3ds"
         case recurringInit = "recurring_init"
+        case reqToken = "req_token"
     }
 }

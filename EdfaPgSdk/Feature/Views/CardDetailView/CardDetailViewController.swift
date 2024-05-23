@@ -212,6 +212,7 @@ class CardDetailViewController : UIViewController {
     
     func isValidExpiry() -> Bool{
         let df = DateFormatter()
+        df.locale = Locale.init(identifier: "en-US")
         
         df.dateFormat = "MM"
         let month = df.string(from: Date())
@@ -224,10 +225,11 @@ class CardDetailViewController : UIViewController {
         var valid = false
         if let y1 = expiry.year, let m1 = expiry.month,
            let y2 = UInt(year), let m2 = UInt(month){
-            valid = y1+m1 >= y2+m2
+            if y1 > y2 { return true }
+            if y1 == y2 && m1 >= m2 { return true }
         }
         
-        return valid
+        return false
     }
     
     func isValidCVC() -> Bool{
@@ -250,6 +252,28 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
     
     func doSaleTransaction(){
         
+        
+//        let payerOptions = EdfaPgPayerOptions(middleName: tfPayerMiddleName.text,
+//                                                 birthdate: Foundation.Date.formatter.date(from: tfPayerBirthday.text ?? ""),
+//                                                 address2: tfPayerAddress2.text,
+//                                                 state: tfPayerState.text)
+//        
+//        let payer = EdfaPgPayer(firstName: tfPayerFirstName.text ?? "",
+//                                   lastName: tfPayerLastName.text ?? "",
+//                                   address: tfPayerAddress.text ?? "",
+//                                   country: tfPayerCountryCode.text ?? "",
+//                                   city: tfPayerCity.text ?? "",
+//                                   zip: tfPayerZip.text ?? "",
+//                                   email: tfPayerEmail.text ?? "",
+//                                   phone: tfPayerPhone.text ?? "",
+//                                   ip: tfPayerIpAddress.text ?? "",
+//                                   options: payerOptions)
+//        
+//        let saleOptions = EdfaPgSaleOptions(channelId: tfChannelId.text,
+//                                               recurringInit: swtInitRecurringSale.isOn)
+//        
+//        let transaction = EdfaPgTransactionStorage.Transaction(payerEmail: payer.email,
+//                                                                  cardNumber: card.number)
         
         guard  let number = cardNumberFormatter.unformat(txtCardNumber.text),
                let cvv = cardCVVFormatter.unformat(txtCardCVV.text),

@@ -64,7 +64,9 @@ public final class EdfaPgPayer {
         self.email = email
         self.phone = phone
         self.ip = ip
-        self.options = options
+        self.options = options ?? EdfaPgPayerOptions(
+            middleName: "undefined", birthdate: nil, address2: "undefined", state: "undefined"
+        )
     }
     
     public init(firstName: String, lastName: String, email: String, phone: String, options: EdfaPgPayerOptions? = nil) {
