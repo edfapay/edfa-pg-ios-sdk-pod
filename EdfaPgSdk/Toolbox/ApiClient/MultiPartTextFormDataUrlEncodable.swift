@@ -21,7 +21,6 @@ extension MultiPartTextFormDataUrlEncodable {
         
         let boundary = "boundary-edfapay-pg-formdata"
         var body = Data()
-        var error: Error? = nil
         
         dict.forEach { (key: String, value: Any) in
             body += Data("--\(boundary)\r\n".utf8)

@@ -52,7 +52,8 @@ public struct EdfaPgVirtualSaleService: MultiPartTextFormDataUrlEncodable {
 extension EdfaPgVirtualSaleService: Encodable {
     enum CodingKeys: String, CodingKey {
         case hash, action, brand, identifier
-        case paymentToken = "parameters[paymentToken]"
+        case paymentToken = "parameters"
+//        case paymentToken = "parameters[paymentToken]"
         case returnUrl = "return_url"
         case clientKey = "client_key"
         case orderId = "order_id"

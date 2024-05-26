@@ -205,7 +205,6 @@ extension SaleRedirectionView{
         }
         
         
-        let uri = request.url
         let url = request.url?.description ?? ""
         let body = String(data: request.httpBody ?? Data(), encoding: .utf8)  ?? "None"
         

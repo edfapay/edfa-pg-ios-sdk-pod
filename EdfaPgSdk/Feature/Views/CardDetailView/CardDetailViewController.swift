@@ -222,7 +222,6 @@ class CardDetailViewController : UIViewController {
         
         let expiry = cardxExpiry()
         
-        var valid = false
         if let y1 = expiry.year, let m1 = expiry.month,
            let y2 = UInt(year), let m2 = UInt(month){
             if y1 > y2 { return true }

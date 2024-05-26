@@ -83,7 +83,7 @@ public class EdfaPgVirtualBaseAdapter<Serivce: Encodable> {
                                        callback: @escaping EdfaPgCallback<T>) -> URLSessionDataTask {
 //        let url = URL(string: "\(EdfaPgSdk.shared.credentials.paymentUrl)-va")!
         
-        var urlstr = EdfaPgSdk.shared.credentials.paymentUrl.replacingOccurrences(of: "payment/post", with: "")
+        let urlstr = EdfaPgSdk.shared.credentials.paymentUrl.replacingOccurrences(of: "payment/post", with: "")
         let url = URL(string: "\(urlstr)applepay/orders/s2s/sale")!
         
         let request = EdfaPgDataRequest(url: url,
