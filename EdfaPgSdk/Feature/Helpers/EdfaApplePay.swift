@@ -317,7 +317,7 @@ fileprivate func startPurchaseApm(payment:PKPayment, completion:@escaping ((Bool
                     completion(false, error.json())
                     
                 case .failure(let error):
-                    completion(false, ["error" : error.localizedDescription])
+                    completion(false, ["error" : "\(error)"])
                 }
             }
         }
