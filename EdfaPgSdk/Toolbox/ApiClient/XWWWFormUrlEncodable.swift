@@ -25,6 +25,6 @@ extension XWWWFormUrlEncodable {
             return "\($0.key)=\(value)"
         }.joined(separator: "&")
         
-        return string.data(using: .ascii, allowLossyConversion: false)
+        return string.data(using: .utf8, allowLossyConversion: false)
     }
 }
