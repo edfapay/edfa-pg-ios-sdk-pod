@@ -14,7 +14,7 @@ class UserAgent{
     func DarwinVersion() -> String {
         var sysinfo = utsname()
         uname(&sysinfo)
-        let dv = String(bytes: Data(bytes: &sysinfo.release, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+        let dv = String(bytes: Data(bytes: &sysinfo.release, count: Int(_SYS_NAMELEN)), encoding: .utf8)!.trimmingCharacters(in: .controlCharacters)
         return "Darwin/\(dv)"
     }
     //eg. CFNetwork/808.3
@@ -33,7 +33,7 @@ class UserAgent{
     func deviceName() -> String {
         var sysinfo = utsname()
         uname(&sysinfo)
-        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .utf8)!.trimmingCharacters(in: .controlCharacters)
     }
     //eg. MyApp/1
     func appNameAndVersion() -> String {
