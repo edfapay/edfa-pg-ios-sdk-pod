@@ -19,6 +19,8 @@ final class EdfaPgAmountFormatter {
         formatter.maximumFractionDigits = 2
         
         formatter.minimumIntegerDigits = 1
+        formatter.locale = Locale(identifier: "en_US")
+        
     }
     
     /// Validate and format the amount value.
