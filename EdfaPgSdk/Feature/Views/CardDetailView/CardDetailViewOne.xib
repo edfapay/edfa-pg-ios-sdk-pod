@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardDetailViewController" customModule="EdfaPgSdk" customModuleProvider="target">
             <connections>
                 <outlet property="btnSubmit" destination="gU0-7f-SLN" id="wP0-GF-TmQ"/>
+                <outlet property="cardViewCardExpiry" destination="nVK-nT-HDQ" id="AxF-Jp-MVm"/>
                 <outlet property="cardViewCardName" destination="Mrg-4l-WiZ" id="nhR-dD-K2d"/>
                 <outlet property="cardViewCardNumber" destination="lvN-re-1rD" id="2Jw-rm-1C7"/>
                 <outlet property="cardViewCvv" destination="VkV-WY-bCk" id="vI9-cB-UIW"/>

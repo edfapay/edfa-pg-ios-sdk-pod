@@ -22,6 +22,7 @@ fileprivate var _target:UIViewController?
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
 fileprivate var _paymentType:String!
+fileprivate var _languageCode:String!
 
 // https://github.com/card-io/card.io-iOS-SDK
 // https://github.com/orazz/CreditCardForm-iOS
@@ -98,7 +99,7 @@ class CardDetailViewController : UIViewController {
         btnSubmit.setTitle(NSLocalizedString("label_pay", comment: "Submit button title"), for: .normal)
         setupTargets()
         setupFormatters()
-        //setLabelsText()
+        setLocalizedtext(langugeCode:_languageCode)
         btnSubmit.isEnabled = false
         btnSubmit.alpha = 0.5
         
@@ -117,14 +118,18 @@ class CardDetailViewController : UIViewController {
         cardNumberInputController.formatter = cardNumberFormatter
         txtCardNumber.delegate = cardNumberInputController
         txtCardNumber.text = cardNumberFormatter.format("")
+        txtCardNumber.keyboardType = .numberPad
     
         cardExpirationInputController.formatter = cardExpirationFormatter
         txtCardExpiry.delegate = cardExpirationInputController
         txtCardExpiry.text = cardExpirationFormatter.format("")
+        txtCardExpiry.keyboardType = .numberPad
     
         cardCVVInputController.formatter = cardCVVFormatter
         txtCardCVV.delegate = cardCVVInputController
         txtCardCVV.text = cardCVVFormatter.format("")
+        txtCardCVV.keyboardType = .numberPad
+
     }
     
     
@@ -261,6 +266,59 @@ class CardDetailViewController : UIViewController {
     
 }
 
+extension CardDetailViewController {
+    
+    
+    func setLocalizedtext(langugeCode : String ){
+        
+        // Set localized text for a UIButton
+        setLocalizedText(for: btnSubmit, key: "label_pay", languageCode: langugeCode) // Arabic localization for the button
+
+//        // Set localized text for a UILabel
+//        setLocalizedText(for: l, key: "label_total", languageCode: "ar") // Arabic localization for the label
+//
+//        // Set localized placeholder for a UITextField
+//        setLocalizedText(for: nameTextField, key: "label_card_holder_name", languageCode: "ar") // Arabic localization for the text field placeholder
+//        
+    }
+    
+    func setLocalizedText(for component: AnyObject, key: String, languageCode: String = "en") {
+        // Get the bundle for the pod
+        let podBundle = Bundle(for: EdfaPgSdk.self) // Replace with a class from your pod
+
+        // Find the localization bundle within the pod bundle
+        if let localizationBundle = podBundle.path(forResource: languageCode, ofType: "lproj"),
+           let bundle = Bundle(path: localizationBundle) {
+            // Get the localized string
+            let localizedString = NSLocalizedString(key, tableName: nil, bundle: bundle, value: "", comment: "")
+            print("Localized String: \(localizedString)")
+
+            // Set the localized text based on the component type
+            switch component {
+            case let button as UIButton:
+                button.setTitle(localizedString, for: .normal)
+            case let label as UILabel:
+                label.text = localizedString
+            case let textField as UITextField:
+                textField.placeholder = localizedString
+            default:
+                print("Unsupported component type")
+            }
+        } else {
+            print("\(languageCode) localization not found")
+            // Optionally, set the default text if the localization is not found
+            if let button = component as? UIButton {
+                button.setTitle(key, for: .normal)
+            } else if let label = component as? UILabel {
+                label.text = key
+            } else if let textField = component as? UITextField {
+                textField.placeholder = key
+            }
+        }
+    }
+
+    
+}
 
 
 extension CardDetailViewController : EdfaPgAdapterDelegate{
@@ -527,17 +585,11 @@ public class EdfaCardPay{
     }
 
     public func getSelectedPaymentScreen(paymentType: String?)->String{
-        var screenName = "CardDetailViewOne"
-        if (paymentType != nil){
-            if (paymentType!.elementsEqual("1")){
-                screenName = "CardDetailViewOne"
-            }else  if (paymentType!.elementsEqual("2")){
-                screenName = "CardDetailViewTwo"
-            }else  if (paymentType!.elementsEqual("3")){
-                screenName = "CardDetailViewThree"
-            }
+        let defaultScreenName = "CardDetailViewOne"
+        if let paymentType = EdfaCardPay.EdfaPayPaymentDesignType(rawValue: paymentType ?? "") {
+                    return paymentType.screenName
         }
-        return screenName
+        return defaultScreenName
     }
 }
 
@@ -575,6 +627,33 @@ extension EdfaCardPay{
     public func setPaymentType(paymentType:String) -> EdfaCardPay{
         _paymentType = paymentType
         return self
+    }
+    public func setLanguage(languageCode:String) -> EdfaCardPay{
+        _languageCode = languageCode
+        return self
+    }
+    
+    public enum EdfaPayPaymentDesignType: String {
+        case payment_ONE = "payment_ONE"
+        case payment_TWO = "payment_TWO"
+        case payment_THREE = "payment_THREE"
+
+        var screenName: String {
+            switch self {
+            case .payment_ONE:
+                return "CardDetailViewOne"
+            case .payment_TWO:
+                return "CardDetailViewTwo"
+            case .payment_THREE:
+                return "CardDetailViewThree"
+            }
+        }
+    }
+    
+    public enum EdfaPaySelectedLanguage: String {
+        case language_en = "en"
+        case language_ar = "ar"
+
     }
 }
 
@@ -665,6 +744,7 @@ private extension EdfaCardPay{
         
         return (valid, errors)
     }
+    
 }
 
 extension CardDetailViewController : UITextFieldDelegate {
@@ -750,15 +830,22 @@ extension CardDetailViewController : UITextFieldDelegate {
         }
         // when edit Card Number this code execute
         else if textField == txtCardNumber {
-            if _paymentType.elementsEqual("3"){
-                self.cardViewCardNumber.text = (
-                    number.isEmpty ?? true
-                ) ? "**** **** **** 1245" : number
+            if (_paymentType == nil){
+                if _paymentType.elementsEqual("3"){
+                    self.cardViewCardNumber.text = (
+                        number.isEmpty ?? true
+                    ) ? "**** **** **** 1245" : number
+                }else{
+                    self.cardViewCardNumber.text = (
+                        number.isEmpty ?? true
+                    ) ? "**** **** **** ****" : number
+                }
             }else{
                 self.cardViewCardNumber.text = (
                     number.isEmpty ?? true
                 ) ? "**** **** **** ****" : number
             }
+           
             let number = cardNumberFormatter.unformat(textField.text)
             if (number?.count == 16){
                 if isValidCardNumber(number: number){

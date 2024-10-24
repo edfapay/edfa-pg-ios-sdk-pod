@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F2AC0A82CC8DEB4001B34B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2AC0A62CC8DEB4001B34B2 /* Localizable.strings */; };
-		0F2AC0A92CC8DEB4001B34B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2AC0A62CC8DEB4001B34B2 /* Localizable.strings */; };
 		0FCBF2542CCA353D001E5FBB /* EdfaPayWithCardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF2532CCA353D001E5FBB /* EdfaPayWithCardDetails.swift */; };
 		0FCBF2552CCA353D001E5FBB /* EdfaPayWithCardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF2532CCA353D001E5FBB /* EdfaPayWithCardDetails.swift */; };
 		0FCBF25F2CCA3566001E5FBB /* CardDetailViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FCBF25A2CCA3566001E5FBB /* CardDetailViewTwo.xib */; };
@@ -25,6 +23,11 @@
 		0FCBF2702CCA3630001E5FBB /* EdfaPgVirtualSaleAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF26E2CCA3630001E5FBB /* EdfaPgVirtualSaleAdapter.swift */; };
 		0FCBF2722CCA3646001E5FBB /* ApplePayPaymentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF2712CCA3646001E5FBB /* ApplePayPaymentData.swift */; };
 		0FCBF2732CCA3646001E5FBB /* ApplePayPaymentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF2712CCA3646001E5FBB /* ApplePayPaymentData.swift */; };
+		0FCBF2872CCA6B9A001E5FBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FCBF2852CCA6B9A001E5FBB /* Localizable.strings */; };
+		0FCBF28A2CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF2892CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift */; };
+		0FCBF28B2CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF2892CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift */; };
+		0FCBF2902CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF28F2CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift */; };
+		0FCBF2912CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF28F2CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift */; };
 		3044D8A529827AFB00F81550 /* EdfaPgSdk.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8A429827AFB00F81550 /* EdfaPgSdk.docc */; };
 		3044D8AB29827AFB00F81550 /* EdfaPgSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3044D8A029827AFB00F81550 /* EdfaPgSdk.framework */; };
 		3044D8B029827AFB00F81550 /* EdfaPgSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044D8AF29827AFB00F81550 /* EdfaPgSDKTests.swift */; };
@@ -302,8 +305,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F2AC0A72CC8DEB4001B34B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0F2AC0AA2CC8DFA5001B34B2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FCBF2532CCA353D001E5FBB /* EdfaPayWithCardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdfaPayWithCardDetails.swift; sourceTree = "<group>"; };
 		0FCBF2582CCA3566001E5FBB /* CardDetailViewOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailViewOne.xib; sourceTree = "<group>"; };
 		0FCBF2592CCA3566001E5FBB /* CardDetailViewThree.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailViewThree.xib; sourceTree = "<group>"; };
@@ -314,6 +315,10 @@
 		0FCBF2692CCA35B7001E5FBB /* visa_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa_new.png; sourceTree = "<group>"; };
 		0FCBF26E2CCA3630001E5FBB /* EdfaPgVirtualSaleAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdfaPgVirtualSaleAdapter.swift; sourceTree = "<group>"; };
 		0FCBF2712CCA3646001E5FBB /* ApplePayPaymentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayPaymentData.swift; sourceTree = "<group>"; };
+		0FCBF2862CCA6B9A001E5FBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FCBF2882CCA6BF0001E5FBB /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FCBF2892CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdfaPgVirtualSaleService.swift; sourceTree = "<group>"; };
+		0FCBF28F2CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPartTextFormDataUrlEncodable.swift; sourceTree = "<group>"; };
 		3044D8A029827AFB00F81550 /* EdfaPgSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EdfaPgSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3044D8A329827AFB00F81550 /* EdfaPgSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EdfaPgSdk.h; sourceTree = "<group>"; };
 		3044D8A429827AFB00F81550 /* EdfaPgSdk.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = EdfaPgSdk.docc; sourceTree = "<group>"; };
@@ -437,7 +442,7 @@
 		3085D5112989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldBlockCharacter.swift; sourceTree = "<group>"; };
 		3085D5122989B55F00AEFE32 /* AKMaskFieldPatternCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldPatternCharacter.swift; sourceTree = "<group>"; };
 		3085D5132989B55F00AEFE32 /* AKMaskFieldStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMaskFieldStatus.swift; sourceTree = "<group>"; };
-		308B68B92A1522F4000EF281 /* EdfaPgSdk.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EdfaPgSdk.podspec; sourceTree = "<group>"; };
+		308B68B92A1522F4000EF281 /* EdfaPgSdk.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EdfaPgSdk.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		308B68E42A164D5B000EF281 /* Mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mastercard.png; sourceTree = "<group>"; };
 		308B68E52A164D5B000EF281 /* pci-dss-compliant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pci-dss-compliant.png"; sourceTree = "<group>"; };
 		308B68E72A164D5B000EF281 /* UnionPay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnionPay.png; sourceTree = "<group>"; };
@@ -473,14 +478,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FDCE23D2CC7968200CB5CAB /* Localizables */ = {
-			isa = PBXGroup;
-			children = (
-				0F2AC0A62CC8DEB4001B34B2 /* Localizable.strings */,
-			);
-			path = Localizables;
-			sourceTree = "<group>";
-		};
 		3044D89629827AFB00F81550 = {
 			isa = PBXGroup;
 			children = (
@@ -504,7 +501,6 @@
 		3044D8A229827AFB00F81550 /* EdfaPgSdk */ = {
 			isa = PBXGroup;
 			children = (
-				0FDCE23D2CC7968200CB5CAB /* Localizables */,
 				308B68FE2A166E5B000EF281 /* README.md */,
 				308B68DF2A164312000EF281 /* Assets */,
 				3044D8F829827B2A00F81550 /* Core */,
@@ -513,6 +509,7 @@
 				3044D91729827B2A00F81550 /* Toolbox */,
 				3044D8A329827AFB00F81550 /* EdfaPgSdk.h */,
 				3044D8A429827AFB00F81550 /* EdfaPgSdk.docc */,
+				0FCBF2852CCA6B9A001E5FBB /* Localizable.strings */,
 			);
 			path = EdfaPgSdk;
 			sourceTree = "<group>";
@@ -552,15 +549,15 @@
 		3044D8BC29827B2900F81550 /* Sale */ = {
 			isa = PBXGroup;
 			children = (
-				3044D8BD29827B2900F81550 /* EdfaPgSaleRedirectBody.swift */,
-				3044D8BE29827B2900F81550 /* EdfaPgSaleResult.swift */,
-				3044D8BF29827B2900F81550 /* EdfaPgSaleRedirect.swift */,
-				3044D8C029827B2A00F81550 /* EdfaPgSaleRedirectionBody.swift */,
-				3044D8C129827B2A00F81550 /* EdfaPgSaleSuccess.swift */,
 				3044D8C229827B2A00F81550 /* EdfaPgSale3ds.swift */,
 				3044D8C329827B2A00F81550 /* EdfaPgSaleDecline.swift */,
-				3044D8C429827B2A00F81550 /* EdfaPgSaleRedirectParams.swift */,
 				3044D8C529827B2A00F81550 /* EdfaPgSaleRecurring.swift */,
+				3044D8BF29827B2900F81550 /* EdfaPgSaleRedirect.swift */,
+				3044D8BD29827B2900F81550 /* EdfaPgSaleRedirectBody.swift */,
+				3044D8C029827B2A00F81550 /* EdfaPgSaleRedirectionBody.swift */,
+				3044D8C429827B2A00F81550 /* EdfaPgSaleRedirectParams.swift */,
+				3044D8BE29827B2900F81550 /* EdfaPgSaleResult.swift */,
+				3044D8C129827B2A00F81550 /* EdfaPgSaleSuccess.swift */,
 			);
 			path = Sale;
 			sourceTree = "<group>";
@@ -748,6 +745,7 @@
 		3044D90629827B2A00F81550 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0FCBF2892CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift */,
 				3044D90729827B2A00F81550 /* EdfaPgSaleService.swift */,
 				3044D90829827B2A00F81550 /* EdfaPgCreditvoidService.swift */,
 				3044D90929827B2A00F81550 /* EdfaPgGetTransactionDetailsService.swift */,
@@ -796,6 +794,7 @@
 		3044D91929827B2A00F81550 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				0FCBF28F2CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift */,
 				3044D91A29827B2A00F81550 /* XWWWFormUrlEncodable.swift */,
 				3044D91B29827B2A00F81550 /* EdfaPgRestApiClient.swift */,
 			);
@@ -1145,9 +1144,9 @@
 				30B013BA2AE98BE300460806 /* Mastercard.png in Resources */,
 				30B013BB2AE98BE300460806 /* paweredby-logo.png in Resources */,
 				30B013BC2AE98BE300460806 /* pci-dss-compliant.png in Resources */,
+				0FCBF2872CCA6B9A001E5FBB /* Localizable.strings in Resources */,
 				30B013C02AE98E3200460806 /* LICENSE in Resources */,
 				30B013BD2AE98BE300460806 /* UnionPay.png in Resources */,
-				0F2AC0A92CC8DEB4001B34B2 /* Localizable.strings in Resources */,
 				0FCBF26A2CCA35B7001E5FBB /* debit_card.png in Resources */,
 				0FCBF26B2CCA35B7001E5FBB /* visa_new.png in Resources */,
 				0FCBF26C2CCA35B7001E5FBB /* cardback_design_one.png in Resources */,
@@ -1163,7 +1162,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2AC0A82CC8DEB4001B34B2 /* Localizable.strings in Resources */,
 				0FCBF25F2CCA3566001E5FBB /* CardDetailViewTwo.xib in Resources */,
 				0FCBF2602CCA3566001E5FBB /* CardDetailViewThree.xib in Resources */,
 				0FCBF2612CCA3566001E5FBB /* CardDetailViewOne.xib in Resources */,
@@ -1227,6 +1225,7 @@
 				3044D9B529827B2A00F81550 /* EdfaPgHashUtil.swift in Sources */,
 				3085D5282989B55F00AEFE32 /* AKMaskFieldStatus.swift in Sources */,
 				3085D51A2989B55F00AEFE32 /* CreditCardValidator.swift in Sources */,
+				0FCBF2902CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift in Sources */,
 				3085D51E2989B55F00AEFE32 /* AKMaskField.swift in Sources */,
 				30787E4F2989E5C10008631C /* SumFormatParser.swift in Sources */,
 				3044D99929827B2A00F81550 /* EdfaPgGetTransactionStatusService.swift in Sources */,
@@ -1271,6 +1270,7 @@
 				3044D92329827B2A00F81550 /* EdfaPgSaleRedirect.swift in Sources */,
 				30787E632989E5C10008631C /* TextNumberUnformatter.swift in Sources */,
 				3085D51C2989B55F00AEFE32 /* AKMaskFieldBlock.swift in Sources */,
+				0FCBF28A2CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift in Sources */,
 				3044D96F29827B2A00F81550 /* EdfaPgPayerOptions.swift in Sources */,
 				3044D99129827B2A00F81550 /* EdfaPgCreditvoidService.swift in Sources */,
 				3044D94D29827B2A00F81550 /* TestSDK.swift in Sources */,
@@ -1357,6 +1357,7 @@
 				30787E502989E5C10008631C /* SumFormatParser.swift in Sources */,
 				3044D99A29827B2A00F81550 /* EdfaPgGetTransactionStatusService.swift in Sources */,
 				3085D5252989B55F00AEFE32 /* AKMaskFieldBlockCharacter.swift in Sources */,
+				0FCBF2912CCA78C3001E5FBB /* MultiPartTextFormDataUrlEncodable.swift in Sources */,
 				3044D96C29827B2A00F81550 /* EdfaPgTestCard.swift in Sources */,
 				3044D98C29827B2A00F81550 /* EdfaPgSaleAdapter.swift in Sources */,
 				3044D95029827B2A00F81550 /* EdfaPgTransactionType.swift in Sources */,
@@ -1383,6 +1384,7 @@
 				3044D93029827B2A00F81550 /* EdfaPgSaleRecurring.swift in Sources */,
 				30787E542989E5C10008631C /* PlaceholderTextInputFormatter.swift in Sources */,
 				3044D98E29827B2A00F81550 /* EdfaPgCreditvoidAdapter.swift in Sources */,
+				0FCBF28B2CCA77FC001E5FBB /* EdfaPgVirtualSaleService.swift in Sources */,
 				3044D94229827B2A00F81550 /* EdfaPgGetTransactionStatusSuccess.swift in Sources */,
 				30787E4A2989E5C10008631C /* SumTextInputFormatter.swift in Sources */,
 				3044D94429827B2A00F81550 /* EdfaPgResultProtocol.swift in Sources */,
@@ -1437,11 +1439,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F2AC0A62CC8DEB4001B34B2 /* Localizable.strings */ = {
+		0FCBF2852CCA6B9A001E5FBB /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0F2AC0A72CC8DEB4001B34B2 /* en */,
-				0F2AC0AA2CC8DFA5001B34B2 /* ar */,
+				0FCBF2862CCA6B9A001E5FBB /* en */,
+				0FCBF2882CCA6BF0001E5FBB /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

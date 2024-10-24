@@ -96,5 +96,8 @@ Pod::Spec.new do |spec|
   spec.resources = '**/*{png}'
 
   spec.exclude_files = "Classes/Exclude"
+  spec.resources = ['EdfaPgSdk/**/*.lproj', 'EdfaPgSdk/Assets/**/*']
+  
+
 
 end
