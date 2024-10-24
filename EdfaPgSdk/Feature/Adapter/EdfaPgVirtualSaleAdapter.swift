@@ -29,7 +29,7 @@ public final class EdfaPgVirtualSaleAdapter: EdfaPgVirtualBaseAdapter<EdfaPgVirt
         order: EdfaPgSaleOrder,
         payer: EdfaPgPayer,
         options: EdfaPgSaleOptions? = nil,
-        callback: @escaping EdfaPgSaleVirtualTransactionResultCallback
+        callback: EdfaPgSaleVirtualTransactionResultCallback
     ) -> URLSessionDataTask {
         
         let hash = EdfaPgHashUtil.hashApplePayVirtual(
