@@ -16,3 +16,6 @@
 "label_valid_thru" = "VALID THRU";
 "lbl_card_desc" = "This card is issued by Swedbank pursuant to licence by Mastercard International.";
 "lbl_sar" = "SAR";
+"lbl_poweredby" = "Powered by";
+"lbl_card_holder_placetext" = "CARD HOLDER NAME";
+"lbl_card_number_placetext" = "**** **** **** 1256";

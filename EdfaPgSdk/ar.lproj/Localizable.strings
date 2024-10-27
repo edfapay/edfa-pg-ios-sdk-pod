@@ -17,3 +17,7 @@
 "label_valid_thru" = "صالح \nحتى";
 "lbl_card_desc" = "تم إصدار هذه البطاقة من قبل سويدبانك بموجب ترخيص من ماستركارد الدولية.";
 "lbl_sar" = "SAR";
+"lbl_poweredby" = "مدعوم من";
+"lbl_card_holder_placetext" = "اسم حامل البطاقة";
+"lbl_card_number_placetext" = "اسم حامل البطاقة";
+"lbl_card_number_placetext" = "**** **** **** 1256";

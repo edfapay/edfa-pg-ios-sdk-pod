@@ -21,8 +21,8 @@ fileprivate var _onError:ErrorCallback!
 fileprivate var _target:UIViewController?
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
-fileprivate var _paymentType:String!
-fileprivate var _languageCode:String!
+fileprivate var _paymentType:String! = EdfaCardPay.EdfaPayPaymentDesignType.payment_ONE.rawValue
+fileprivate var _languageCode:String! = EdfaCardPay.EdfaPaySelectedLanguage.language_en.rawValue
 
 // https://github.com/card-io/card.io-iOS-SDK
 // https://github.com/orazz/CreditCardForm-iOS
@@ -32,8 +32,17 @@ fileprivate var _cardNumber:String?
 fileprivate var _txnId:String?
 class CardDetailViewController : UIViewController {
     
-
+    @IBOutlet weak var lblCardDes: UILabel!
+    @IBOutlet weak var lblTotalAmount: UILabel!
+    @IBOutlet weak var lblMonthYear: UILabel!
+    @IBOutlet weak var lblValidThru: UILabel!
+    @IBOutlet weak var lblCvv: UILabel!
     
+    @IBOutlet weak var lblCardHolder: UILabel!
+    @IBOutlet weak var lblCardnumber: UILabel!
+    @IBOutlet weak var lblCvvField: UILabel!
+    @IBOutlet weak var lblExpiryField: UILabel!
+    @IBOutlet weak var lblPowredBy: UILabel!
     
     var onPresent:(() ->Void)?
     
@@ -96,10 +105,9 @@ class CardDetailViewController : UIViewController {
         self.lblCurrency.text = Locale.current
             .localizedCurrencySymbol(forCurrencyCode: _order.currency)
         // Set localized text for button
-        btnSubmit.setTitle(NSLocalizedString("label_pay", comment: "Submit button title"), for: .normal)
         setupTargets()
         setupFormatters()
-        setLocalizedtext(langugeCode:_languageCode)
+        setLocalization(langugeCode:_languageCode)
         btnSubmit.isEnabled = false
         btnSubmit.alpha = 0.5
         
@@ -158,7 +166,7 @@ class CardDetailViewController : UIViewController {
             txtCardHolderName.becomeFirstResponder()
         }
     }
-    
+
     
     @IBAction func expiryTextChanged(_ sender: UITextField) {
         onChange()
@@ -238,7 +246,8 @@ class CardDetailViewController : UIViewController {
         return ((number ?? "").count == 15 || (number ?? "").count == 16)
         //return ((number ?? "").count == 15 || (number ?? "").count == 16) || cardView.cardBrand != .NONE
     }
-    
+   
+    /*
     func isValidExpiry() -> Bool{
         let df = DateFormatter()
         df.locale = Locale.init(identifier: "en-US")
@@ -259,6 +268,36 @@ class CardDetailViewController : UIViewController {
         
         return false
     }
+     */
+    
+    func isValidExpiry() -> Bool {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "en-US")
+        
+        // Get the current month and year
+        df.dateFormat = "MM"
+        let currentMonth = df.string(from: Date())
+        
+        df.dateFormat = "yy"
+        let currentYear = df.string(from: Date())
+        
+        // Get the expiry date entered by the user
+        let expiry = cardxExpiry()
+        
+        // Check that the month is within 1 and 12
+        guard let m1 = expiry.month, (1...12).contains(m1) else {
+            return false
+        }
+        
+        // Continue with the existing year and month validation
+        if let y1 = expiry.year, let y2 = UInt(currentYear), let m2 = UInt(currentMonth) {
+            if y1 > y2 { return true }
+            if y1 == y2 && m1 >= m2 { return true }
+        }
+        
+        return false
+    }
+
     
     func isValidCVC() -> Bool{
         return (txtCardCVV.text?.count == 3 || txtCardCVV.text?.count == 4 )
@@ -269,20 +308,40 @@ class CardDetailViewController : UIViewController {
 extension CardDetailViewController {
     
     
-    func setLocalizedtext(langugeCode : String ){
+    func setLocalization(langugeCode : String ){
         
         // Set localized text for a UIButton
-        setLocalizedText(for: btnSubmit, key: "label_pay", languageCode: langugeCode) // Arabic localization for the button
+        setLocalizedText(for: btnSubmit, key: "label_payee", languageCode: langugeCode)
+        setLocalizedText(for: lblTotalAmount, key: "label_total", languageCode: langugeCode)
+    
+        if (_paymentType != nil){
+            if(!_paymentType.elementsEqual(EdfaCardPay.EdfaPayPaymentDesignType.payment_THREE.rawValue)){
+                setLocalizedText(for: lblCardDes, key: "lbl_card_desc", languageCode: langugeCode)
+                setLocalizedText(for: lblMonthYear, key: "label_month_year", languageCode: langugeCode)
+                setLocalizedText(for: lblValidThru, key: "label_valid_thru", languageCode: langugeCode)
+                setLocalizedText(for: lblCvv, key: "label_cvv", languageCode: langugeCode)
+            }
+        }else{
+            setLocalizedText(for: lblCardDes, key: "lbl_card_desc", languageCode: langugeCode)
+            setLocalizedText(for: lblMonthYear, key: "label_month_year", languageCode: langugeCode)
+            setLocalizedText(for: lblValidThru, key: "label_valid_thru", languageCode: langugeCode)
+            setLocalizedText(for: lblCvv, key: "label_cvv", languageCode: langugeCode)
+            
+        }
+        setLocalizedText(for: lblCardHolder, key: "label_card_holder_name", languageCode: langugeCode)
+        setLocalizedText(for: lblCardnumber, key: "label_card_number", languageCode: langugeCode)
+        setLocalizedText(for: cardViewCardNumber, key: "lbl_card_number_placetext", languageCode: langugeCode)
+        setLocalizedText(for: lblCvvField, key: "label_cvv", languageCode: langugeCode)
+        setLocalizedText(for: lblExpiryField, key: "label_expiry", languageCode: langugeCode)
+        setLocalizedText(for: lblPowredBy, key: "lbl_poweredby", languageCode: langugeCode)
+        setLocalizedText(for: cardViewCardName, key: "lbl_card_holder_placetext", languageCode: langugeCode)
+        setLocalizedText(for: cardViewCardNumber, key: "lbl_card_number_placetext", languageCode: langugeCode)
+    
+        adjustLayoutDirection(languageCode: langugeCode)
 
-//        // Set localized text for a UILabel
-//        setLocalizedText(for: l, key: "label_total", languageCode: "ar") // Arabic localization for the label
-//
-//        // Set localized placeholder for a UITextField
-//        setLocalizedText(for: nameTextField, key: "label_card_holder_name", languageCode: "ar") // Arabic localization for the text field placeholder
-//        
     }
     
-    func setLocalizedText(for component: AnyObject, key: String, languageCode: String = "en") {
+    func setLocalizedText(for component: AnyObject, key: String, languageCode: String = EdfaCardPay.EdfaPaySelectedLanguage.language_en.rawValue) {
         // Get the bundle for the pod
         let podBundle = Bundle(for: EdfaPgSdk.self) // Replace with a class from your pod
 
@@ -291,7 +350,7 @@ extension CardDetailViewController {
            let bundle = Bundle(path: localizationBundle) {
             // Get the localized string
             let localizedString = NSLocalizedString(key, tableName: nil, bundle: bundle, value: "", comment: "")
-            print("Localized String: \(localizedString)")
+            //print("Localized String: \(localizedString)")
 
             // Set the localized text based on the component type
             switch component {
@@ -300,7 +359,7 @@ extension CardDetailViewController {
             case let label as UILabel:
                 label.text = localizedString
             case let textField as UITextField:
-                textField.placeholder = localizedString
+                textField.text = localizedString
             default:
                 print("Unsupported component type")
             }
@@ -315,6 +374,30 @@ extension CardDetailViewController {
                 textField.placeholder = key
             }
         }
+    }
+    
+    func adjustLayoutDirection(languageCode: String) {
+        let direction: UISemanticContentAttribute = languageCode == EdfaCardPay.EdfaPaySelectedLanguage.language_ar.rawValue ? .forceRightToLeft : .forceLeftToRight
+        let alignment: NSTextAlignment = languageCode == EdfaCardPay.EdfaPaySelectedLanguage.language_ar.rawValue ? .right : .left
+
+        view.semanticContentAttribute = direction
+        
+        func applyDirection(to view: UIView) {
+            view.semanticContentAttribute = direction
+            for subview in view.subviews {
+                applyDirection(to: subview)
+            }
+        }
+        
+        applyDirection(to: view)
+        // Update text alignment
+        txtCardCVV.textAlignment = alignment
+        txtCardExpiry.textAlignment = alignment
+        txtCardNumber.textAlignment = alignment
+        txtCardHolderName.textAlignment = alignment
+        
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
     }
 
     
@@ -485,8 +568,7 @@ onTransactionFailure: { error in
     print("onTransactionFailure: \(error)")
     _onTransactionFailure?(response, error)
                 
-})
-            .enableLogs()
+}).enableLogs()
             .show(owner: self, onStartIn: { viewController in
                 print("onStart: \(viewController)")
                 
@@ -799,9 +881,11 @@ extension CardDetailViewController : UITextFieldDelegate {
           
         // when edit Card Holder Name this code execute
         if textField == txtCardHolderName {
-            self.cardViewCardName.text = (
-                name?.isEmpty ?? true
-            ) ? "Card Holder Name" : name
+            if (name == "") {
+                setLocalizedText(for: self.cardViewCardName, key: "lbl_card_holder_placetext", languageCode: _languageCode)
+            }else{
+                self.cardViewCardName.text = name
+            }
         }
         // when edit Card Expiry this code execute
         else if textField == txtCardExpiry {
@@ -830,22 +914,11 @@ extension CardDetailViewController : UITextFieldDelegate {
         }
         // when edit Card Number this code execute
         else if textField == txtCardNumber {
-            if (_paymentType == nil){
-                if _paymentType.elementsEqual("3"){
-                    self.cardViewCardNumber.text = (
-                        number.isEmpty ?? true
-                    ) ? "**** **** **** 1245" : number
-                }else{
-                    self.cardViewCardNumber.text = (
-                        number.isEmpty ?? true
-                    ) ? "**** **** **** ****" : number
-                }
+            if number.isEmpty {
+                setLocalizedText(for: self.cardViewCardNumber, key: "lbl_card_number_placetext", languageCode: _languageCode)
             }else{
-                self.cardViewCardNumber.text = (
-                    number.isEmpty ?? true
-                ) ? "**** **** **** ****" : number
+                self.cardViewCardNumber.text = number
             }
-           
             let number = cardNumberFormatter.unformat(textField.text)
             if (number?.count == 16){
                 if isValidCardNumber(number: number){
