@@ -198,8 +198,7 @@ private extension EdfaApplePay{
     func validate() -> (valid:Bool, validationErrors:[String] ){
         var errors:[String] = []
         var valid = true
-        
-        
+
         if _onTransactionSuccess == nil{
             valid = valid && false
             errors.append("onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionSuccess:)'")
