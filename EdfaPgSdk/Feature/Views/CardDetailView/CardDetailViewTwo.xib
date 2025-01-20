@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -153,8 +154,8 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-qa-HB0" userLabel="uiViewCardNumber">
                                                                     <rect key="frame" x="10" y="76.666666666666657" width="206.66666666666666" height="21"/>
                                                                     <subviews>
-                                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**** **** **** ****" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tt-PO-Z8D">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="21"/>
+                                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**** **** **** ****" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tt-PO-Z8D">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="131" height="21"/>
                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                             <textInputTraits key="textInputTraits"/>
@@ -162,7 +163,7 @@
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstAttribute="bottom" secondItem="2tt-PO-Z8D" secondAttribute="bottom" id="3lK-zj-RBW"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="2tt-PO-Z8D" secondAttribute="trailing" id="7Qs-wl-vXA"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2tt-PO-Z8D" secondAttribute="trailing" id="7Qs-wl-vXA"/>
                                                                         <constraint firstItem="2tt-PO-Z8D" firstAttribute="top" secondItem="TKz-qa-HB0" secondAttribute="top" id="C9P-0T-cAY"/>
                                                                         <constraint firstItem="2tt-PO-Z8D" firstAttribute="leading" secondItem="TKz-qa-HB0" secondAttribute="leading" id="XZ6-ua-m2Z"/>
                                                                     </constraints>
@@ -170,8 +171,8 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2us-va-mJs" userLabel="uiViewCardName">
                                                                     <rect key="frame" x="10" y="97.666666666666657" width="206.66666666666666" height="21"/>
                                                                     <subviews>
-                                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKB-vf-cbv" userLabel="Card Holder Name">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="21"/>
+                                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKB-vf-cbv" userLabel="Card Holder Name">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="4" height="21"/>
                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                             <textInputTraits key="textInputTraits"/>
@@ -179,7 +180,7 @@
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstItem="aKB-vf-cbv" firstAttribute="leading" secondItem="2us-va-mJs" secondAttribute="leading" id="8fb-PT-vRo"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="aKB-vf-cbv" secondAttribute="trailing" id="D2A-sH-vvG"/>
+                                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aKB-vf-cbv" secondAttribute="trailing" id="D2A-sH-vvG"/>
                                                                         <constraint firstItem="aKB-vf-cbv" firstAttribute="top" secondItem="2us-va-mJs" secondAttribute="top" id="oK7-2f-GuN"/>
                                                                         <constraint firstAttribute="bottom" secondItem="aKB-vf-cbv" secondAttribute="bottom" id="uuw-bS-aW7"/>
                                                                     </constraints>
@@ -188,37 +189,37 @@
                                                                     <rect key="frame" x="10" y="130.66666666666666" width="206.66666666666666" height="52.333333333333343"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7z-HP-2S5">
-                                                                            <rect key="frame" x="30" y="16.333333333333343" width="60" height="20"/>
+                                                                            <rect key="frame" x="30" y="16.333333333333343" width="80" height="20"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cr-m1-IuC">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aul-Pd-XYc">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="20"/>
                                                                                             <constraints>
-                                                                                                <constraint firstAttribute="width" constant="15" id="vfE-BE-gfS"/>
+                                                                                                <constraint firstAttribute="width" constant="25" id="vfE-BE-gfS"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="4"/>
+                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCJ-b7-osR">
-                                                                                            <rect key="frame" x="15" y="0.0" width="45" height="20"/>
+                                                                                            <rect key="frame" x="25" y="0.0" width="55" height="20"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2tv-Ut-GS0">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="20"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-0f-1q0">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="7"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="7"/>
                                                                                                             <constraints>
                                                                                                                 <constraint firstAttribute="height" constant="7" id="XhF-qQ-m5r"/>
                                                                                                             </constraints>
-                                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="5"/>
+                                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRr-8L-bPD" userLabel="MM/YY">
-                                                                                                            <rect key="frame" x="0.0" y="7" width="45" height="13"/>
+                                                                                                            <rect key="frame" x="0.0" y="7" width="55" height="13"/>
                                                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                                                                             <textInputTraits key="textInputTraits"/>
@@ -237,7 +238,7 @@
                                                                                 </stackView>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="60" id="0er-X4-JeR"/>
+                                                                                <constraint firstAttribute="width" constant="80" id="0er-X4-JeR"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="3cr-m1-IuC" secondAttribute="trailing" id="HQU-Be-t5b"/>
                                                                                 <constraint firstItem="3cr-m1-IuC" firstAttribute="leading" secondItem="j7z-HP-2S5" secondAttribute="leading" id="ITc-at-DTn"/>
                                                                                 <constraint firstAttribute="height" constant="20" id="cSM-la-mhe"/>
@@ -246,11 +247,11 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cTV-9S-cU2">
-                                                                            <rect key="frame" x="109.99999999999997" y="18.333333333333343" width="28" height="16"/>
+                                                                            <rect key="frame" x="129.99999999999997" y="18.333333333333343" width="28" height="16"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scq-tq-81D">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="8"/>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="5"/>
+                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                                                                     <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -357,6 +358,7 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" name="edittext_bg"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="qew-EW-SpW" secondAttribute="bottom" constant="2" id="8s4-C4-Dyr"/>
                                                         <constraint firstItem="qew-EW-SpW" firstAttribute="top" secondItem="Gtx-6N-O5q" secondAttribute="bottom" constant="1" id="HGL-lo-pPy"/>
@@ -373,6 +375,9 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="az9-Bc-ks6" appends="YES" id="Eyl-uB-B5V"/>
+                                                    </connections>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZG-QK-Ip7" userLabel="uiViewCardNumber">
                                                     <rect key="frame" x="1" y="62" width="371" height="56"/>
@@ -393,6 +398,7 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" name="edittext_bg"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Fha-fT-5bg" secondAttribute="trailing" id="9JL-rx-NcX"/>
                                                         <constraint firstItem="Fha-fT-5bg" firstAttribute="top" secondItem="8ZG-QK-Ip7" secondAttribute="top" constant="5" id="Aho-U1-sMD"/>
@@ -409,6 +415,9 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="sVO-Xa-4uJ" appends="YES" id="bU9-6B-Ktf"/>
+                                                    </connections>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-nc-oAN">
                                                     <rect key="frame" x="1" y="121" width="371" height="56"/>
@@ -429,6 +438,7 @@
                                                                 </textField>
                                                             </subviews>
                                                             <color key="backgroundColor" name="edittext_bg"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="seX-nD-JqK" secondAttribute="trailing" constant="3" id="E4K-rP-Qbi"/>
                                                                 <constraint firstAttribute="bottom" secondItem="OkE-6v-8YY" secondAttribute="bottom" constant="1" id="P6O-Wf-GwR"/>
@@ -444,6 +454,9 @@
                                                                     <integer key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="hgy-SE-sbu" appends="YES" id="MpJ-Bk-bfd"/>
+                                                            </connections>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXx-gi-Pwk" userLabel="uiViewExpire">
                                                             <rect key="frame" x="189.66666666666663" y="0.0" width="181.33333333333337" height="56"/>
@@ -461,6 +474,7 @@
                                                                 </textField>
                                                             </subviews>
                                                             <color key="backgroundColor" name="edittext_bg"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="fQf-7o-6GJ" firstAttribute="leading" secondItem="uXx-gi-Pwk" secondAttribute="leading" constant="10" id="4KI-2U-ZV7"/>
                                                                 <constraint firstItem="nfv-rx-IH2" firstAttribute="leading" secondItem="uXx-gi-Pwk" secondAttribute="leading" constant="10" id="4Mb-Lm-fz9"/>
@@ -476,6 +490,9 @@
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="l59-0w-X8Z" appends="YES" id="vVe-hh-60I"/>
+                                                            </connections>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
@@ -710,6 +727,26 @@
             </constraints>
             <point key="canvasLocation" x="-495.41984732824426" y="-682.3943661971831"/>
         </view>
+        <tapGestureRecognizer id="az9-Bc-ks6">
+            <connections>
+                <action selector="handleTapOnCardHolder:" destination="-1" id="9S8-UG-fGd"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="sVO-Xa-4uJ">
+            <connections>
+                <action selector="handleTapOnCardNumber:" destination="-1" id="LAA-Nl-kP7"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="hgy-SE-sbu">
+            <connections>
+                <action selector="handleTapOnCardCvv:" destination="-1" id="qsQ-bv-SsX"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="l59-0w-X8Z">
+            <connections>
+                <action selector="handleTapOnCardExpiry:" destination="-1" id="Ani-LM-gJ8"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Amex.png" width="230.39999389648438" height="230.39999389648438"/>

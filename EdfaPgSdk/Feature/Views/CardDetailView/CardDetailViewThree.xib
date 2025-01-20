@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -127,13 +128,13 @@
                                                                         <constraint firstAttribute="width" constant="50.340000000000003" id="lww-MY-QGU"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-hT-2mX">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-hT-2mX">
                                                                     <rect key="frame" x="80.333333333333329" y="20" width="252.66666666666669" height="21"/>
                                                                     <color key="textColor" red="0.18039215689999999" green="0.2274509804" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
-                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fim-nq-vL5">
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fim-nq-vL5">
                                                                     <rect key="frame" x="80.333333333333329" y="46" width="252.66666666666669" height="18.666666666666671"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -222,6 +223,7 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstItem="GB6-r2-6mq" firstAttribute="leading" secondItem="wFX-Oa-RZI" secondAttribute="leading" constant="10" id="BIV-t1-suH"/>
                                                         <constraint firstAttribute="height" constant="56" id="elg-Fy-FIK"/>
@@ -238,6 +240,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="47l-Ol-L52" appends="YES" id="9sb-xC-VQh"/>
+                                                    </connections>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-01-nsG" userLabel="uiViewCardNumber">
                                                     <rect key="frame" x="1" y="62" width="371" height="56"/>
@@ -258,6 +263,7 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstItem="LDP-Se-bDW" firstAttribute="top" secondItem="4Gw-at-JNz" secondAttribute="bottom" constant="1" id="6gD-k9-9Dq"/>
                                                         <constraint firstItem="LDP-Se-bDW" firstAttribute="leading" secondItem="4Le-01-nsG" secondAttribute="leading" constant="10" id="BYs-p4-5HX"/>
@@ -274,6 +280,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="k6o-Ff-Ts0" appends="YES" id="8fU-r0-3Nk"/>
+                                                    </connections>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-IU-vnf">
                                                     <rect key="frame" x="1" y="121" width="371" height="56"/>
@@ -294,6 +303,7 @@
                                                                 </textField>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="0QL-Kb-bIW" firstAttribute="top" secondItem="8dp-mw-ieg" secondAttribute="bottom" constant="7" id="Ijm-xT-P9l"/>
                                                                 <constraint firstItem="8dp-mw-ieg" firstAttribute="leading" secondItem="Zn7-QN-S3z" secondAttribute="leading" constant="10" id="KVz-hW-gJs"/>
@@ -309,6 +319,9 @@
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="GVS-Tx-xta" appends="YES" id="lay-hI-KUN"/>
+                                                            </connections>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUH-nx-Q8L" userLabel="uiViewExpiry">
                                                             <rect key="frame" x="189.66666666666663" y="0.0" width="181.33333333333337" height="56"/>
@@ -326,6 +339,7 @@
                                                                 </textField>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="QJS-d9-oHK" firstAttribute="leading" secondItem="FUH-nx-Q8L" secondAttribute="leading" constant="10" id="121-5c-Jmn"/>
                                                                 <constraint firstItem="QJS-d9-oHK" firstAttribute="top" secondItem="FUH-nx-Q8L" secondAttribute="top" constant="3" id="2Eh-Qv-reG"/>
@@ -341,6 +355,9 @@
                                                                     <integer key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="zPb-ey-gQm" appends="YES" id="Xim-jp-lvz"/>
+                                                            </connections>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
@@ -575,6 +592,26 @@
             </constraints>
             <point key="canvasLocation" x="-379.38931297709922" y="-682.3943661971831"/>
         </view>
+        <tapGestureRecognizer id="47l-Ol-L52">
+            <connections>
+                <action selector="handleTapOnCardHolder:" destination="-1" id="MWI-io-xMH"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="k6o-Ff-Ts0">
+            <connections>
+                <action selector="handleTapOnCardNumber:" destination="-1" id="YE4-l2-TUH"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="GVS-Tx-xta">
+            <connections>
+                <action selector="handleTapOnCardCvv:" destination="-1" id="DzR-Ey-HLq"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="zPb-ey-gQm">
+            <connections>
+                <action selector="handleTapOnCardExpiry:" destination="-1" id="ynt-Tp-PKF"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Amex.png" width="230.39999389648438" height="230.39999389648438"/>

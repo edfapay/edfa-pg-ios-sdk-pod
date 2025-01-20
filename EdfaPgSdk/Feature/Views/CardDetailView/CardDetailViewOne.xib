@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -102,8 +103,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KM4-1J-nBw" userLabel="uiViewCardNumber">
                                                     <rect key="frame" x="10" y="78.666666666666657" width="269" height="21"/>
                                                     <subviews>
-                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**** **** **** ****" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-re-1rD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="21"/>
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**** **** **** ****" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-re-1rD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="131" height="21"/>
                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -112,15 +113,15 @@
                                                     <constraints>
                                                         <constraint firstItem="lvN-re-1rD" firstAttribute="top" secondItem="KM4-1J-nBw" secondAttribute="top" id="God-Yn-cvU"/>
                                                         <constraint firstItem="lvN-re-1rD" firstAttribute="leading" secondItem="KM4-1J-nBw" secondAttribute="leading" id="SjJ-hA-4ae"/>
-                                                        <constraint firstAttribute="trailing" secondItem="lvN-re-1rD" secondAttribute="trailing" id="rDh-Cq-ZtY"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lvN-re-1rD" secondAttribute="trailing" id="rDh-Cq-ZtY"/>
                                                         <constraint firstAttribute="bottom" secondItem="lvN-re-1rD" secondAttribute="bottom" id="tdh-bp-ogk"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZm-rO-leo" userLabel="uiViewCardName">
                                                     <rect key="frame" x="10" y="99.666666666666657" width="269" height="21"/>
                                                     <subviews>
-                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mrg-4l-WiZ" userLabel="Card Holder Name">
-                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="21"/>
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mrg-4l-WiZ" userLabel="Card Holder Name">
+                                                            <rect key="frame" x="0.0" y="0.0" width="4" height="21"/>
                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -130,44 +131,44 @@
                                                         <constraint firstItem="Mrg-4l-WiZ" firstAttribute="top" secondItem="KZm-rO-leo" secondAttribute="top" id="7bR-5I-SnQ"/>
                                                         <constraint firstAttribute="bottom" secondItem="Mrg-4l-WiZ" secondAttribute="bottom" id="Raa-wk-Glk"/>
                                                         <constraint firstItem="Mrg-4l-WiZ" firstAttribute="leading" secondItem="KZm-rO-leo" secondAttribute="leading" id="mCL-bp-N30"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Mrg-4l-WiZ" secondAttribute="trailing" id="zaG-rF-hAp"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mrg-4l-WiZ" secondAttribute="trailing" id="zaG-rF-hAp"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8d-Fp-CFC">
                                                     <rect key="frame" x="10" y="132.66666666666669" width="269" height="59.666666666666657"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaH-Rw-HOR">
-                                                            <rect key="frame" x="30" y="20" width="60" height="20"/>
+                                                            <rect key="frame" x="30" y="20" width="80" height="20"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utf-20-VhJ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-la-yb7" userLabel="VALID THRU">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="20"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="15" id="j2O-FJ-p2d"/>
+                                                                                <constraint firstAttribute="width" constant="25" id="j2O-FJ-p2d"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="4"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZD3-8k-QjS">
-                                                                            <rect key="frame" x="15" y="0.0" width="45" height="20"/>
+                                                                            <rect key="frame" x="25" y="0.0" width="55" height="20"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EF8-DQ-sD5">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="20"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="20"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcJ-Yi-dv9" userLabel="MONTH/YEAR">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="7"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="55" height="7"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="7" id="0Tb-zX-W8b"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="5"/>
+                                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVK-nT-HDQ" userLabel="MM/YY">
-                                                                                            <rect key="frame" x="0.0" y="7" width="45" height="13"/>
+                                                                                            <rect key="frame" x="0.0" y="7" width="55" height="13"/>
                                                                                             <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                                                             <textInputTraits key="textInputTraits"/>
@@ -186,7 +187,7 @@
                                                                 </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="2eN-l8-RDt"/>
+                                                                <constraint firstAttribute="width" constant="80" id="2eN-l8-RDt"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Utf-20-VhJ" secondAttribute="bottom" id="6Wo-Wy-Wwe"/>
                                                                 <constraint firstItem="Utf-20-VhJ" firstAttribute="top" secondItem="PaH-Rw-HOR" secondAttribute="top" id="D7k-dt-7Mj"/>
                                                                 <constraint firstItem="Utf-20-VhJ" firstAttribute="leading" secondItem="PaH-Rw-HOR" secondAttribute="leading" id="XOx-Bf-dad"/>
@@ -195,16 +196,16 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FmY-Z5-8AZ">
-                                                            <rect key="frame" x="110" y="22" width="25" height="16"/>
+                                                            <rect key="frame" x="130" y="22" width="30" height="16"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO8-2W-DNY" userLabel="CVC">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="8"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="8"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="7"/>
                                                                     <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkV-WY-bCk">
-                                                                    <rect key="frame" x="0.0" y="8" width="25" height="8"/>
+                                                                    <rect key="frame" x="0.0" y="8" width="30" height="8"/>
                                                                     <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -212,7 +213,7 @@
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="Ma7-qE-EOR"/>
-                                                                <constraint firstAttribute="width" constant="25" id="vIo-t5-wUj"/>
+                                                                <constraint firstAttribute="width" constant="30" id="vIo-t5-wUj"/>
                                                             </constraints>
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="debit_card.png" translatesAutoresizingMaskIntoConstraints="NO" id="V70-xP-OtR">
@@ -283,6 +284,7 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstItem="GB6-r2-6mq" firstAttribute="leading" secondItem="wFX-Oa-RZI" secondAttribute="leading" constant="10" id="BIV-t1-suH"/>
                                                         <constraint firstAttribute="height" constant="56" id="elg-Fy-FIK"/>
@@ -299,6 +301,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="xcc-cT-nsy" appends="YES" id="ZVm-aO-Kaa"/>
+                                                    </connections>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Le-01-nsG" userLabel="uiViewCardNumber">
                                                     <rect key="frame" x="1" y="62" width="371" height="56"/>
@@ -319,6 +324,7 @@
                                                         </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstItem="LDP-Se-bDW" firstAttribute="top" secondItem="4Gw-at-JNz" secondAttribute="bottom" constant="1" id="6gD-k9-9Dq"/>
                                                         <constraint firstItem="LDP-Se-bDW" firstAttribute="leading" secondItem="4Le-01-nsG" secondAttribute="leading" constant="10" id="BYs-p4-5HX"/>
@@ -335,6 +341,9 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="b72-Lv-var" appends="YES" id="iF2-UB-vGk"/>
+                                                    </connections>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rNp-IU-vnf">
                                                     <rect key="frame" x="1" y="121" width="371" height="56"/>
@@ -355,6 +364,7 @@
                                                                 </textField>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="0QL-Kb-bIW" firstAttribute="top" secondItem="8dp-mw-ieg" secondAttribute="bottom" constant="7" id="Ijm-xT-P9l"/>
                                                                 <constraint firstItem="8dp-mw-ieg" firstAttribute="leading" secondItem="Zn7-QN-S3z" secondAttribute="leading" constant="10" id="KVz-hW-gJs"/>
@@ -370,6 +380,9 @@
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="ydo-sJ-57h" appends="YES" id="ya7-23-q2Y"/>
+                                                            </connections>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUH-nx-Q8L" userLabel="uiViewExpiry">
                                                             <rect key="frame" x="189.66666666666663" y="0.0" width="181.33333333333337" height="56"/>
@@ -402,8 +415,12 @@
                                                                     <integer key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="iLq-dF-OAQ" appends="YES" id="VN8-5X-Jlg"/>
+                                                            </connections>
                                                         </view>
                                                     </subviews>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="uDz-PW-WvI"/>
                                                     </constraints>
@@ -639,6 +656,26 @@
             </constraints>
             <point key="canvasLocation" x="-379.38931297709922" y="-682.3943661971831"/>
         </view>
+        <tapGestureRecognizer id="xcc-cT-nsy">
+            <connections>
+                <action selector="handleTapOnCardHolder:" destination="-1" id="mw5-dD-dk3"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ydo-sJ-57h">
+            <connections>
+                <action selector="handleTapOnCardCvv:" destination="-1" id="jsD-lN-XwE"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="iLq-dF-OAQ">
+            <connections>
+                <action selector="handleTapOnCardExpiry:" destination="-1" id="Zng-RD-vKm"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="b72-Lv-var">
+            <connections>
+                <action selector="handleTapOnCardNumber:" destination="-1" id="flF-cg-Lbf"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Amex.png" width="230.39999389648438" height="230.39999389648438"/>

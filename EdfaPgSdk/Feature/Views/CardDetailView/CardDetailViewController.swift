@@ -21,8 +21,8 @@ fileprivate var _onError:ErrorCallback!
 fileprivate var _target:UIViewController?
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
-fileprivate var _paymentType:String! = EdfaCardPay.EdfaPayPaymentDesignType.payment_ONE.rawValue
-fileprivate var _languageCode:String! = EdfaCardPay.EdfaPaySelectedLanguage.language_en.rawValue
+fileprivate var _designType:EdfaCardPay.EdfaPayPaymentDesignType! = EdfaCardPay.EdfaPayPaymentDesignType.designType_ONE
+fileprivate var _languageCode:EdfaCardPay.EdfaPayLanguage! = EdfaCardPay.EdfaPayLanguage.language_en
 
 // https://github.com/card-io/card.io-iOS-SDK
 // https://github.com/orazz/CreditCardForm-iOS
@@ -119,7 +119,48 @@ class CardDetailViewController : UIViewController {
         if let _onPresent = onPresent{
             _onPresent()
         }
+        
+        addKeyboardNotificationObserver()
+            
     }
+    
+    func addKeyboardNotificationObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+                NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    // Move the view up when keyboard appears
+       @objc func keyboardWillShow(notification: NSNotification) {
+           if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+               let keyboardHeight = keyboardFrame.height
+               self.view.frame.origin.y = -keyboardHeight / 2  // Adjust as needed
+           }
+       }
+       
+       // Move the view back down when keyboard hides
+       @objc func keyboardWillHide(notification: NSNotification) {
+           self.view.frame.origin.y = 0
+       }
+
+       deinit {
+           NotificationCenter.default.removeObserver(self)
+       }
+    
+    
+    @IBAction func handleTapOnCardHolder(_ sender: UITapGestureRecognizer) {
+        txtCardHolderName.becomeFirstResponder()
+    }
+    @IBAction func handleTapOnCardNumber(_ sender: UITapGestureRecognizer) {
+        txtCardNumber.becomeFirstResponder()
+    }
+    
+    @IBAction func handleTapOnCardCvv(_ sender: UITapGestureRecognizer) {
+        txtCardCVV.becomeFirstResponder()
+    }
+    
+    @IBAction func handleTapOnCardExpiry(_ sender: UITapGestureRecognizer) {
+        txtCardExpiry.becomeFirstResponder()
+    }
+    
     
     
     func setupFormatters(){
@@ -139,7 +180,6 @@ class CardDetailViewController : UIViewController {
         txtCardCVV.keyboardType = .numberPad
 
     }
-    
     
     
     @IBAction func btnSubmit(_ sender: Any) {
@@ -310,14 +350,14 @@ class CardDetailViewController : UIViewController {
 extension CardDetailViewController {
     
     
-    func setLocalization(langugeCode : String ){
+    func setLocalization(langugeCode : EdfaCardPay.EdfaPayLanguage ){
         
         // Set localized text for a UIButton
         setLocalizedText(for: btnSubmit, key: "label_pay", languageCode: langugeCode)
         setLocalizedText(for: lblTotalAmount, key: "label_total", languageCode: langugeCode)
     
-        if (_paymentType != nil){
-            if(!_paymentType.elementsEqual(EdfaCardPay.EdfaPayPaymentDesignType.payment_THREE.rawValue)){
+        if (_designType != nil){
+            if(_designType != (EdfaCardPay.EdfaPayPaymentDesignType.designType_THREE)){
                 setLocalizedText(for: lblCardDes, key: "lbl_card_desc", languageCode: langugeCode)
                 setLocalizedText(for: lblMonthYear, key: "label_month_year", languageCode: langugeCode)
                 setLocalizedText(for: lblValidThru, key: "label_valid_thru", languageCode: langugeCode)
@@ -343,12 +383,12 @@ extension CardDetailViewController {
 
     }
     
-    func setLocalizedText(for component: AnyObject, key: String, languageCode: String = EdfaCardPay.EdfaPaySelectedLanguage.language_en.rawValue) {
+    func setLocalizedText(for component: AnyObject, key: String, languageCode: EdfaCardPay.EdfaPayLanguage = EdfaCardPay.EdfaPayLanguage.language_en) {
         // Get the bundle for the pod
         let podBundle = Bundle(for: EdfaPgSdk.self) // Replace with a class from your pod
 
         // Find the localization bundle within the pod bundle
-        if let localizationBundle = podBundle.path(forResource: languageCode, ofType: "lproj"),
+        if let localizationBundle = podBundle.path(forResource: languageCode.rawValue, ofType: "lproj"),
            let bundle = Bundle(path: localizationBundle) {
             // Get the localized string
             let localizedString = NSLocalizedString(key, tableName: nil, bundle: bundle, value: "", comment: "")
@@ -378,9 +418,9 @@ extension CardDetailViewController {
         }
     }
     
-    func adjustLayoutDirection(languageCode: String) {
-        let direction: UISemanticContentAttribute = languageCode == EdfaCardPay.EdfaPaySelectedLanguage.language_ar.rawValue ? .forceRightToLeft : .forceLeftToRight
-        let alignment: NSTextAlignment = languageCode == EdfaCardPay.EdfaPaySelectedLanguage.language_ar.rawValue ? .right : .left
+    func adjustLayoutDirection(languageCode: EdfaCardPay.EdfaPayLanguage) {
+        let direction: UISemanticContentAttribute = languageCode == EdfaCardPay.EdfaPayLanguage.language_ar ? .forceRightToLeft : .forceLeftToRight
+        let alignment: NSTextAlignment = languageCode == EdfaCardPay.EdfaPayLanguage.language_ar ? .right : .left
 
         view.semanticContentAttribute = direction
         
@@ -393,10 +433,10 @@ extension CardDetailViewController {
         
         applyDirection(to: view)
         // Update text alignment
-//        txtCardCVV.textAlignment = alignment
-//        txtCardExpiry.textAlignment = alignment
-//        txtCardNumber.textAlignment = alignment
-//        txtCardHolderName.textAlignment = alignment
+        txtCardCVV.textAlignment = alignment
+        txtCardExpiry.textAlignment = alignment
+        txtCardNumber.textAlignment = alignment
+        txtCardHolderName.textAlignment = alignment
         
         view.setNeedsLayout()
         view.layoutIfNeeded()
@@ -548,37 +588,41 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
         sale3dsRedirectResponse:EdfaPgSaleRedirect
     ){
         
-        SaleRedirectionView()
-            .setup(
-response: sale3dsRedirectResponse,
- onTransactionSuccess: { result in
-     if let txnId = result.transactionId{
-         self.checkTransactionStatus(
-            saleResponse: response,
-            transactionId: txnId
-         )
-     }else{
-         _onTransactionFailure?(
-            response,
-            "Something went wrong (Transaction ID not returned on success response)"
-         )
-     }
-
-                
- },
-onTransactionFailure: { error in
-    print("onTransactionFailure: \(error)")
-    _onTransactionFailure?(response, error)
-                
-}).enableLogs()
-            .show(owner: self, onStartIn: { viewController in
-                print("onStart: \(viewController)")
-                
-            }, onError: { error in
-                print("onError: \(error)")
-                
-            })
-
+            
+            
+            SaleRedirectionView()
+                .setup(
+                    response: sale3dsRedirectResponse,
+                    onTransactionSuccess: { result in
+                        if let txnId = result.transactionId{
+                            self.checkTransactionStatus(
+                                saleResponse: response,
+                                transactionId: txnId
+                            )
+                        }else{
+                            _onTransactionFailure?(
+                                response,
+                                "Something went wrong (Transaction ID not returned on success response)"
+                            )
+                        }
+                        
+                        
+                    },
+                    onTransactionFailure: { error in
+                        print("onTransactionFailure: \(error)")
+                        _onTransactionFailure?(response, error)
+                        
+                    }).enableLogs()
+                .show(owner: self, onStartIn: { viewController in
+                    print("onStart: \(viewController)")
+                    
+                }, onError: { error in
+                    print("onError: \(error)")
+                    
+                })
+            
+            
+        
     }
     
     func checkTransactionStatus(
@@ -634,7 +678,7 @@ public class EdfaCardPay{
     
     func start() -> CardDetailViewController{
         let vc = CardDetailViewController(
-            nibName: getSelectedPaymentScreen(paymentType: _paymentType),
+            nibName: getSelectedPaymentScreen(designType: _designType),
             bundle: Bundle(for: CardDetailViewController.self)
         )
         vc.onPresent = _onPresent
@@ -668,10 +712,10 @@ public class EdfaCardPay{
         )
     }
 
-    public func getSelectedPaymentScreen(paymentType: String?)->String{
+    public func getSelectedPaymentScreen(designType:  EdfaCardPay.EdfaPayPaymentDesignType?)->String{
         let defaultScreenName = "CardDetailViewOne"
-        if let paymentType = EdfaCardPay.EdfaPayPaymentDesignType(rawValue: paymentType ?? "") {
-                    return paymentType.screenName
+        if let designType = designType {
+                    return designType.screenName
         }
         return defaultScreenName
     }
@@ -727,33 +771,33 @@ extension EdfaCardPay{
         return self
     }
     
-    public func setPaymentType(paymentType:String) -> EdfaCardPay{
-        _paymentType = paymentType
+    public func setDesignType(designType:EdfaPayPaymentDesignType) -> EdfaCardPay{
+       _designType = designType
         return self
     }
-    public func setLanguage(languageCode:String) -> EdfaCardPay{
+    public func setLanguage(languageCode:EdfaPayLanguage) -> EdfaCardPay{
         _languageCode = languageCode
         return self
     }
     
     public enum EdfaPayPaymentDesignType: String {
-        case payment_ONE = "payment_ONE"
-        case payment_TWO = "payment_TWO"
-        case payment_THREE = "payment_THREE"
+        case designType_ONE = "payment_ONE"
+        case designType_TWO = "payment_TWO"
+        case designType_THREE = "payment_THREE"
 
         var screenName: String {
             switch self {
-            case .payment_ONE:
+            case .designType_ONE:
                 return "CardDetailViewOne"
-            case .payment_TWO:
+            case .designType_TWO:
                 return "CardDetailViewTwo"
-            case .payment_THREE:
+            case .designType_THREE:
                 return "CardDetailViewThree"
             }
         }
     }
     
-    public enum EdfaPaySelectedLanguage: String {
+    public enum EdfaPayLanguage: String {
         case language_en = "en"
         case language_ar = "ar"
 

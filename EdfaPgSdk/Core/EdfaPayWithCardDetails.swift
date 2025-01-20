@@ -30,10 +30,13 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
     private var onTransactionFailure: TransactionCallback?
     private var onError: ErrorCallback?
 
-    private var cardNumber: String?
+//    private var cardNumber: String?
     private var txnId: String?
     private var payer: EdfaPgPayer!
     private var order: EdfaPgSaleOrder!
+    private var card: EdfaPgCard!
+
+    
 
     private lazy var saleAdapter: EdfaPgSaleAdapter = {
         let adapter = EdfaPgAdapterFactory().createSale()
@@ -66,6 +69,10 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
         self.order = order
         return self
     }
+    public func setCard(_ card: EdfaPgCard) -> EdfaPayWithCardDetails {
+        self.card = card
+        return self
+    }
 
 
     public func onTransactionSuccess(_ callback: @escaping TransactionCallback) -> EdfaPayWithCardDetails {
@@ -78,23 +85,25 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
         return self
     }
 
-    public func onError(_ callback: @escaping ErrorCallback) -> EdfaPayWithCardDetails {
-        self.onError = callback
-        return self
-    }
+//    public func onError(_ callback: @escaping ErrorCallback) -> EdfaPayWithCardDetails {
+//        self.onError = callback
+//        return self
+//    }
 
     private func validate() -> Bool {
         return payer != nil && order != nil
     }
+ 
+    public func initialize(onError:@escaping ErrorCallback){
+        
+        self.onError = onError
+        doSaleTransaction()
+        
+    }
+
     
     
-    
-    public func doSaleTransaction(
-        cardNumber: String,
-        expiryMonth: Int,
-        expiryYear: Int,
-        cvv: String
-    ) {
+    private func doSaleTransaction( ) {
 //        guard validate() else {
 //            onError?(["Invalid payment details. Please check all fields."])
 //            return
@@ -108,6 +117,11 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
             onError?(["Order information is missing. Please call 'set(order:)' before initializing."])
                return
         }
+        
+        guard let edfaPgCard = card else {
+            onError?(["Card information is missing. Please call 'set(card:)' before initializing."])
+            return
+        }
 
         // Validate payer and order
         let (isPayerValid, payerErrors) = validatePayer()
@@ -119,13 +133,13 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
             return
         }
         
-        let edfaPgCard = EdfaPgCard(
-            number: cardNumber,
-            expireMonth: Int(expiryMonth),
-            expireYear: Int(expiryYear),
-            cvv: cvv
-        )
-        self.cardNumber = cardNumber
+//        let edfaPgCard = EdfaPgCard(
+//            number: cardNumber,
+//            expireMonth: Int(expiryMonth),
+//            expireYear: Int(expiryYear),
+//            cvv: cvv
+//        )
+//         self.cardNumber = edfaPgCard.number
         
         let saleOptions:EdfaPgSaleOptions? = nil //EdfaPgSaleOptions(channelId: "", recurringInit: false)
         viewController!.showLoading()
@@ -192,7 +206,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
     }
     
     
-    func openRedirect3Ds(termUrl: String,
+    private func openRedirect3Ds(termUrl: String,
                          termUrl3Ds: String,
                          redirectUrl: String,
                          paymentRequisites: String) {
@@ -208,7 +222,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
         //        present(navigation, animated: true, completion: nil)
     }
     
-    func redirect(
+    private func redirect(
         response:EdfaPgResponse<EdfaPgSaleResult>,
         sale3dsRedirectResponse:EdfaPgSaleRedirect
     ){
@@ -243,14 +257,15 @@ onTransactionFailure: { error in
 
     }
     
-    func checkTransactionStatus(
+    private func checkTransactionStatus(
         saleResponse:EdfaPgResponse<EdfaPgSaleResult>,
         transactionId:String
     ){
         print(
             "Checking transaction status for transaction id: \(transactionId)"
         )
-        if let cardNumber = cardNumber, let txn = txnId{
+        let cardNumber = card.number
+        if  let txn = txnId{
             getTransactionDetailAdapter.execute(
                 transactionId: txn,
                 payerEmail: payer.email,
