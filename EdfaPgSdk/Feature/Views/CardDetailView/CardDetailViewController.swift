@@ -21,8 +21,8 @@ fileprivate var _onError:ErrorCallback!
 fileprivate var _target:UIViewController?
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
-fileprivate var _designType:EdfaCardPay.EdfaPayPaymentDesignType! = EdfaCardPay.EdfaPayPaymentDesignType.designType_ONE
-fileprivate var _languageCode:EdfaCardPay.EdfaPayLanguage! = EdfaCardPay.EdfaPayLanguage.language_en
+fileprivate var _designType:EdfaPayDesignType = .one
+fileprivate var _languageCode:EdfaPayLanguage = .en
 
 // https://github.com/card-io/card.io-iOS-SDK
 // https://github.com/orazz/CreditCardForm-iOS
@@ -350,14 +350,14 @@ class CardDetailViewController : UIViewController {
 extension CardDetailViewController {
     
     
-    func setLocalization(langugeCode : EdfaCardPay.EdfaPayLanguage ){
+    func setLocalization(langugeCode : EdfaPayLanguage ){
         
         // Set localized text for a UIButton
         setLocalizedText(for: btnSubmit, key: "label_pay", languageCode: langugeCode)
         setLocalizedText(for: lblTotalAmount, key: "label_total", languageCode: langugeCode)
     
         if (_designType != nil){
-            if(_designType != (EdfaCardPay.EdfaPayPaymentDesignType.designType_THREE)){
+            if(_designType != (EdfaPayDesignType.three)){
                 setLocalizedText(for: lblCardDes, key: "lbl_card_desc", languageCode: langugeCode)
                 setLocalizedText(for: lblMonthYear, key: "label_month_year", languageCode: langugeCode)
                 setLocalizedText(for: lblValidThru, key: "label_valid_thru", languageCode: langugeCode)
@@ -383,7 +383,7 @@ extension CardDetailViewController {
 
     }
     
-    func setLocalizedText(for component: AnyObject, key: String, languageCode: EdfaCardPay.EdfaPayLanguage = EdfaCardPay.EdfaPayLanguage.language_en) {
+    func setLocalizedText(for component: AnyObject, key: String, languageCode: EdfaPayLanguage = .en) {
         // Get the bundle for the pod
         let podBundle = Bundle(for: EdfaPgSdk.self) // Replace with a class from your pod
 
@@ -418,9 +418,9 @@ extension CardDetailViewController {
         }
     }
     
-    func adjustLayoutDirection(languageCode: EdfaCardPay.EdfaPayLanguage) {
-        let direction: UISemanticContentAttribute = languageCode == EdfaCardPay.EdfaPayLanguage.language_ar ? .forceRightToLeft : .forceLeftToRight
-        let alignment: NSTextAlignment = languageCode == EdfaCardPay.EdfaPayLanguage.language_ar ? .right : .left
+    func adjustLayoutDirection(languageCode: EdfaPayLanguage) {
+        let direction: UISemanticContentAttribute = languageCode == .ar ? .forceRightToLeft : .forceLeftToRight
+        let alignment: NSTextAlignment = languageCode == .ar ? .right : .left
 
         view.semanticContentAttribute = direction
         
@@ -712,7 +712,7 @@ public class EdfaCardPay{
         )
     }
 
-    public func getSelectedPaymentScreen(designType:  EdfaCardPay.EdfaPayPaymentDesignType?)->String{
+    public func getSelectedPaymentScreen(designType: EdfaPayDesignType?)->String{
         let defaultScreenName = "CardDetailViewOne"
         if let designType = designType {
                     return designType.screenName
@@ -771,36 +771,13 @@ extension EdfaCardPay{
         return self
     }
     
-    public func setDesignType(designType:EdfaPayPaymentDesignType) -> EdfaCardPay{
+    public func set(designType:EdfaPayDesignType) -> EdfaCardPay{
        _designType = designType
         return self
     }
-    public func setLanguage(languageCode:EdfaPayLanguage) -> EdfaCardPay{
-        _languageCode = languageCode
+    public func set(language:EdfaPayLanguage) -> EdfaCardPay{
+        _languageCode = language
         return self
-    }
-    
-    public enum EdfaPayPaymentDesignType: String {
-        case designType_ONE = "payment_ONE"
-        case designType_TWO = "payment_TWO"
-        case designType_THREE = "payment_THREE"
-
-        var screenName: String {
-            switch self {
-            case .designType_ONE:
-                return "CardDetailViewOne"
-            case .designType_TWO:
-                return "CardDetailViewTwo"
-            case .designType_THREE:
-                return "CardDetailViewThree"
-            }
-        }
-    }
-    
-    public enum EdfaPayLanguage: String {
-        case language_en = "en"
-        case language_ar = "ar"
-
     }
 }
 
