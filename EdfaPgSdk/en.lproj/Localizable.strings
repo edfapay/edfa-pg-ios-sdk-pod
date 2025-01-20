@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  EdfaPgSdk
+
+  Created by Haseebburiro on 24/10/2024.
+  
+*/
+"label_cancel" = "Cancel";
+"label_card_holder_name" = "CARD HOLDER";
+"label_card_number" = "CARD NUMBER";
+"label_cvv" = "CVV";
+"label_expiry" = "EXPIRY";
+"label_month_year" = "MONTH/YEAR";
+"label_pay" = "Pay";
+"label_total" = "Total Amount";
+"label_valid_thru" = "VALID THRU";
+"lbl_card_desc" = "This card is issued by Swedbank pursuant to licence by Mastercard International.";
+"lbl_sar" = "SAR";
+"lbl_poweredby" = "Powered by";
+"lbl_card_holder_placetext" = "CARD HOLDER NAME";
+"lbl_card_number_placetext" = "**** **** **** 1256";

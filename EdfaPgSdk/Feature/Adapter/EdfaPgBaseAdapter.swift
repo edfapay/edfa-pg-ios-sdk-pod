@@ -86,6 +86,10 @@ public class EdfaPgVirtualBaseAdapter<Serivce: Encodable> {
         let urlstr = EdfaPgSdk.shared.credentials.paymentUrl.replacingOccurrences(of: "payment/post", with: "")
         let url = URL(string: "\(urlstr)applepay/orders/s2s/sale")!
         
+        if let json = try? JSONSerialization.data(withJSONObject: params.json(), options: .prettyPrinted),
+           let body = String(data: json, encoding: .utf8){
+            debugPrint(body)
+        }
         let request = EdfaPgDataRequest(url: url,
                                            httpMethod: .post,
                                            body: params)

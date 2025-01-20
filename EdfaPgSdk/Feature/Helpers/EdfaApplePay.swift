@@ -198,8 +198,7 @@ private extension EdfaApplePay{
     func validate() -> (valid:Bool, validationErrors:[String] ){
         var errors:[String] = []
         var valid = true
-        
-        
+
         if _onTransactionSuccess == nil{
             valid = valid && false
             errors.append("onTransactionFailure not set, try to call function 'EdfaApplePay.on(transactionSuccess:)'")
@@ -494,7 +493,7 @@ fileprivate func printHttp(response: URLResponse?, request: URLRequest?, data: D
             
             // PARAMETERS
             if let httpBody = request.httpBody {
-                if let stringBody = String(data: httpBody, encoding: .ascii) {
+                if let stringBody = String(data: httpBody, encoding: .utf8) {
                     let formatedBody = stringBody.components(separatedBy: "&").map { $0.replacingOccurrences(of: "=", with: ": ") }
                     requestArray.append(["!!!<PARAMETERS>!!!": formatedBody])
                     

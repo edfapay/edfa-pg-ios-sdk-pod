@@ -81,6 +81,17 @@ public class SaleRedirectionView : WKWebView{
             return
         }
         
+
+
+
+        if #available(iOS 13.0, *) {
+            sale3dsViewController.modalPresentationStyle = .automatic
+            sale3dsViewController.isModalInPresentation = false
+
+        } else {
+            sale3dsViewController.modalPresentationStyle = .fullScreen
+        }
+
         owner.present(sale3dsViewController, animated: true)
                 
     }
