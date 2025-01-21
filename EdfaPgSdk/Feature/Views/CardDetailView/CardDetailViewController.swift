@@ -355,21 +355,15 @@ extension CardDetailViewController {
         // Set localized text for a UIButton
         setLocalizedText(for: btnSubmit, key: "label_pay", languageCode: langugeCode)
         setLocalizedText(for: lblTotalAmount, key: "label_total", languageCode: langugeCode)
-    
-        if (_designType != nil){
-            if(_designType != (EdfaPayDesignType.three)){
-                setLocalizedText(for: lblCardDes, key: "lbl_card_desc", languageCode: langugeCode)
-                setLocalizedText(for: lblMonthYear, key: "label_month_year", languageCode: langugeCode)
-                setLocalizedText(for: lblValidThru, key: "label_valid_thru", languageCode: langugeCode)
-                setLocalizedText(for: lblCvv, key: "label_cvv", languageCode: langugeCode)
-            }
-        }else{
+        
+            
+        if(_designType != .three){
             setLocalizedText(for: lblCardDes, key: "lbl_card_desc", languageCode: langugeCode)
             setLocalizedText(for: lblMonthYear, key: "label_month_year", languageCode: langugeCode)
             setLocalizedText(for: lblValidThru, key: "label_valid_thru", languageCode: langugeCode)
             setLocalizedText(for: lblCvv, key: "label_cvv", languageCode: langugeCode)
-            
         }
+        
         setLocalizedText(for: lblCardHolder, key: "label_card_holder_name", languageCode: langugeCode)
         setLocalizedText(for: lblCardnumber, key: "label_card_number", languageCode: langugeCode)
         setLocalizedText(for: cardViewCardNumber, key: "lbl_card_number_placetext", languageCode: langugeCode)
