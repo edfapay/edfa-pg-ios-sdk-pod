@@ -133,7 +133,7 @@ Always download latest version by run `pod update` or `pod install --repo-update
 >
 > >  **Pay With Card details**
 > > ```swift
-> >     let edfaPgCard = EdfaPgCard(
+> >     let card = EdfaPgCard(
 > >            number: "5123445000000008",
 > >            expireMonth: Int(01),
 > >             expireYear: Int(2039),
@@ -143,7 +143,7 @@ Always download latest version by run `pod update` or `pod install --repo-update
 > >        EdfaPayWithCardDetails(viewController: self)
 > >              .set(order: order)
 > >              .set(payer: payer)
-> >              .set(card: edfaPgCard)
+> >              .set(card: card)
 > >              .onTransactionSuccess { response, result in
 > >                  print("Transaction Success: \(result)")
 > >              }
