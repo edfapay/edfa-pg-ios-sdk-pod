@@ -33,6 +33,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
 //    private var cardNumber: String?
     private var txnId: String?
     private var payer: EdfaPgPayer!
+    private var language: EdfaPayLanguage!
     private var order: EdfaPgSaleOrder!
     private var card: EdfaPgCard!
 
@@ -60,28 +61,33 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
         self.viewController = viewController
     }
 
-    public func setPayer(_ payer: EdfaPgPayer) -> EdfaPayWithCardDetails {
+    public func set(payer: EdfaPgPayer) -> EdfaPayWithCardDetails {
         self.payer = payer
         return self
     }
 
-    public func setOrder(_ order: EdfaPgSaleOrder) -> EdfaPayWithCardDetails {
+    public func set(language: EdfaPayLanguage) -> EdfaPayWithCardDetails {
+        self.language = language
+        return self
+    }
+
+    public func set(order: EdfaPgSaleOrder) -> EdfaPayWithCardDetails {
         self.order = order
         return self
     }
-    public func setCard(_ card: EdfaPgCard) -> EdfaPayWithCardDetails {
+    public func set(card: EdfaPgCard) -> EdfaPayWithCardDetails {
         self.card = card
         return self
     }
 
 
-    public func onTransactionSuccess(_ callback: @escaping TransactionCallback) -> EdfaPayWithCardDetails {
-        self.onTransactionSuccess = callback
+    public func on(transactionSuccess: @escaping TransactionCallback) -> EdfaPayWithCardDetails {
+        self.onTransactionSuccess = transactionSuccess
         return self
     }
 
-    public func onTransactionFailure(_ callback: @escaping TransactionCallback) -> EdfaPayWithCardDetails {
-        self.onTransactionFailure = callback
+    public func on(transactionFailure: @escaping TransactionCallback) -> EdfaPayWithCardDetails {
+        self.onTransactionFailure = transactionFailure
         return self
     }
 
