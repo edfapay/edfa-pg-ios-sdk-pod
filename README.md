@@ -140,6 +140,7 @@ Always download latest version by run `pod update` or `pod install --repo-update
 > >             cvv: "100"
 > >        )
 > >   
+> > 
 > >        EdfaPayWithCardDetails(viewController: self)
 > >              .set(order: order)
 > >              .set(payer: payer)
