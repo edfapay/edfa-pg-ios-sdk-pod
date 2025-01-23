@@ -81,11 +81,11 @@ Always download latest version by run `pod update` or `pod install --repo-update
 > > **Payment with SDK Card UI**
 > > ```swift
 > >    EdfaCardPay()
-> >        .setOrder(order)
-> >        .setPayer(payer)
-> >        .set(designType: .one)
-> >        .set(language: .ar)
-> >        .on(transactionFailure: { result, err in
+> >         .set(order: order)
+> >         .set(payer: payer)
+> >         .set(designType: .one)
+> >         .set(language: .ar)
+> >         .on(transactionFailure: { result, err in
 > >                 debugPrint(result ?? "No Result")
 > >                 debugPrint(err ?? "No Error Summary")
 > >             })
@@ -141,9 +141,9 @@ Always download latest version by run `pod update` or `pod install --repo-update
 > >        )
 > >   
 > >        EdfaPayWithCardDetails(viewController: self)
-> >              .setCard(edfaPgCard)
-> >              .setPayer(payer)
-> >              .setOrder(order)
+> >              .set(order: order)
+> >              .set(payer: payer)
+> >              .set(card: edfaPgCard)
 > >              .onTransactionSuccess { response, result in
 > >                  print("Transaction Success: \(result)")
 > >              }
