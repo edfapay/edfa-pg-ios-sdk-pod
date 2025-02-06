@@ -1062,7 +1062,7 @@ extension CardDetailViewController : UITextFieldDelegate {
             let number = cardNumberFormatter.unformat(textField.text)
             if (number?.count == 16){
                 if isValidCardNumber(number: number){
-                    txtCardCVV.becomeFirstResponder()
+                     txtCardCVV.becomeFirstResponder()
                 }else{
                     //cardView.shake(duration: 1)
                     textField.textColor = UIColor.red
