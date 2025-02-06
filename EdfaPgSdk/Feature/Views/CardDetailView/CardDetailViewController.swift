@@ -197,6 +197,7 @@ class CardDetailViewController : UIViewController {
         onChange()
         sender.textColor = UIColor.black
         let number = cardNumberFormatter.unformat(sender.text)
+    
         if (number?.count == 16){
             if isValidCardNumber(number: number){
                 txtCardExpiry.becomeFirstResponder()
@@ -207,6 +208,9 @@ class CardDetailViewController : UIViewController {
         }else if cardCVVFormatter.unformat(sender.text)?.count == 0{
             txtCardHolderName.becomeFirstResponder()
         }
+     
+
+
     }
 
     
@@ -265,6 +269,8 @@ class CardDetailViewController : UIViewController {
             btnSubmit.alpha = 1.0
         }
     }
+    
+ 
     
     func cardxExpiry() -> (month:UInt?, year:UInt?){
         let expiry = cardExpirationFormatter.unformat(txtCardExpiry.text) ?? "0"
@@ -371,7 +377,7 @@ extension CardDetailViewController {
         setLocalizedText(for: lblExpiryField, key: "label_expiry", languageCode: langugeCode)
         setLocalizedText(for: lblPowredBy, key: "lbl_poweredby", languageCode: langugeCode)
         setLocalizedText(for: cardViewCardName, key: "lbl_card_holder_placetext", languageCode: langugeCode)
-        setLocalizedText(for: cardViewCardNumber, key: "lbl_card_number_placetext", languageCode: langugeCode)
+//        setLocalizedText(for: cardViewCardNumber, key: "lbl_card_number_placetext", languageCode: langugeCode)
     
         adjustLayoutDirection(languageCode: langugeCode)
 
@@ -1056,7 +1062,7 @@ extension CardDetailViewController : UITextFieldDelegate {
             let number = cardNumberFormatter.unformat(textField.text)
             if (number?.count == 16){
                 if isValidCardNumber(number: number){
-                    txtCardExpiry.becomeFirstResponder()
+                    txtCardCVV.becomeFirstResponder()
                 }else{
                     //cardView.shake(duration: 1)
                     textField.textColor = UIColor.red

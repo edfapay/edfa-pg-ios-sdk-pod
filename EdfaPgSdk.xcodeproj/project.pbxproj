@@ -279,6 +279,9 @@
 		30B013BD2AE98BE300460806 /* UnionPay.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E72A164D5B000EF281 /* UnionPay.png */; };
 		30B013BE2AE98BE300460806 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 308B68E92A164D5B000EF281 /* Visa.png */; };
 		30B013C02AE98E3200460806 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 30B013BF2AE98E3200460806 /* LICENSE */; };
+		620ECCD52D54D20B00F93777 /* edfalogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 620ECCD42D54D20B00F93777 /* edfalogo.png */; };
+		62E0CF582D54971E000DDBC1 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E0CF572D54971E000DDBC1 /* globe.png */; };
+		62E0CF5A2D5497A6000DDBC1 /* cardfront_design_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E0CF592D5497A6000DDBC1 /* cardfront_design_one.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -457,6 +460,9 @@
 		308B68FC2A164DE4000EF281 /* paweredby-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paweredby-logo.png"; sourceTree = "<group>"; };
 		308B68FE2A166E5B000EF281 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		30B013BF2AE98E3200460806 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		620ECCD42D54D20B00F93777 /* edfalogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edfalogo.png; sourceTree = "<group>"; };
+		62E0CF572D54971E000DDBC1 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		62E0CF592D5497A6000DDBC1 /* cardfront_design_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardfront_design_one.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1016,10 +1022,12 @@
 			isa = PBXGroup;
 			children = (
 				0FCBF2662CCA35B7001E5FBB /* cardback_design_one.png */,
+				62E0CF592D5497A6000DDBC1 /* cardfront_design_one.png */,
 				0FCBF2672CCA35B7001E5FBB /* debit_card.png */,
 				0FCBF2682CCA35B7001E5FBB /* mada_new.png */,
 				0FCBF2692CCA35B7001E5FBB /* visa_new.png */,
 				308B68EC2A164D5C000EF281 /* Amex.png */,
+				62E0CF572D54971E000DDBC1 /* globe.png */,
 				308B68EF2A164D5C000EF281 /* chip.png */,
 				308B68E82A164D5B000EF281 /* amexCvc.png */,
 				308B68EB2A164D5C000EF281 /* Discover.png */,
@@ -1028,6 +1036,7 @@
 				308B68ED2A164D5C000EF281 /* mada.png */,
 				308B68E42A164D5B000EF281 /* Mastercard.png */,
 				308B68FC2A164DE4000EF281 /* paweredby-logo.png */,
+				620ECCD42D54D20B00F93777 /* edfalogo.png */,
 				308B68E52A164D5B000EF281 /* pci-dss-compliant.png */,
 				308B68E72A164D5B000EF281 /* UnionPay.png */,
 				308B68E92A164D5B000EF281 /* Visa.png */,
@@ -1135,12 +1144,14 @@
 				30B013B42AE98BE300460806 /* chip.png in Resources */,
 				30B013B52AE98BE300460806 /* amexCvc.png in Resources */,
 				30B013B62AE98BE300460806 /* Discover.png in Resources */,
+				62E0CF5A2D5497A6000DDBC1 /* cardfront_design_one.png in Resources */,
 				30B013B72AE98BE300460806 /* Group-1.png in Resources */,
 				30B013B82AE98BE300460806 /* JCB.png in Resources */,
 				30B013B92AE98BE300460806 /* mada.png in Resources */,
 				0FCBF2632CCA3566001E5FBB /* CardDetailViewTwo.xib in Resources */,
 				0FCBF2642CCA3566001E5FBB /* CardDetailViewThree.xib in Resources */,
 				0FCBF2652CCA3566001E5FBB /* CardDetailViewOne.xib in Resources */,
+				62E0CF582D54971E000DDBC1 /* globe.png in Resources */,
 				30B013BA2AE98BE300460806 /* Mastercard.png in Resources */,
 				30B013BB2AE98BE300460806 /* paweredby-logo.png in Resources */,
 				30B013BC2AE98BE300460806 /* pci-dss-compliant.png in Resources */,
@@ -1148,6 +1159,7 @@
 				30B013C02AE98E3200460806 /* LICENSE in Resources */,
 				30B013BD2AE98BE300460806 /* UnionPay.png in Resources */,
 				0FCBF26A2CCA35B7001E5FBB /* debit_card.png in Resources */,
+				620ECCD52D54D20B00F93777 /* edfalogo.png in Resources */,
 				0FCBF26B2CCA35B7001E5FBB /* visa_new.png in Resources */,
 				0FCBF26C2CCA35B7001E5FBB /* cardback_design_one.png in Resources */,
 				0FCBF26D2CCA35B7001E5FBB /* mada_new.png in Resources */,
