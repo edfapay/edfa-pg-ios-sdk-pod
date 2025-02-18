@@ -12,7 +12,7 @@
 "label_cvv" = "الرمز";
 "label_expiry" = "تاريخ الانتهاء";
 "label_month_year" = "شهر/سنة";
-"label_pay" = "يدفع";
+"label_pay" = "دفع";
 "label_total" = "المبلغ الإجمالي";
 "label_valid_thru" = "صالح حتى";
 "lbl_card_desc" = "تم إصدار هذه البطاقة من قبل سويدبانك بموجب ترخيص من ماستركارد الدولية.";
