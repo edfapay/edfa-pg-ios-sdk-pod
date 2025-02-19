@@ -23,6 +23,7 @@ fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
 fileprivate var _designType:EdfaPayDesignType = .one
 fileprivate var _languageCode:EdfaPayLanguage = .en
+fileprivate var _recurring:Bool = false
 
 // https://github.com/card-io/card.io-iOS-SDK
 // https://github.com/orazz/CreditCardForm-iOS
@@ -499,7 +500,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
         )
         
         
-        let saleOptions:EdfaPgSaleOptions? = nil //EdfaPgSaleOptions(channelId: "", recurringInit: false)
+        let saleOptions:EdfaPgSaleOptions? = EdfaPgSaleOptions(channelId: "", recurringInit:_recurring)
         showLoading()
         saleAdapter.execute(order: _order,
                             card: _card,
@@ -694,6 +695,7 @@ public class EdfaCardPay{
     class public func viewController(target:UIViewController,
                                      payer:EdfaPgPayer,
                                      order:EdfaPgSaleOrder,
+                                     isReccuring:Bool = false,
                                      transactionSuccess:@escaping TransactionCallback,
                                      transactionFailure:@escaping TransactionCallback,
                                      onError:@escaping ErrorCallback,
@@ -701,6 +703,7 @@ public class EdfaCardPay{
         _target = target
         _payer = payer
         _order = order
+        _isRecurring = isReccuring
         _onTransactionSuccess = transactionSuccess
         _onTransactionFailure = transactionFailure
         _onError = onError
@@ -777,6 +780,10 @@ extension EdfaCardPay{
     }
     public func set(language:EdfaPayLanguage) -> EdfaCardPay{
         _languageCode = language
+        return self
+    }
+    public func set(recurring:Bool) -> EdfaCardPay{
+        _recurring = recurring
         return self
     }
 }
