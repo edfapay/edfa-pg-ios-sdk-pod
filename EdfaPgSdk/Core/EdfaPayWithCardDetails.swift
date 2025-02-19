@@ -36,7 +36,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
     private var language: EdfaPayLanguage!
     private var order: EdfaPgSaleOrder!
     private var card: EdfaPgCard!
-    private var recurring: Bool = false
+    private var recurring: EdfaPgSaleOptions? =  nil
 
     
     
@@ -84,7 +84,8 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
     }
 
     public func set(recurring: Bool) -> EdfaPayWithCardDetails {
-        self.recurring = recurring
+        self.recurring = EdfaPgSaleOptions(channelId: "", recurringInit: recurring)
+
         return self
     }
 
@@ -154,7 +155,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
 //        )
 //         self.cardNumber = edfaPgCard.number
         
-        let saleOptions:EdfaPgSaleOptions? = EdfaPgSaleOptions(channelId: "", recurringInit: self.recurring)
+        let saleOptions:EdfaPgSaleOptions? = self.recurring
         viewController!.showLoading()
         saleAdapter.execute(order: order,
                             card:edfaPgCard,
