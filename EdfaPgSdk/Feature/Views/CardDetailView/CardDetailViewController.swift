@@ -695,7 +695,7 @@ public class EdfaCardPay{
     class public func viewController(target:UIViewController,
                                      payer:EdfaPgPayer,
                                      order:EdfaPgSaleOrder,
-                                     isReccuring:Bool = false,
+                                     recurring:Bool = false,
                                      transactionSuccess:@escaping TransactionCallback,
                                      transactionFailure:@escaping TransactionCallback,
                                      onError:@escaping ErrorCallback,
@@ -703,7 +703,7 @@ public class EdfaCardPay{
         _target = target
         _payer = payer
         _order = order
-        _isRecurring = isReccuring
+        _recurring = recurring
         _onTransactionSuccess = transactionSuccess
         _onTransactionFailure = transactionFailure
         _onError = onError
