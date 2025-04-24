@@ -37,6 +37,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
     private var order: EdfaPgSaleOrder!
     private var card: EdfaPgCard!
     private var recurring: Bool = false
+    private var auth: Bool = false
 
     
     
@@ -85,6 +86,11 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
 
     public func set(recurring: Bool) -> EdfaPayWithCardDetails {
         self.recurring = recurring
+        return self
+    }
+
+    public func set(auth: Bool) -> EdfaPayWithCardDetails {
+        self.auth = auth
         return self
     }
 
@@ -161,7 +167,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
                             payer: payer,
                             termUrl3ds: EdfaPgProcessCompleteCallbackUrl,
                             options: saleOptions,
-                            auth: false) {(response) in
+                            auth: auth) {(response) in
             
             hideLoading()
                         

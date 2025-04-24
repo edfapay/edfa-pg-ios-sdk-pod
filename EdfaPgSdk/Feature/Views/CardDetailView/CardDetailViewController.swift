@@ -24,6 +24,7 @@ fileprivate var _order:EdfaPgSaleOrder!
 fileprivate var _designType:EdfaPayDesignType = .one
 fileprivate var _languageCode:EdfaPayLanguage = .en
 fileprivate var _recurring:Bool = false
+fileprivate var _auth:Bool = false
 
 // https://github.com/card-io/card.io-iOS-SDK
 // https://github.com/orazz/CreditCardForm-iOS
@@ -507,7 +508,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
                             payer: _payer,
                             termUrl3ds: EdfaPgProcessCompleteCallbackUrl,
                             options: saleOptions,
-                            auth: false) { [weak self] (response) in
+                            auth: _auth) { [weak self] (response) in
             
             hideLoading()
             
@@ -784,6 +785,10 @@ extension EdfaCardPay{
     }
     public func set(recurring:Bool) -> EdfaCardPay{
         _recurring = recurring
+        return self
+    }
+    public func set(auth:Bool) -> EdfaCardPay{
+        _auth = auth
         return self
     }
 }
