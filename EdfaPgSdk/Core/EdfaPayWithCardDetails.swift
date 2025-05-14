@@ -302,7 +302,7 @@ onTransactionFailure: { error in
                                     successResult
                                 )
                                 
-                            }else if successResult.status == .pending && auth{
+                            }else if successResult.status == .pending && self.auth{
                                 print("Auth Transaction pending: \(successResult)")
                                 self.onTransactionSuccess?(
                                     saleResponse,
