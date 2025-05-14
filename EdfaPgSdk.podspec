@@ -11,7 +11,7 @@
 #  ―――――――――――――――――――――――――――――――――――――――――――――――――――――
 #  (Register) > pod trunk register <email> <user_name>
 #  (Validate) > pod lib lint
-#  (Create)   > pod trunk push <*.podspec>
+#  (Create)   > pod trunk push EdfaPgSdk.podspec --allow-warnings
 #  (Delete)   > pod trunk delete <pod_name> <pod_version>
 #
 
@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   #
   
   spec.name         = "EdfaPgSdk"
-  spec.version      = "2.0.7"
+  spec.version      = "2.0.8"
   spec.summary      = "(EdfaPgSdk) Edfa Payment Gateway SDK is an payment library written in Swift."
   
   # This description is used to generate tags and improve search results.

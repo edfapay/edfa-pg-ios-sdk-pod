@@ -651,6 +651,14 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
                                     saleResponse,
                                     successResult
                                 )
+                                
+                            }else if successResult.status == .pending && _auth{
+                                print("Auth Transaction pending: \(successResult)")
+                                _onTransactionSuccess?(
+                                    saleResponse,
+                                    successResult
+                                )
+                                
                             }else{
                                 _onTransactionFailure?(
                                     saleResponse,
