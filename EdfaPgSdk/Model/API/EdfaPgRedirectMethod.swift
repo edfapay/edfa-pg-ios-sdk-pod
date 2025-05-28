@@ -17,4 +17,14 @@ public enum EdfaPgRedirectMethod: String, Codable {
     
     /// POST redirect method value.
     case post = "POST"
+    
+    
+    /// Undefined Method
+    case undefined
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = EdfaPgRedirectMethod(rawValue: rawValue.uppercased()) ?? .undefined
+    }
 }

@@ -16,7 +16,7 @@ final class EdfaPgDateFormatter {
     }()
     
     static func date(from string: String) -> Date? {
-        formatter.date(from: string)
+        return try? formatter.date(from: string)
     }
     
     static func string(from: Date) -> String? {

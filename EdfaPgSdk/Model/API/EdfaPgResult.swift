@@ -26,4 +26,13 @@ public enum EdfaPgResult: String, Codable {
     
     /// Request has errors and was not validated by Payment Platform.
     case error = "ERROR"
+    
+    /// Undefined Result
+    case undefined
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = EdfaPgResult(rawValue: rawValue.uppercased()) ?? .undefined
+    }
 }

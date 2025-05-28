@@ -34,4 +34,13 @@ public enum EdfaPgAction: String, Codable {
     /// Following actions can not be made by request, they are created by Payment Platform in certain circumstances
     /// (e.g. issuer initiated chargeback) and you receive callback as a result.
     case chargeback = "CHARGEBACK"
+    
+    /// Undefined Action
+    case undefined
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = EdfaPgAction(rawValue: rawValue.uppercased()) ?? .undefined
+    }
 }

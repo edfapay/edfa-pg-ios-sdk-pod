@@ -38,4 +38,10 @@ public enum EdfaPgStatus: String, Codable {
     
     /// Undefined status
     case undefined
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = EdfaPgStatus(rawValue: rawValue.uppercased()) ?? .undefined
+    }
 }

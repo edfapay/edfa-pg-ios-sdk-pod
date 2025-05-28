@@ -38,4 +38,13 @@ public enum EdfaPgTransactionType: String, Codable {
     
     /// CHARGEBACK transaction type.
     case chargeback = "CHARGEBACK"
+    
+    /// Undefined Type
+    case undefined
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = EdfaPgTransactionType(rawValue: rawValue.uppercased()) ?? .undefined
+    }
 }
