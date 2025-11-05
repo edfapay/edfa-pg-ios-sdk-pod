@@ -826,7 +826,7 @@ let hash = EdfaPgHashUtil.hashApplePayVirtual(
 )
 ```
 
-**Formula**: `md5(strtoupper(strrev(identifier).client_password.number.amount.currency))`
+**Formula**: `md5(strtoupper(strrev(identifier.number.amount.currency.client_password)))`
 
 #### Payment Token Structure
 
@@ -1039,11 +1039,13 @@ Hash generation is crucial for request security. The SDK provides utilities in `
    ```
    md5(
      strtoupper(
-       strrev(identifier) . 
-       client_password . 
-       number . 
-       amount . 
-       currency
+       strrev(
+         identifier . 
+         number . 
+         amount . 
+         currency . 
+         client_password
+       )
      )
    )
    ```
@@ -1080,19 +1082,19 @@ let hash = md5(upper)
 ```swift
 // Given:
 let identifier = "apple-pay-trans-12345"
-let clientPassword = "merchant-password-123"
 let orderNumber = "order-12345"
 let amount = "100.00"
 let currency = "SAR"
+let clientPassword = "merchant-password-123"
 
-// Step 1: Reverse identifier
-let identifierRev = String(identifier.reversed())  // "54321-snart-yap-elppa"
+// Step 1: Concatenate all values
+let combined = identifier + orderNumber + amount + currency + clientPassword
 
-// Step 2: Concatenate
-let combined = identifierRev + clientPassword + orderNumber + amount + currency
+// Step 2: Reverse the entire combined string
+let reversed = String(combined.reversed())
 
 // Step 3: Uppercase
-let upper = combined.uppercased()
+let upper = reversed.uppercased()
 
 // Step 4: MD5
 let hash = md5(upper)

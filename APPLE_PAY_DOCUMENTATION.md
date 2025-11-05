@@ -367,11 +367,13 @@ The hash is calculated using the following formula:
 ```
 md5(
   strtoupper(
-    strrev(identifier) + 
-    client_password + 
-    order_number + 
-    order_amount + 
-    order_currency
+    strrev(
+      identifier + 
+      order_number + 
+      order_amount + 
+      order_currency + 
+      client_password
+    )
   )
 )
 ```
@@ -390,19 +392,22 @@ let hash = EdfaPgHashUtil.hashApplePayVirtual(
 ```swift
 // Given:
 let identifier = "ABC123XYZ"
-let clientPassword = "MySecret123"
 let orderNumber = "order-12345"
 let amount = "100.00"
 let currency = "SAR"
+let clientPassword = "MySecret123"
 
-// Step 1: Reverse identifier
-let idRev = "ZYXABC321"
+// Step 1: Concatenate all values
+let combined = identifier + orderNumber + amount + currency + clientPassword
+// "ABC123XYZorder-12345100.00SARMySecret123"
 
-// Step 2: Concatenate
-let str = "ZYXABC321MySecret123order-12345100.00SAR"
+// Step 2: Reverse the entire combined string
+let reversed = String(combined.reversed())
+// "321terceSyMRAS00.00154321-redrOZYX321CBA"
 
 // Step 3: Uppercase
-let upper = "ZYXABC321MYSECRET123ORDER-12345100.00SAR"
+let upper = reversed.uppercased()
+// "321TERCESMYRAS00.00154321-REDRОЗYX321CBA"
 
 // Step 4: MD5 hash
 let hash = md5(upper)  // "a1b2c3d4e5f6..."
