@@ -788,8 +788,8 @@ extension EdfaCardPay{
         _order = order
         return self
     }
-    public func set(extra:[Extra]) -> EdfaCardPay{
-        _extras = extra
+    public func set(extras:[Extra]) -> EdfaCardPay{
+        _extras = extras
         return self
     }
     public func set(designType:EdfaPayDesignType) -> EdfaCardPay{

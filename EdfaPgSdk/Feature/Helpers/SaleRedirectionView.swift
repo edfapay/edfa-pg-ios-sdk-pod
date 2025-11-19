@@ -11,7 +11,7 @@ import WebKit
 
 fileprivate var shouldDismiss:Bool = true
 
-let EdfaPgProcessCompleteCallbackUrl = "https://expresspay.sa/process-completed"
+var EdfaPgProcessCompleteCallbackUrl = "https://edfapay.com/process-completed"
 fileprivate var response3ds:EdfaPg3dsResponse?
 
 public class SaleRedirectionView : WKWebView{
