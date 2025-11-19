@@ -30,6 +30,7 @@ public struct EdfaPgSaleService: XWWWFormUrlEncodable {
     let orderAmount: String
     let orderCurrency: String
     let orderDescription: String
+    let extras:String
     let cardNumber: String
     let cardExpireMonth: String
     let cardExpireYear: String
@@ -63,6 +64,7 @@ extension EdfaPgSaleService: Encodable {
         case orderAmount = "order_amount"
         case orderCurrency = "order_currency"
         case orderDescription = "order_description"
+        case extras = "extras"
         case cardNumber = "card_number"
         case cardExpireMonth = "card_exp_month"
         case cardExpireYear = "card_exp_year"

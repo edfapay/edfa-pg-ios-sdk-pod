@@ -27,6 +27,7 @@ public struct EdfaPgVirtualSaleService: MultiPartTextFormDataUrlEncodable {
     let clientKey = EdfaPgSdk.shared.credentials.clientKey
     let orderId: String
     let orderAmount: String
+    let extras:String
     let orderCurrency: String
     let orderDescription: String
     let payerFirstName: String
@@ -58,6 +59,8 @@ extension EdfaPgVirtualSaleService: Encodable {
         case clientKey = "client_key"
         case orderId = "order_id"
         case orderAmount = "order_amount"
+        case extras = "extras"
+
         case orderCurrency = "order_currency"
         case orderDescription = "order_description"
         case payerFirstName = "payer_first_name"

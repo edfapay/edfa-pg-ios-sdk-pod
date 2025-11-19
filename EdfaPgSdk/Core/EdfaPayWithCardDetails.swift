@@ -33,6 +33,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
 //    private var cardNumber: String?
     private var txnId: String?
     private var payer: EdfaPgPayer!
+    private var extras: [Extra] = []
     private var language: EdfaPayLanguage!
     private var order: EdfaPgSaleOrder!
     private var card: EdfaPgCard!
@@ -67,6 +68,11 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
 
     public func set(payer: EdfaPgPayer) -> EdfaPayWithCardDetails {
         self.payer = payer
+        return self
+    }
+
+    public func set(extras: [Extra]) -> EdfaPayWithCardDetails {
+        self.extras = extras
         return self
     }
 
@@ -165,6 +171,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
         saleAdapter.execute(order: order,
                             card:edfaPgCard,
                             payer: payer,
+                            extras: extras,
                             termUrl3ds: EdfaPgProcessCompleteCallbackUrl,
                             options: saleOptions,
                             auth: auth) {(response) in

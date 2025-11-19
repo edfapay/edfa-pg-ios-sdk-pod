@@ -30,6 +30,8 @@ fileprivate var _onError:(([String]) -> Void)!
 
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
+fileprivate var _extras:[Extra] = []
+
 fileprivate var enableLogs:Bool = false
 
 fileprivate let virtualSaleAdapter = EdfaPgVirtualSaleAdapter()
@@ -166,6 +168,13 @@ extension EdfaApplePay{
         return self
     }
     
+    
+    public func set(extras:[Extra]) -> EdfaApplePay{
+        _extras = extras
+        return self
+    }
+    
+    
     public func set(shippingAddress:EdfaPgShippingAddress) -> EdfaApplePay{
         self.shippingAddress = shippingAddress
         return self
@@ -298,7 +307,9 @@ fileprivate func startPurchaseApm(payment:PKPayment, completion:@escaping ((Bool
                 returnUrl: EdfaPgProcessCompleteCallbackUrl,
                 paymentToken: paymentTokenString,
                 order: _order,
-                payer: _payer
+                payer: _payer,
+                extras: _extras
+                
             ) { response in
                 switch response{
                     

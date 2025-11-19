@@ -21,6 +21,8 @@ fileprivate var _onError:ErrorCallback!
 fileprivate var _target:UIViewController?
 fileprivate var _payer:EdfaPgPayer!
 fileprivate var _order:EdfaPgSaleOrder!
+fileprivate var _extras: [Extra] = []
+
 fileprivate var _designType:EdfaPayDesignType = .one
 fileprivate var _languageCode:EdfaPayLanguage = .en
 fileprivate var _recurring:Bool = false
@@ -506,6 +508,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
         saleAdapter.execute(order: _order,
                             card: _card,
                             payer: _payer,
+                            extras: _extras,
                             termUrl3ds: EdfaPgProcessCompleteCallbackUrl,
                             options: saleOptions,
                             auth: _auth) { [weak self] (response) in
@@ -704,6 +707,8 @@ public class EdfaCardPay{
     class public func viewController(target:UIViewController,
                                      payer:EdfaPgPayer,
                                      order:EdfaPgSaleOrder,
+                                     extras:[Extra],
+
                                      recurring:Bool = false,
                                      transactionSuccess:@escaping TransactionCallback,
                                      transactionFailure:@escaping TransactionCallback,
@@ -712,6 +717,7 @@ public class EdfaCardPay{
         _target = target
         _payer = payer
         _order = order
+        _extras = extras
         _recurring = recurring
         _onTransactionSuccess = transactionSuccess
         _onTransactionFailure = transactionFailure
@@ -782,7 +788,10 @@ extension EdfaCardPay{
         _order = order
         return self
     }
-    
+    public func set(extra:[Extra]) -> EdfaCardPay{
+        _extras = extra
+        return self
+    }
     public func set(designType:EdfaPayDesignType) -> EdfaCardPay{
        _designType = designType
         return self

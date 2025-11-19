@@ -34,6 +34,7 @@ public final class EdfaPgSaleAdapter: EdfaPgBaseAdapter<EdfaPgSaleService> {
     public func execute(order: EdfaPgSaleOrder,
                         card: EdfaPgCard,
                         payer: EdfaPgPayer,
+                        extras:[Extra] = [],
                         termUrl3ds: String,
                         options: EdfaPgSaleOptions? = nil,
                         auth: Bool,
@@ -42,12 +43,21 @@ public final class EdfaPgSaleAdapter: EdfaPgBaseAdapter<EdfaPgSaleService> {
                                           cardNumber: card.number)!
         let payerOptions = payer.options
         
+        
+        let jsonData = try? JSONEncoder().encode(extras)
+        if jsonData == nil{
+            print("Error encoding the extras to json")
+        }
+        
+        let extraJson = String(data: jsonData ?? Data() , encoding: .utf8)
+        
         return procesedRequest(action: .sale,
                                params: .init(channelId: options?.channelId,
                                              orderId: order.id,
                                              orderAmount: amountFormatter.amountFormat(for: order.amount) ?? "",
                                              orderCurrency: order.currency,
                                              orderDescription: order.description,
+                                             extras: extraJson ?? "[]",
                                              cardNumber: card.number,
                                              cardExpireMonth: cardFormatter.expireMonthFormat(for: card) ?? "",
                                              cardExpireYear: cardFormatter.expireYearFormat(for: card) ?? "",

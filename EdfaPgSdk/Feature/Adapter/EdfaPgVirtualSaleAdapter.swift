@@ -28,6 +28,8 @@ public final class EdfaPgVirtualSaleAdapter: EdfaPgVirtualBaseAdapter<EdfaPgVirt
         paymentToken:String,
         order: EdfaPgSaleOrder,
         payer: EdfaPgPayer,
+        extras: [Extra]? = [],
+
         options: EdfaPgSaleOptions? = nil,
         callback: @escaping EdfaPgSaleVirtualTransactionResultCallback
     ) -> URLSessionDataTask {
@@ -41,11 +43,19 @@ public final class EdfaPgVirtualSaleAdapter: EdfaPgVirtualBaseAdapter<EdfaPgVirt
         
         let payerOptions = payer.options
         
+        let jsonData = try? JSONEncoder().encode(extras)
+        if jsonData == nil{
+            print("Error encoding the extras to json")
+        }
+        
+        let extraJson = String(data: jsonData ?? Data() , encoding: .utf8)
+        
         return procesedRequest(
             action: .sale,
             params: .init(
              orderId: order.id,
              orderAmount: amountFormatter.amountFormat(for: order.amount) ?? "",
+             extras:  extraJson ?? "[]",
              orderCurrency: order.currency,
              orderDescription: order.description,
              payerFirstName: payer.firstName,
