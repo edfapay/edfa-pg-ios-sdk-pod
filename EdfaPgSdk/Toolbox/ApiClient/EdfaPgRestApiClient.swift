@@ -119,11 +119,11 @@ final class EdfaPgRestApiClient {
 
 public final class EdfaPgDataRequest {
     
-    fileprivate let request: URLRequest
+    var request: URLRequest
 
     init<T: Encodable>(url: URL,
                        httpMethod: EdfaPgHttpMethod,
-                       body: T) {
+                       body: T, headers:[String:String] = [:]) {
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue.capitalized
@@ -132,6 +132,9 @@ public final class EdfaPgDataRequest {
             "X-User-Agent": "ios",
             "Accept": "application/json",
         ]
+        headers.forEach { (key: String, value: String) in
+            request.allHTTPHeaderFields?[key] = value
+        }
         
         if body is XWWWFormUrlEncodable{
             request.httpBody = (body as? XWWWFormUrlEncodable)?.encodableData
@@ -141,6 +144,11 @@ public final class EdfaPgDataRequest {
         if body is MultiPartTextFormDataUrlEncodable{
             request.httpBody = (body as? MultiPartTextFormDataUrlEncodable)?.encodableData
             request.allHTTPHeaderFields?["Content-Type"] = "multipart/form-data; boundary=boundary-edfapay-pg-formdata"
+        }
+        
+        if body is JSONBodyEncodable{
+            request.httpBody = (body as? JSONBodyEncodable)?.encodableData
+            request.allHTTPHeaderFields?["Content-Type"] = "application/json"
         }
         
         self.request = request

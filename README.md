@@ -156,6 +156,23 @@ Always download latest version by run `pod update` or `pod install --repo-update
 > >             })
 > > ```
 >
+> >  **Pay With SADAD Number**
+> > ```swift
+> >      EdfaSadadPay()
+> >          .setOrderId("Unique order_id as string")
+> >          .setOrderDescription("Description of the order")
+> >          .setOrderAmount(10.0)
+> >          .setCustomerName("Merchant customer name here")
+> >          .setMobileNumber("Merchant customer mobile number here in format: 966500409598")
+> >          .onSuccess { response in
+> >              debugPrint("Transaction Success: \(response)")
+> >          }.onFailure { errors, exception in
+> >              debugPrint("Transaction Failed: \(errors), Exception:\(exception)")
+> >          }.initialize { errors in
+> >              debugPrint(errors) 
+> >          }
+> > ```
+>
 ## Getting help
 
 To report a specific issue or feature request, open a [new issue](https://github.com/edfapay/edfa-pg-ios-sdk-pod/issues/new).

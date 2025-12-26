@@ -41,6 +41,10 @@ final class EdfaPgHashUtil {
         return md5(from: sum.uppercased())
     }
     
+    static func hashSHA256(text: String) -> String? {
+        return sha256(string: text)
+    }
+    
 
     
     
@@ -103,6 +107,16 @@ final class EdfaPgHashUtil {
         var digest = [UInt8](repeating: 0, count:Int(CC_SHA1_DIGEST_LENGTH))
         data.withUnsafeBytes {
             _ = CC_SHA1($0.baseAddress, CC_LONG(data.count), &digest)
+        }
+        let hexBytes = digest.map { String(format: "%02hhx", $0) }
+        return hexBytes.joined()
+    }
+    
+    private static func sha256(string:String) -> String {
+        let data = Data(string.utf8)
+        var digest = [UInt8](repeating: 0, count:Int(CC_SHA256_DIGEST_LENGTH))
+        data.withUnsafeBytes {
+            _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &digest)
         }
         let hexBytes = digest.map { String(format: "%02hhx", $0) }
         return hexBytes.joined()

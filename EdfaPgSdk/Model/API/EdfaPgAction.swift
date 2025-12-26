@@ -13,6 +13,9 @@ import Foundation
 /// See *EdfaPgSdk, EdfaPgResultProtocol*
 public enum EdfaPgAction: String, Codable {
     
+    /// Creates SADAD just for identification, not used ad action in request
+    case sadad = "SADAD"
+    
     /// Creates SALE or AUTH transaction.
     case sale = "SALE"
     
