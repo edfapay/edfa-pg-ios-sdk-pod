@@ -10,6 +10,7 @@ import Foundation
 final class EdfaPgDateFormatter {
     private static let formatter: DateFormatter = {
         let formatter = DateFormatter()
+        formatter.locale = .init(identifier: "en_US")
         formatter.dateFormat = "yyyy-mm-dd hh:mm:ss"
         
         return formatter

@@ -324,7 +324,7 @@ class CardDetailViewController : UIViewController {
     
     func isValidExpiry() -> Bool {
         let df = DateFormatter()
-        df.locale = Locale(identifier: "en-US")
+        df.locale = .init(identifier: "en-US")
         
         // Get the current month and year
         df.dateFormat = "MM"

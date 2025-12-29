@@ -17,4 +17,13 @@ public enum EdfaPgTransactionStatus: String, Codable {
     
     /// Success or "1" status.
     case success
+    
+    case undefined
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        let status = try? EdfaPgTransactionStatus(rawValue: rawValue.lowercased())
+        self = status ?? .undefined
+    }
 }

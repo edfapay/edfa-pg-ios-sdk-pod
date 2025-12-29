@@ -51,6 +51,7 @@ public final class EdfaPgSaleOrder: EdfaPgOrder {
     
     func formatedAmountString() -> String{
         let formatter = NumberFormatter()
+        formatter.locale = .init(identifier: "en_US")
         formatter.currencyCode = currency
         formatter.numberStyle = .currency
 

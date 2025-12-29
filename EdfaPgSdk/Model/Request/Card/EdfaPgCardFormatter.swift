@@ -13,9 +13,11 @@ final class EdfaPgCardFormatter {
     private let yearFormatter = NumberFormatter()
     
     init() {
+        monthFormatter.locale = .init(identifier: "en_US")
         monthFormatter.minimumIntegerDigits = 2
         monthFormatter.maximumIntegerDigits = 2
         
+        yearFormatter.locale = .init(identifier: "en_US")
         yearFormatter.minimumIntegerDigits = 4
         yearFormatter.maximumIntegerDigits = 4
     }

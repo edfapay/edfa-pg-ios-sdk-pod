@@ -13,13 +13,13 @@ final class EdfaPgAmountFormatter {
     private let formatter = NumberFormatter()
     
     init() {
+        formatter.locale = .init(identifier: "en_US")
         formatter.usesGroupingSeparator = false
         
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         
         formatter.minimumIntegerDigits = 1
-        formatter.locale = Locale(identifier: "en_US")
         
     }
     

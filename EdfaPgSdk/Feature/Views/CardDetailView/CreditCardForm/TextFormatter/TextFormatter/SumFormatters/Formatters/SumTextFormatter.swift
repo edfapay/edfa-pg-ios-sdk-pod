@@ -52,6 +52,7 @@ open class SumTextFormatter: TextFormatter, TextUnformatter, TextNumberFormatter
         let formatParser = SumFormatParser()
         let result = formatParser.parse(format: textPattern, patternSymbol: patternSymbol)
         let numberFormatter = NumberFormatter()
+        numberFormatter.locale = .init(identifier: "en_US")
         numberFormatter.positivePrefix = result.prefix
         numberFormatter.positiveSuffix = result.suffix
         numberFormatter.groupingSeparator = result.groupingSeparator

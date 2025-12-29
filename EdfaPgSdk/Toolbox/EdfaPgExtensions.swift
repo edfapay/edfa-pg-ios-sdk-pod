@@ -14,6 +14,7 @@ extension Optional where Wrapped: StringProtocol {
         return value == ""
     }
 }
+
 //extension Array where Extra:Encodable{
 //    func toJsonString() -> String?{
 //        let jsonData = try? JSONEncoder().encode(self)

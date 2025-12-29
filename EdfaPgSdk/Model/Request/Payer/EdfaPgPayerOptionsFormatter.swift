@@ -12,7 +12,7 @@ final class EdfaPgPayerOptionsFormatter {
     private let birthdateFormat = DateFormatter()
 
     init() {
-        birthdateFormat.locale = .init(identifier: "us")
+        birthdateFormat.locale = .init(identifier: "en_US")
         birthdateFormat.dateFormat = "yyyy-MM-dd"
     }
     

@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   #
   
   spec.name         = "EdfaPgSdk"
-  spec.version      = "2.1.2"
+  spec.version      = "2.1.3"
   spec.summary      = "(EdfaPgSdk) Edfa Payment Gateway SDK is an payment library written in Swift."
   
   # This description is used to generate tags and improve search results.
@@ -41,7 +41,8 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://edfapay.com"
   spec.screenshots  = "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/sale.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/recurring-sale.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/capture.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/creditvoid.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/get-trans-status.png?raw=true", "https://github.com/edfapay/edfa-pg-ios-sdk-pod/blob/main/media/get-trans-details.png?raw=true"
-  
+  spec.documentation_url  = "https://github.com/edfapay/edfa-pg-ios-sdk-pod/wiki/Quick-Guide"
+
   
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
