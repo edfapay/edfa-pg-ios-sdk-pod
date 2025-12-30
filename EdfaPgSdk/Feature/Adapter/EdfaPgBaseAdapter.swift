@@ -86,11 +86,10 @@ public class EdfaPgSadadBaseAdapter<Serivce: Encodable> {
         
         
         
-        
         let request = EdfaPgDataRequest(
             url: URL(string: sadadUrl)!,
             httpMethod: .post,
-            body: params,
+            body: params
         )
         
         let httpBody = request.request.httpBody ?? Data()
