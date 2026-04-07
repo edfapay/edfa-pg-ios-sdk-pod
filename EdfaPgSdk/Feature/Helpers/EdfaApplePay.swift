@@ -60,6 +60,12 @@ public class EdfaApplePay : EdfaPgAdapterDelegate{
             if validation.valid{
                 
                 let request = preparePayment(request:PKPaymentRequest())
+                if request.paymentSummaryItems.isEmpty{
+                    let label = "Cost"
+                    request.paymentSummaryItems = [
+                        PKPaymentSummaryItem(label: label, amount: NSDecimalNumber(value: _order.amount), type: .final)
+                    ]
+                }
                 
                 if let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request){
                     applePayController.delegate = prepareDelegate(target: target, edfaApplePay: self)
@@ -106,7 +112,7 @@ public class EdfaApplePay : EdfaPgAdapterDelegate{
         
         request.paymentSummaryItems = purchaseItems
         if purchaseItems.isEmpty{
-            let label = (Bundle.main.infoDictionary?["CFBundleName"] as? String) ?? _order.description
+            let label = _order.description ?? (Bundle.main.infoDictionary?["CFBundleName"] as? String) ?? ""
             request.paymentSummaryItems = [
                 PKPaymentSummaryItem(label: label, amount: NSDecimalNumber(value: _order.amount), type: .final)
             ]

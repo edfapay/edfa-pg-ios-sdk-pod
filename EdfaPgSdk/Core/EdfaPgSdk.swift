@@ -94,8 +94,24 @@ public final class EdfaPgSdk {
         #endif
     }
     
+
     public static func enableLogs(){
         ENABLE_DEBUG = true
+    }
+    
+    public static var successAnimation:String? = nil
+    public static func setSuccessAnimation(url:String?){
+        successAnimation = url
+    }
+    
+    static var failureAnimation:String? = nil
+    public static func setFailureAnimation(url:String?){
+        failureAnimation = url
+    }
+    
+    static var animationDelay:Int = 0
+    public static func setAnimationDelay(delay:Int){
+        animationDelay = delay
     }
     
     private init() { }

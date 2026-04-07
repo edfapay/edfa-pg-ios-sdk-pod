@@ -46,6 +46,16 @@ Always download latest version by run `pod update` or `pod install --repo-update
 > ```
 
 > [!TIP]
+> ### Status Animation
+> > - You will be able to set animation for success and failure status at 3DS Redirection.
+> > - You will be also able to set delay to dismiss or complete the transaction animation.
+> > ```swift
+> >     EdfaPgSdk.setAnimationDelay(delay: 5000) // Milliseconds
+> >     EdfaPgSdk.setFailureAnimation(url: "https://lottie.host/embed/6391d446-ad05-4ec8-bbc3-6e4b995b80c1/MRQIViE7eS.lottie")
+> >     EdfaPgSdk.setSuccessAnimation(url: "https://lottie.host/embed/6d93db21-e1e4-4ac3-9474-aa8182cadba7/vWVmKBU70n.lottie")
+> > ```
+> >
+> 
 > ### Get Ready for Payment
 > > **Create `EdfaPgSaleOrder` Model**
 > > ```swift

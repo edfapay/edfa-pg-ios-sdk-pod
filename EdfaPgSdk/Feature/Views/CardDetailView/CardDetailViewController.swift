@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
-public typealias TransactionCallback = (
-    (EdfaPgResponse<EdfaPgSaleResult>?, Any?) -> Void
-)
 public typealias ErrorCallback = (([String]) -> Void)
+public typealias TransactionCallback = (EdfaPgResponse<EdfaPgSaleResult>?, Any?) -> Void
 
 fileprivate var _onTransactionSuccess:TransactionCallback?
 fileprivate var _onTransactionFailure:TransactionCallback?
+
 fileprivate var _onPresent:(() -> Void)?
 fileprivate var _onError:ErrorCallback!
 
@@ -33,6 +32,7 @@ fileprivate var _auth:Bool = false
 // https://github.com/luximetr/AnyFormatKit
 
 fileprivate var _cardNumber:String?
+fileprivate var _card:EdfaPgCard?
 fileprivate var _txnId:String?
 class CardDetailViewController : UIViewController {
     
@@ -462,29 +462,6 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
     
     func doSaleTransaction(){
         
-        
-        //        let payerOptions = EdfaPgPayerOptions(middleName: tfPayerMiddleName.text,
-        //                                                 birthdate: Foundation.Date.formatter.date(from: tfPayerBirthday.text ?? ""),
-        //                                                 address2: tfPayerAddress2.text,
-        //                                                 state: tfPayerState.text)
-        //        
-        //        let payer = EdfaPgPayer(firstName: tfPayerFirstName.text ?? "",
-        //                                   lastName: tfPayerLastName.text ?? "",
-        //                                   address: tfPayerAddress.text ?? "",
-        //                                   country: tfPayerCountryCode.text ?? "",
-        //                                   city: tfPayerCity.text ?? "",
-        //                                   zip: tfPayerZip.text ?? "",
-        //                                   email: tfPayerEmail.text ?? "",
-        //                                   phone: tfPayerPhone.text ?? "",
-        //                                   ip: tfPayerIpAddress.text ?? "",
-        //                                   options: payerOptions)
-        //        
-        //        let saleOptions = EdfaPgSaleOptions(channelId: tfChannelId.text,
-        //                                               recurringInit: swtInitRecurringSale.isOn)
-        //        
-        //        let transaction = EdfaPgTransactionStorage.Transaction(payerEmail: payer.email,
-        //                                                                  cardNumber: card.number)
-        
         guard  let number = cardNumberFormatter.unformat(txtCardNumber.text),
                let cvv = cardCVVFormatter.unformat(txtCardCVV.text),
                let expiryYear = cardxExpiry().year,
@@ -495,7 +472,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
         _cardNumber = number.replacingOccurrences(of: " ", with: "")
         
         
-        let _card = EdfaPgCard(
+        _card = EdfaPgCard(
             number: number,
             expireMonth: Int(expiryMonth),
             expireYear: Int(expiryYear + 2000),
@@ -506,7 +483,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
         let saleOptions:EdfaPgSaleOptions? = EdfaPgSaleOptions(channelId: "", recurringInit:_recurring)
         showLoading()
         saleAdapter.execute(order: _order,
-                            card: _card,
+                            card: _card!,
                             payer: _payer,
                             extras: _extras,
                             termUrl3ds: EdfaPgProcessCompleteCallbackUrl,
@@ -539,7 +516,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
                     debugPrint(redirectResult)
                     _txnId = redirectResult.transactionId
                     self.redirect(
-                        response: response,
+                        saleResponse: response,
                         sale3dsRedirectResponse:redirectResult
                     )
                     
@@ -558,7 +535,7 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
                     )
                     
                 }
-                                
+                
             case .error(let errorResult):
                 debugPrint(errorResult)
                 _onTransactionFailure?(response, errorResult)
@@ -589,45 +566,26 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
     }
     
     func redirect(
-        response:EdfaPgResponse<EdfaPgSaleResult>,
+        saleResponse:EdfaPgResponse<EdfaPgSaleResult>,
         sale3dsRedirectResponse:EdfaPgSaleRedirect
     ){
         
-            
-            
-            SaleRedirectionView()
-                .setup(
-                    response: sale3dsRedirectResponse,
-                    onTransactionSuccess: { result in
-                        if let txnId = result.transactionId{
-                            self.checkTransactionStatus(
-                                saleResponse: response,
-                                transactionId: txnId
-                            )
-                        }else{
-                            _onTransactionFailure?(
-                                response,
-                                "Something went wrong (Transaction ID not returned on success response)"
-                            )
-                        }
-                        
-                        
-                    },
-                    onTransactionFailure: { error in
-                        print("onTransactionFailure: \(error)")
-                        _onTransactionFailure?(response, error)
-                        
-                    }).enableLogs()
-                .show(owner: self, onStartIn: { viewController in
-                    print("onStart: \(viewController)")
-                    
-                }, onError: { error in
-                    print("onError: \(error)")
-                    
-                })
-            
-            
+        let saleData = SaleTransactionData(auth:_auth, order: _order, payer: _payer, card: _card!, saleResponse: sale3dsRedirectResponse)
         
+        SaleRedirectionView()
+            .setup(
+                saleData: saleData,
+                callback: { status in
+                    self.handleTxnDetailResponse(saleResponse: saleResponse, status: status)
+                }
+            ).enableLogs()
+            .show(owner: self, onStartIn: { viewController in
+                print("onStart: \(viewController)")
+                
+            }, onError: { error in
+                print("onError: \(error)")
+                
+            })
     }
     
     func checkTransactionStatus(
@@ -641,49 +599,54 @@ extension CardDetailViewController : EdfaPgAdapterDelegate{
             getTransactionDetailAdapter.execute(
                 transactionId: txn,
                 payerEmail: _payer.email,
-                cardNumber: cardNumber) { response in
-                
-                    switch response {
-                    case .result(let result):
-                        
-                        switch result {
-                        case .success(let successResult):
-                            if successResult.status == .settled{
-                                print("Transaction settled: \(successResult)")
-                                _onTransactionSuccess?(
-                                    saleResponse,
-                                    successResult
-                                )
-                                
-                            }else if successResult.status == .pending && _auth{
-                                print("Auth Transaction pending: \(successResult)")
-                                _onTransactionSuccess?(
-                                    saleResponse,
-                                    successResult
-                                )
-                                
-                            }else{
-                                _onTransactionFailure?(
-                                    saleResponse,
-                                    successResult
-                                )
-                            }
-                        }
-                                        
-                    case .error(let errorResult):
-                        debugPrint(errorResult)
-                        _onTransactionFailure?(saleResponse, response)
-                        
-                    case .failure(let errorResult):
-                        debugPrint(errorResult)
-                        _onTransactionFailure?(saleResponse, errorResult)
-                        
-                    }
+                cardNumber: cardNumber,
+                callback: { status in
+                    self.handleTxnDetailResponse(saleResponse: saleResponse, status: status)
                 }
+            )
+        }
+    }
+    
+    func handleTxnDetailResponse(saleResponse:EdfaPgResponse<EdfaPgSaleResult>, status:EdfaPgResponse<EdfaPgGetTransactionDetailsResult>){
+        
+        switch status {
+        case .result(let result):
+            
+            switch result {
+            case .success(let successResult):
+                if successResult.status == .settled{
+                    print("Transaction settled: \(successResult)")
+                    _onTransactionSuccess?(
+                        saleResponse,
+                        successResult
+                    )
+                    
+                }else if successResult.status == .pending && _auth{
+                    print("Auth Transaction pending: \(successResult)")
+                    _onTransactionSuccess?(
+                        saleResponse,
+                        successResult
+                    )
+                    
+                }else{
+                    _onTransactionFailure?(
+                        saleResponse,
+                        successResult
+                    )
+                }
+            }
+                            
+        case .error(let errorResult):
+            debugPrint(errorResult)
+            _onTransactionFailure?(saleResponse, status)
+            
+        case .failure(let errorResult):
+            debugPrint(errorResult)
+            _onTransactionFailure?(saleResponse, errorResult)
+            
         }
     }
 }
-
 
 public class EdfaCardPay{
     

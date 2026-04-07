@@ -158,14 +158,6 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
             return
         }
         
-//        let edfaPgCard = EdfaPgCard(
-//            number: cardNumber,
-//            expireMonth: Int(expiryMonth),
-//            expireYear: Int(expiryYear),
-//            cvv: cvv
-//        )
-//         self.cardNumber = edfaPgCard.number
-        
         let saleOptions:EdfaPgSaleOptions? = EdfaPgSaleOptions(channelId: "", recurringInit: self.recurring)
         viewController!.showLoading()
         saleAdapter.execute(order: order,
@@ -199,7 +191,7 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
                     debugPrint(redirectResult)
                     self.txnId = redirectResult.transactionId
                     self.redirect(
-                        response: response,
+                        saleResponse: response,
                         sale3dsRedirectResponse:redirectResult
                     )
                     
@@ -249,30 +241,19 @@ public class EdfaPayWithCardDetails: EdfaPgAdapterDelegate {
     }
     
     private func redirect(
-        response:EdfaPgResponse<EdfaPgSaleResult>,
+        saleResponse:EdfaPgResponse<EdfaPgSaleResult>,
         sale3dsRedirectResponse:EdfaPgSaleRedirect
     ){
         
+        let saleData = SaleTransactionData(auth: auth, order: order, payer: payer, card: card!, saleResponse: sale3dsRedirectResponse)
+        
         SaleRedirectionView()
             .setup(
-                response: sale3dsRedirectResponse,
-                onTransactionSuccess: { result in
-                    if let txnId = result.transactionId{
-                        self.checkTransactionStatus(
-                            saleResponse: response,transactionId: txnId)
-                    }else{
-                        self.onTransactionFailure?(response,"Something went wrong (Transaction ID not returned on success response)"
-                    )
-     }
-
-                
- },
-onTransactionFailure: { error in
-    print("onTransactionFailure: \(error)")
-    self.onTransactionFailure?(response, error)
-                
-})
-            .enableLogs()
+                saleData: saleData,
+                callback: { status in
+                    self.handleTxnDetailResponse(saleResponse: saleResponse, status: status)
+                }
+            ).enableLogs()
             .show(owner: viewController!, onStartIn: { viewController in
                 print("onStart: \(viewController)")
                 
@@ -283,57 +264,62 @@ onTransactionFailure: { error in
 
     }
     
-    private func checkTransactionStatus(
+    
+    
+    func checkTransactionStatus(
         saleResponse:EdfaPgResponse<EdfaPgSaleResult>,
         transactionId:String
     ){
         print(
             "Checking transaction status for transaction id: \(transactionId)"
         )
-        let cardNumber = card.number
-        if  let txn = txnId{
-            getTransactionDetailAdapter.execute(
-                transactionId: txn,
-                payerEmail: payer.email,
-                cardNumber: cardNumber) { response in
-                
-                    switch response {
-                    case .result(let result):
-                        
-                        switch result {
-                        case .success(let successResult):
-                            if successResult.status == .settled{
-                                print("Transaction settled: \(successResult)")
-                                self.onTransactionSuccess?(
-                                    saleResponse,
-                                    successResult
-                                )
-                                
-                            }else if successResult.status == .pending && self.auth{
-                                print("Auth Transaction pending: \(successResult)")
-                                self.onTransactionSuccess?(
-                                    saleResponse,
-                                    successResult
-                                )
-                                
-                            }else {
-                                self.onTransactionFailure?(
-                                    saleResponse,
-                                    successResult
-                                )
-                            }
-                        }
-                                        
-                    case .error(let errorResult):
-                        debugPrint(errorResult)
-                        self.onTransactionFailure?(saleResponse, response)
-                        
-                    case .failure(let errorResult):
-                        debugPrint(errorResult)
-                        self.onTransactionFailure?(saleResponse, errorResult)
-                        
-                    }
+        
+        getTransactionDetailAdapter.execute(
+            transactionId: transactionId,
+            payerEmail: payer.email,
+            cardNumber: card.number,
+            callback: { status in
+                self.handleTxnDetailResponse(saleResponse: saleResponse, status: status)
+            }
+        )
+    }
+    
+    func handleTxnDetailResponse(saleResponse:EdfaPgResponse<EdfaPgSaleResult>, status:EdfaPgResponse<EdfaPgGetTransactionDetailsResult>){
+        
+        switch status {
+        case .result(let result):
+            
+            switch result {
+            case .success(let successResult):
+                if successResult.status == .settled{
+                    print("Transaction settled: \(successResult)")
+                    onTransactionSuccess?(
+                        saleResponse,
+                        successResult
+                    )
+                    
+                }else if successResult.status == .pending && auth{
+                    print("Auth Transaction pending: \(successResult)")
+                    onTransactionSuccess?(
+                        saleResponse,
+                        successResult
+                    )
+                    
+                }else{
+                    onTransactionFailure?(
+                        saleResponse,
+                        successResult
+                    )
                 }
+            }
+                            
+        case .error(let errorResult):
+            debugPrint(errorResult)
+            onTransactionFailure?(saleResponse, status)
+            
+        case .failure(let errorResult):
+            debugPrint(errorResult)
+            onTransactionFailure?(saleResponse, errorResult)
         }
     }
     

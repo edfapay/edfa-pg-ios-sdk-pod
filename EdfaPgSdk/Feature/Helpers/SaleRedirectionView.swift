@@ -14,20 +14,27 @@ fileprivate var shouldDismiss:Bool = true
 var EdfaPgProcessCompleteCallbackUrl = "https://edfapay.com/process-completed"
 fileprivate var response3ds:EdfaPg3dsResponse?
 
+
 public class SaleRedirectionView : WKWebView{
-    var viewController:Secure3DSVC? = nil
+    
     
     var onLoading:((Bool) -> Void)? = nil
     private var logs:Bool = false
-    private var response:EdfaPgSaleRedirect!
+    private var saleData:SaleTransactionData!
     
     private var onStartIn:((UIViewController)->Void)?
     private var onError:((String)->Void)?
     
-    private var onTransactionSuccess:((EdfaPg3dsResponse)->Void)?
-    private var onTransactionFailure:((EdfaPg3dsResponse)->Void)?
+    private var callback:EdfaPgGetTransactionDetailsCallback? = nil
     
     private var sale3dsViewController:Secure3DSVC!
+    
+    
+    private lazy var getTransactionDetailAdapter: EdfaPgGetTransactionDetailsAdapter = {
+        let adapter = EdfaPgAdapterFactory().createGetTransactionDetails()
+        adapter.delegate = self
+        return adapter
+    }()
 
     override init(frame: CGRect, configuration:WKWebViewConfiguration) {
         super.init(frame: frame, configuration:configuration)
@@ -48,12 +55,9 @@ public class SaleRedirectionView : WKWebView{
         onStartIn?(sale3dsViewController)
     }
     
-    public func setup(response:EdfaPgSaleRedirect, onTransactionSuccess:((EdfaPg3dsResponse)->Void)?, onTransactionFailure:((EdfaPg3dsResponse)->Void)?) -> SaleRedirectionView{
-        
-        self.response = response
-        self.onTransactionFailure = onTransactionFailure
-        self.onTransactionSuccess = onTransactionSuccess
-        
+    public func setup(saleData:SaleTransactionData, callback:@escaping EdfaPgGetTransactionDetailsCallback) -> SaleRedirectionView{
+        self.saleData = saleData
+        self.callback = callback
         return self
     }
     
@@ -61,12 +65,12 @@ public class SaleRedirectionView : WKWebView{
         self.onStartIn = onStartIn
         self.onError = onError
         
-        if onTransactionSuccess == nil || onTransactionFailure == nil{
-            onError("onTransactionSuccess and onTransactionFailure function should be passed to SaleRedirectionView.setup function")
+        if callback == nil {
+            onError("callback function should be passed to SaleRedirectionView.setup function")
             return
         }
         
-        if response.validation() == false{
+        if saleData.redirection.validation() == false{
             onError("Invalid or missing parameters in object 'result:EdfaPgSaleRedirect'")
             return
         }
@@ -74,7 +78,7 @@ public class SaleRedirectionView : WKWebView{
         navigationDelegate = self
         uiDelegate = self
         
-        sale3dsViewController = Secure3DSVC.with(content: self, response: response)
+        sale3dsViewController = Secure3DSVC.with(content: self, response: saleData.redirection)
         
         if let navigationController  =  owner as? UINavigationController{
             navigationController.pushViewController(sale3dsViewController, animated: true)
@@ -109,7 +113,17 @@ public class SaleRedirectionView : WKWebView{
     private func webViewLoading(_ loading:Bool){
         onLoading?(loading)
     }
+    
+}
 
+extension SaleRedirectionView : EdfaPgAdapterDelegate{
+    public func willSendRequest(_ request: EdfaPgDataRequest) {
+        
+    }
+    
+    public func didReceiveResponse(_ reponse: EdfaPgDataResponse?) {
+        
+    }
 }
 
 extension SaleRedirectionView : WKNavigationDelegate{
@@ -140,32 +154,86 @@ extension SaleRedirectionView : WKNavigationDelegate{
         }
         
         if url.lowercased().starts(with: EdfaPgProcessCompleteCallbackUrl){
-            operationCompleted(
-                result: response3ds ?? EdfaPg3dsResponse(
-                    orderId: response.orderId,
-                    transactionId: response.transactionId,
-                    ciphertext: nil, nonce: nil, tag: nil,
-                    result: .success,
-                    gatewayRecommendation: .checkStatus
-                )
-            )
+            checkTransactionStatus()
             decisionHandler(.cancel)
             return
         }
         decisionHandler(.allow)
     }
     
-    private func operationCompleted(result:EdfaPg3dsResponse){
-        webViewLoading(false)
-        if result.result == .success{
-            self.sale3dsViewController.dismiss(animated: true) {
-                self.onTransactionSuccess?(result)
-            }
-        }else if result.result == .failure{
-            self.sale3dsViewController.dismiss(animated: true) {
-                self.onTransactionFailure?(result)
-            }
+    private func checkTransactionStatus(){
+        let transactionId = saleData.redirection.transactionId
+        let payerEmail = saleData.payer.email
+        let cardNumber = saleData.card.number
+    
+        print(
+            "Checking transaction status for transaction id: \(transactionId)"
+        )
+        getTransactionDetailAdapter.execute(
+            transactionId: transactionId,
+            payerEmail: payerEmail,
+            cardNumber: cardNumber,
+            callback: handleStatus
+        )
+    }
+    
+    
+    private func handleStatus(status:EdfaPgResponse<EdfaPgGetTransactionDetailsResult>){
+        delayAndDismiss{
+            self.callback?(status)
         }
+        
+        switch status {
+        case .result(let result):
+            switch result {
+            case .success(let successResult):
+                if successResult.status == .settled{
+                    print("Transaction settled: \(successResult)")
+                    showSuccessAnimation()
+                    
+                }else if successResult.status == .pending && saleData.auth{
+                    print("Auth Transaction pending: \(successResult)")
+                    showSuccessAnimation()
+                    
+                }else{
+                    showFailureAnimation()
+                }
+            }
+                            
+        case .error(let errorResult):
+            debugPrint(errorResult)
+            showFailureAnimation()
+            
+        case .failure(let errorResult):
+            debugPrint(errorResult)
+            showFailureAnimation()
+            
+        }
+        
+    }
+    
+    private func delayAndDismiss(completion:@escaping () -> Void){
+        let millis = EdfaPgSdk.animationDelay ?? 3000
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(Int(millis))) {
+            self.sale3dsViewController?.dismiss(animated: true, completion: completion)
+        }
+    }
+    
+    private func showSuccessAnimation(){
+        if let animation = EdfaPgSdk.successAnimation,
+            let url = URL(string: animation),
+            let request = try? URLRequest(url:url){
+            load(request)
+        }
+    }
+    
+    private func showFailureAnimation(){
+        if let animation = EdfaPgSdk.failureAnimation,
+           let url = URL(string: animation),
+           let request = try? URLRequest(url:url){
+            load(request)
+        }
+    
     }
     
     private func parseHttpBody(httpBody:Data) -> EdfaPg3dsResponse?{
@@ -306,3 +374,20 @@ final class Secure3DSVC : UIViewController{
     
 }
 
+
+
+public class SaleTransactionData{
+    public var auth:Bool
+    public var order:EdfaPgSaleOrder
+    public var payer:EdfaPgPayer
+    public var card:EdfaPgCard
+    public var redirection:EdfaPgSaleRedirect
+    
+    public init(auth:Bool, order: EdfaPgSaleOrder, payer: EdfaPgPayer, card: EdfaPgCard, saleResponse: EdfaPgSaleRedirect) {
+        self.auth = auth
+        self.order = order
+        self.payer = payer
+        self.card = card
+        self.redirection = saleResponse
+    }
+}
