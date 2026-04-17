@@ -20,6 +20,26 @@ The main aspects of the EdfaPg iOS SDK:
 
 To get used to the SDK, download a [sample app](https://github.com/edfapay/edfa-pg-ios-sdk-sample ).
 
+## Documentation
+
+For detailed documentation, please refer to:
+
+- **[HTTP API Documentation](HTTP_API_DOCUMENTATION.md)** - Complete reference for all HTTP API endpoints including:
+  - SALE, CAPTURE, CREDITVOID transactions
+  - RECURRING_SALE for subscription payments
+  - GET_TRANS_STATUS and GET_TRANS_DETAILS for transaction queries
+  - Request/response structures, parameters, and examples
+  - Security and hash calculation
+  - Error handling and debugging
+
+- **[Apple Pay Documentation](APPLE_PAY_DOCUMENTATION.md)** - Comprehensive guide for Apple Pay integration including:
+  - Prerequisites and Apple Pay configuration
+  - Step-by-step integration guide
+  - Payment flow and API structure
+  - Payment token details
+  - Code examples and best practices
+  - Testing and troubleshooting
+
 ## Setup
 
 Add to the `Podfile`:
